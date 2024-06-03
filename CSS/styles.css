@@ -69,7 +69,7 @@ body, html {
 
 .overlay h1 {
     font-family: 'N27', Arial, sans-serif;
-    font-size: 6rem;
+    font-size: 6.2rem;
     margin: 0;
     margin-bottom: 20px;
     align-self: flex-start;
@@ -87,23 +87,34 @@ body, html {
 .overlay .bottom-right {
     font-family: 'N27', Arial, sans-serif;
     position: absolute;
-    bottom: 10px;
+    top: 150px;
+    bottom: 20px; /* Increase this value to move the text further down */
     right: 10px;
-    font-size: 4rem;
+    font-size: 4.5rem;
     text-align: right;
-    line-height: 0.85; /* Reduce line height */
-    white-space: pre-wrap; /* Preserve line breaks */
+    line-height: 0.85;
+    white-space: pre-wrap;
+    margin: 0;
+    padding: 0;
 }
 
-.overlay .crafting-text {
-    font-family: 'N27', Arial, sans-serif;
-    font-style: italic;
-    font-weight: bold;
+.overlay .bottom-right .small-text {
+    font-family: 'Futura', Arial, sans-serif;
+    font-size: 1rem;
+    margin-top: 0; /* Space between the main text and small text */
+    margin-bottom: 30px;
+    top: 0px;
+    bottom: 150px;
+    text-align: right;
 }
 
 @media (max-width: 1200px) {
     .overlay h1 {
         font-size: 5rem;
+    }
+    
+    .overlay .bottom-right {
+        font-size: 4rem;
     }
 }
 
