@@ -32,16 +32,11 @@
       </div>
     </div>
     <h1 onclick="reloadPage()">JORGE MUNYOZ</h1>
-    <div class="scroll-down-arrow" onclick="scrollToNextDiv()"></div>
     <p class="bottom-right">'Surviving and thriving in the third digital revolution'</p> 
   </div>
 </div>
 
 <script>
-  function scrollToNextDiv() {
-    document.getElementById('next-div').scrollIntoView({ behavior: 'smooth' });
-  }
-
   function updateTime() {
     const now = new Date();
     const options = { hour: '2-digit', minute: '2-digit' };
@@ -71,6 +66,15 @@
   }
 
   document.querySelectorAll('.dropdown-content div').forEach(option => {
+    option.addEventListener('mouseover', function() {
+      if (!this.classList.contains('animating')) {
+        this.classList.add('animating');
+        setTimeout(() => {
+          this.classList.remove('animating');
+        }, 600); // duration of the animation + cooldown period
+      }
+    });
+
     option.addEventListener('click', function() {
       const selectedLang = document.getElementById('selected-language');
       const previousLang = selectedLang.innerText.toLowerCase();

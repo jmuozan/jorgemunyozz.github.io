@@ -97,32 +97,6 @@ body, html {
     font-weight: bold;
 }
 
-.scroll-down-arrow {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    width: 30px;
-    height: 30px;
-    border-left: 5px solid white;
-    border-bottom: 5px solid white;
-    transform: rotate(-45deg) translate(-50%, -50%);
-    animation: bounce 2s infinite;
-    z-index: 3;
-    cursor: pointer;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    40% {
-        transform: translate(-50%, calc(-50% - 10px)) rotate(-45deg);
-    }
-    60% {
-        transform: translate(-50%, calc(-50% - 5px)) rotate(-45deg);
-    }
-}
-
 @media (max-width: 1200px) {
     .overlay h1 {
         font-size: 5rem;
@@ -213,10 +187,34 @@ body, html {
 .dropdown-content div {
     color: white;
     padding: 5px 10px; /* Align items properly */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
 }
 
-.dropdown-content div:hover {
+.dropdown-content div.animating {
     text-decoration: underline; /* Underline on hover */
+    animation: slide-up-disappear 0.3s forwards, slide-down-appear 0.3s 0.3s forwards;
+}
+
+@keyframes slide-up-disappear {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slide-down-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .show {
