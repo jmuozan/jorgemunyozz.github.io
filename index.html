@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <h1>JORGE MUNYOZ</h1>
+    <h1 onclick="reloadPage()">JORGE MUNYOZ</h1>
     <div class="scroll-down-arrow" onclick="scrollToNextDiv()"></div>
     <p class="bottom-right">'Surviving and thriving in the third digital revolution'</p> 
   </div>
@@ -54,6 +54,14 @@
 
   function toggleDropdown() {
     const options = document.getElementById('language-options');
+    const selectedLang = document.getElementById('selected-language').innerText.toLowerCase();
+    document.querySelectorAll('.dropdown-content div').forEach(option => {
+      if (option.dataset.lang === selectedLang) {
+        option.style.display = 'none';
+      } else {
+        option.style.display = 'block';
+      }
+    });
     options.classList.toggle('show');
   }
 
@@ -73,6 +81,11 @@
     });
   });
 
+  window.onload = function() {
+    const selectedLang = document.getElementById('selected-language').innerText.toLowerCase();
+    document.getElementById(`lang-${selectedLang}`).style.display = 'none';
+  }
+
   window.onclick = function(event) {
     if (!event.target.matches('#selected-language')) {
       const dropdowns = document.getElementsByClassName('dropdown-content');
@@ -83,6 +96,10 @@
         }
       }
     }
+  }
+
+  function reloadPage() {
+    location.reload();
   }
 </script>
 </body>
