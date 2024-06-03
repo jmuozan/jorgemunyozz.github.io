@@ -16,6 +16,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Futura-Bold-Italic';
+    src: url('Futura-Bold-Italic.woff2') format('woff2'),
+         url('Futura-Bold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -73,6 +82,7 @@ body, html {
 }
 
 .overlay .bottom-right {
+    font-family: 'Futura-Bold-Italic', Arial, sans-serif;
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -149,6 +159,22 @@ body, html {
     z-index: 3;
 }
 
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.location-language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .location-time {
     display: flex;
     flex-direction: row;
@@ -174,17 +200,18 @@ body, html {
     display: none;
     position: absolute;
     background-color: black;
-    min-width: 60px;
-    border: 1px solid white;
     z-index: 1;
-    top: 20px;
-    right: 0;
+    top: 100%; /* Align items with the selected language */
+    left: 50%;
+    transform: translateX(-50%); /* Center align with the selected language */
+    border: none; /* Remove bounding box */
+    text-align: center; /* Center align text */
+    width: max-content; /* Ensure the dropdown fits the content */
 }
 
 .dropdown-content div {
     color: white;
-    padding: 5px;
-    text-align: center;
+    padding: 5px 10px; /* Align items properly */
 }
 
 .dropdown-content div:hover {
@@ -193,4 +220,35 @@ body, html {
 
 .show {
     display: block;
+}
+
+.show-menu {
+    display: flex !important;
+    flex-direction: column;
+}
+
+@media (max-width: 576px) {
+    .menu-button {
+        display: block;
+    }
+
+    .location-language {
+        display: none;
+    }
+
+    .top-right {
+        flex-direction: column;
+        top: 10px;
+        right: 10px;
+        align-items: flex-end;
+    }
+
+    .location-time {
+        margin-bottom: 10px;
+    }
+
+    .overlay h1 {
+        font-size: 2.5rem;
+        padding-left: 10px;
+    }
 }

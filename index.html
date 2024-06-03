@@ -14,16 +14,19 @@
   </video>
   <div class="overlay content">
     <div class="top-right">
-      <div class="location-time">
-        <span id="location">VALÈNCIA</span>
-        <span id="current-time"></span>
+      <div class="menu-button" onclick="toggleMenu()">MENU</div>
+      <div class="location-language">
+        <div class="location-time">
+          <span id="location">VALÈNCIA</span>
+          <span id="current-time"></span>
+        </div>
         <div class="language-selector" onclick="toggleDropdown()">
           <span id="selected-language">EN</span>
           <div id="language-options" class="dropdown-content">
-            <div data-lang="en">EN</div>
-            <div data-lang="es">ES</div>
-            <div data-lang="ca">CA</div>
-            <div data-lang="it">IT</div>
+            <div id="lang-en" data-lang="en">EN</div>
+            <div id="lang-es" data-lang="es">ES</div>
+            <div id="lang-ca" data-lang="ca">CA</div>
+            <div id="lang-it" data-lang="it">IT</div>
           </div>
         </div>
       </div>
@@ -41,7 +44,8 @@
 
   function updateTime() {
     const now = new Date();
-    const timeString = now.toLocaleTimeString();
+    const options = { hour: '2-digit', minute: '2-digit' };
+    const timeString = now.toLocaleTimeString([], options);
     document.getElementById('current-time').innerText = timeString;
   }
 
@@ -53,9 +57,18 @@
     options.classList.toggle('show');
   }
 
+  function toggleMenu() {
+    const menu = document.querySelector('.location-language');
+    menu.classList.toggle('show-menu');
+  }
+
   document.querySelectorAll('.dropdown-content div').forEach(option => {
     option.addEventListener('click', function() {
-      document.getElementById('selected-language').innerText = this.innerText;
+      const selectedLang = document.getElementById('selected-language');
+      const previousLang = selectedLang.innerText.toLowerCase();
+      selectedLang.innerText = this.innerText;
+      document.getElementById(`lang-${previousLang}`).style.display = 'block';
+      this.style.display = 'none';
       document.getElementById('language-options').classList.remove('show');
     });
   });
