@@ -1,8 +1,10 @@
 @font-face {
-    font-family: 'N27 Bold';
-    src: url('FONT/N27 Desktop Complete/N27-Bold.otf') format('opentype');
+    font-family: 'N27';
+    src: url('N27-Bold.woff2') format('woff2'),
+        url('N27-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 body, html {
@@ -46,7 +48,7 @@ body, html {
 }
 
 .overlay h1 {
-    font-family: 'N27 Bold', Arial, sans-serif;
+    font-family: 'N27', Arial, sans-serif;
     font-size: 6rem;
     margin: 0;
     margin-bottom: 100px;
@@ -55,7 +57,7 @@ body, html {
 }
 
 .overlay .ai-text {
-    font-family: 'N27 Bold', Arial, sans-serif;
+    font-family: 'N27', Arial, sans-serif;
     font-style: italic;
     font-weight: bold;
 }
@@ -69,7 +71,7 @@ body, html {
 }
 
 .overlay .crafting-text {
-    font-family: 'N27 Bold', Arial, sans-serif;
+    font-family: 'N27', Arial, sans-serif;
     font-style: italic;
     font-weight: bold;
 }
