@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'N27';
     src: url('N27-Bold.woff2') format('woff2'),
-        url('N27-Bold.woff') format('woff');
+         url('N27-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
