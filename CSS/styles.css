@@ -31,7 +31,7 @@ body, html {
     height: 100%;
     width: 100%;
     overflow: auto;
-    background: black;
+    background: #EBEBEB; /* Set background color */
     scroll-behavior: smooth;
     font-family: 'N27', Arial, sans-serif;
 }
@@ -44,13 +44,14 @@ body, html {
 }
 
 .video-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    transition: all 1s ease; /* Smooth transition */
 }
 
 .overlay {
@@ -70,10 +71,11 @@ body, html {
     font-family: 'N27', Arial, sans-serif;
     font-size: 6rem;
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     align-self: flex-start;
     padding-left: 20px;
     cursor: pointer; /* Added rule to change cursor */
+    line-height: 0.8; /* Adjust line height */
 }
 
 .overlay .ai-text {
@@ -87,8 +89,10 @@ body, html {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    font-size: 1.5rem;
+    font-size: 4rem;
     text-align: right;
+    line-height: 0.85; /* Reduce line height */
+    white-space: pre-wrap; /* Preserve line breaks */
 }
 
 .overlay .crafting-text {
