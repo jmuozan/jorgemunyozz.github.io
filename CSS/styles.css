@@ -7,6 +7,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura-Medium.woff2') format('woff2'),
+         url('Futura-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -15,6 +24,7 @@ body, html {
     overflow: auto;
     background: black;
     scroll-behavior: smooth;
+    font-family: 'Futura', Arial, sans-serif; /* Apply Futura font to the body */
 }
 
 .background {
@@ -126,4 +136,61 @@ body, html {
         font-size: 3rem;
         padding-left: 20px;
     }
+}
+
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    z-index: 3;
+}
+
+.location-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.location-time span {
+    margin-right: 10px;
+}
+
+.language-selector {
+    margin-left: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.language-selector #selected-language {
+    font-size: 1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 60px;
+    border: 1px solid white;
+    z-index: 1;
+    top: 20px;
+    right: 0;
+}
+
+.dropdown-content div {
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.dropdown-content div:hover {
+    background-color: #575757;
+}
+
+.show {
+    display: block;
 }
