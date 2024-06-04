@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'N27';
-    src: url('N27-Bold.woff2') format('woff2'),
-         url('N27-Bold.woff') format('woff');
+    src: url('../FONT/N27-Bold.woff2') format('woff2'),
+         url('../FONT/N27-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Futura';
-    src: url('Futura-Medium.woff2') format('woff2'),
-         url('Futura-Medium.woff') format('woff');
+    font-family: 'N27-Regular';
+    src: url('../FONT/N27-Regular.woff2') format('woff2'),
+         url('../FONT/N27-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Futura-Bold-Italic';
-    src: url('Futura-Bold-Italic.woff2') format('woff2'),
-         url('Futura-Bold-Italic.woff') format('woff');
+    src: url('../FONT/Futura-Bold-Italic.woff2') format('woff2'),
+         url('../FONT/Futura-Bold-Italic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -101,8 +101,12 @@ body, html {
     margin-bottom: 10px; /* Reduced spacing */
 }
 
+.arrow-glyph {
+    padding-right: 30px;
+}
+
 .overlay .bottom-right .arrow-glyph {
-    font-size: 6.2rem; /* Adjusted size */
+    font-size: 6.4rem; /* Adjusted size */
     color: white; /* Adjust color as needed */
 }
 
@@ -112,11 +116,11 @@ body, html {
 }
 
 .overlay .bottom-right .small-text-container {
-    margin-top: 10px; /* Space between the main text and small text */
+    margin-top: 0px; /* Space between the main text and small text */
 }
 
 .overlay .bottom-right .small-text {
-    font-family: 'Futura', Arial, sans-serif;
+    font-family: 'N27-Regular', Arial, sans-serif;
     font-size: 1rem;
     margin: 0;
 }
