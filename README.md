@@ -9,3 +9,4 @@
 - [ ] Lab (work not for the portfolio)
 - [ ] Blogposts
 - [ ] Honors and Awards
+- [ ] CV
