@@ -60,6 +60,12 @@ window.onload = function() {
 
   // Scroll to the leftmost part of the page on load
   window.scrollTo(0, 0);
+
+  // Add event listener to the arrow-container div
+  const arrowContainer = document.querySelector('.arrow-container');
+  arrowContainer.addEventListener('click', () => {
+    immediateScroll(document.body.scrollWidth - window.innerWidth);
+  });
 }
 
 window.onclick = function(event) {
@@ -79,52 +85,21 @@ function reloadPage() {
 }
 
 // Hybrid scroll implementation
-function smoothScroll(targetX, duration) {
-  const startX = window.scrollX;
-  const distanceX = targetX - startX;
-  let startTime = null;
-
-  function animation(currentTime) {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = ease(timeElapsed, startX, distanceX, duration);
-      window.scrollTo(run, 0);
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
-
-  function ease(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t + b;
-      t--;
-      return -c / 2 * (t * (t - 2) - 1) + b;
-  }
-
-  requestAnimationFrame(animation);
+function immediateScroll(targetX) {
+  window.scrollTo({
+    left: targetX,
+    behavior: 'auto'
+  });
 }
 
-let lastScrollTime = 0;
-let isTrackpad = false;
-
 window.addEventListener('wheel', (event) => {
-  const currentTime = new Date().getTime();
-  const timeDiff = currentTime - lastScrollTime;
-
-  // Determine if the input is from a trackpad
-  if (timeDiff < 50) {
-    isTrackpad = true;
-  } else {
-    isTrackpad = false;
-  }
-
-  lastScrollTime = currentTime;
-
-  // Prevent default vertical scroll behavior
+  // Prevent default vertical and horizontal scroll behavior
   event.preventDefault();
 
-  // Adjust scroll distance based on input type
-  const scrollDistance = isTrackpad ? event.deltaY * 10 : event.deltaY * 100;
-  const targetScrollX = window.scrollX + scrollDistance;
-  const duration = isTrackpad ? 100 : 1; // Longer duration for trackpad for smoother scroll
-
-  smoothScroll(targetScrollX, duration);
+  // If scrolling down or left, scroll to the far right side of the screen
+  if (event.deltaY > 0 || event.deltaX < 0) {
+    immediateScroll(document.body.scrollWidth - window.innerWidth);
+  } else if (event.deltaY < 0) {
+    immediateScroll(0); // If scrolling up, scroll to the left side
+  }
 });

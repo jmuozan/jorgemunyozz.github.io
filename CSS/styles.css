@@ -100,6 +100,14 @@ body, html {
 
 .overlay .bottom-right .arrow-container {
     margin-bottom: 10px; /* Reduced spacing */
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Revert to default pointer cursor */
+    overflow: hidden; /* Ensure pseudo-element is contained */
+}
+
+button, .arrow-container {
+    cursor: pointer; /* Revert to default pointer cursor */
 }
 
 .arrow-glyph {
