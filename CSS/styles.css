@@ -29,7 +29,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 200%; /* Extend width to enable horizontal scrolling */
+    width: 145%; /* Extend width to enable horizontal scrolling */
     overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Disable vertical scrolling */
     background: #EBEBEB; /* Set background color */
