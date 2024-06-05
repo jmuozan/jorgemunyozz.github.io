@@ -120,7 +120,7 @@ button, .arrow-container {
 }
 
 .overlay .bottom-right .text-container p {
-    font-size: 4.5rem;
+    font-size: 5rem;
     margin: 0;
 }
 
@@ -281,4 +281,31 @@ button, .arrow-container {
         height: calc(100vh - 100px);
         left: -100px; /* Move left to center the increased width */
     }
+}
+
+/* New section styles */
+.new-layout {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #f0f0f0; /* Light grey background for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-overlay {
+    text-align: center;
+    color: black; /* Black text for contrast */
+}
+
+.new-overlay h1 {
+    font-family: 'N27', Arial, sans-serif;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.new-overlay p {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 1.5rem;
 }
