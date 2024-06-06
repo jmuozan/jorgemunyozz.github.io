@@ -1,8 +1,35 @@
 @font-face {
+    font-family: 'N27-Medium';
+    src: url('../FONT/N27-Medium.woff2') format('woff2'),
+         url('../FONT/N27-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-MediumItalic';
+    src: url('../FONT/N27-MediumItalic.woff2') format('woff2'),
+         url('../FONT/N27-MediumItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'N27';
     src: url('../FONT/N27-Bold.woff2') format('woff2'),
          url('../FONT/N27-Bold.woff') format('woff');
     font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-RegularItalic';
+    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
+         url('../FONT/N27-RegularItalic.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
@@ -13,15 +40,6 @@
          url('../FONT/N27-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Futura-Bold-Italic';
-    src: url('../FONT/Futura-Bold-Italic.woff2') format('woff2'),
-         url('../FONT/Futura-Bold-Italic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -337,6 +355,17 @@ button, .arrow-container {
     font-size: 6.2rem; /* Match the size of the overlay h1 */
     margin: 0;
     margin-bottom: 20px;
+    line-height: 0.8; /* Adjust line height for better spacing */
+}
+
+.new-overlay .medium-text {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 4.5rem; /* Adjust size for "HI, I'M AN" */
+}
+
+.new-overlay .medium-text-italic {
+    font-family: 'N27-RegularItalic', Arial, sans-serif;
+    font-size: 2.6rem; /* Adjust size for "KIND OF" */
 }
 
 .new-overlay p {
