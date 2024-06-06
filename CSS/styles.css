@@ -26,20 +26,20 @@
 }
 
 @font-face {
-    font-family: 'N27-RegularItalic';
-    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
-         url('../FONT/N27-RegularItalic.woff') format('woff');
+    font-family: 'N27-Regular';
+    src: url('../FONT/N27-Regular.woff2') format('woff2'),
+         url('../FONT/N27-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'N27-Regular';
-    src: url('../FONT/N27-Regular.woff2') format('woff2'),
-         url('../FONT/N27-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Futura-Bold-Italic';
+    src: url('../FONT/Futura-Bold-Italic.woff2') format('woff2'),
+         url('../FONT/Futura-Bold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -89,7 +89,7 @@ body, html {
 
 .overlay h1 {
     font-family: 'N27', Arial, sans-serif;
-    font-size: 6.8rem;
+    font-size: 6.4rem;
     margin: 0;
     margin-bottom: 20px;
     align-self: flex-start;
@@ -355,21 +355,38 @@ button, .arrow-container {
     font-size: 6.2rem; /* Match the size of the overlay h1 */
     margin: 0;
     margin-bottom: 20px;
-    line-height: 0.95; /* Adjust line height for better spacing */
+    line-height: 0.9; /* Adjust line height for better spacing */
 }
 
 .new-overlay .medium-text {
-    font-family: 'N27-Regular', Arial, sans-serif;
+    font-family: 'N27-Medium', Arial, sans-serif;
     font-size: 4.5rem; /* Adjust size for "HI, I'M AN" */
 }
 
 .new-overlay .medium-text-italic {
-    font-family: 'N27-RegularItalic', Arial, sans-serif;
-    font-size: 2.6rem; /* Adjust size for "KIND OF" */
+    font-family: 'N27-MediumItalic', Arial, sans-serif;
+    font-size: 4.5rem; /* Adjust size for "KIND OF" */
 }
 
 .new-overlay p {
     font-family: 'N27-Regular', Arial, sans-serif;
     font-size: 1.5rem;
     color: white; /* Ensure white color for contrast */
+}
+
+.links-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'N27', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.links-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'N27', Arial, sans-serif;
+    font-size: 1.5rem;
 }
