@@ -42,6 +42,7 @@ body, html {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background: #EBEBEB; /* Ensure a consistent background color */
 }
 
 .video-background {
@@ -255,6 +256,10 @@ button, .arrow-container {
     .overlay h1 {
         font-size: 4rem;
     }
+
+    .overlay .bottom-right .text-container p {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -295,6 +300,7 @@ button, .arrow-container {
     justify-content: flex-start; /* Align items to the left */
     z-index: 2; /* Ensure it is above other elements */
     overflow: hidden;
+    background: #EBEBEB; /* Ensure a consistent background color */
 }
 
 .new-layout .vertical-video-container {
@@ -304,7 +310,7 @@ button, .arrow-container {
     width: 30vw; /* Adjust width as necessary */
     height: 100vh;
     overflow: hidden;
-    z-index: -1; /* Set to background */
+    z-index: 1; /* Set to background */
 }
 
 .new-layout .vertical-video-background {
@@ -321,8 +327,9 @@ button, .arrow-container {
     top: 20px; /* Adjust top position */
     left: 20px; /* Adjust left position */
     text-align: left; /* Align text to the left */
-    color: black; /* Black text for contrast */
-    z-index: 3; /* Ensure it's above the video */
+    color: white; /* White text for contrast */
+    z-index: 2; /* Ensure it's above the video but below other elements */
+    mix-blend-mode: difference; /* Apply blend mode */
 }
 
 .new-overlay h1 {
@@ -335,4 +342,5 @@ button, .arrow-container {
 .new-overlay p {
     font-family: 'N27-Regular', Arial, sans-serif;
     font-size: 1.5rem;
+    color: white; /* Ensure white color for contrast */
 }
