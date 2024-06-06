@@ -61,6 +61,11 @@ window.onload = function() {
   // Scroll to the leftmost part of the page on load
   window.scrollTo(0, 0);
 
+  // Dynamically set the position of new-layout
+  const newLayout = document.querySelector('.new-layout');
+  const bodyWidth = document.body.scrollWidth;
+  newLayout.style.left = `${bodyWidth - window.innerWidth + window.innerWidth * 0.5}px`; // Adjust as needed
+
   // Add event listener to the arrow-container div
   const arrowContainer = document.querySelector('.arrow-container');
   arrowContainer.addEventListener('click', () => {

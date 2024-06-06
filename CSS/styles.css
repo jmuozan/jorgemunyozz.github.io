@@ -29,7 +29,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 145%; /* Extend width to enable horizontal scrolling */
+    width: 200%; /* Extend width to enable horizontal scrolling */
     overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Disable vertical scrolling */
     background: #EBEBEB; /* Set background color */
@@ -285,13 +285,15 @@ button, .arrow-container {
 
 /* New section styles */
 .new-layout {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: #f0f0f0; /* Light grey background for contrast */
+    position: absolute;
+    top: 150px; /* Adjust based on the .bottom-right position */
+    width: auto; /* Adjust width as necessary */
+    height: auto; /* Adjust height as necessary */
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 3; /* Ensure it is above other elements */
+    background: none; /* Remove background */
 }
 
 .new-overlay {
