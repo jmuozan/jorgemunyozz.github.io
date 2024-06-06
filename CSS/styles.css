@@ -308,14 +308,17 @@ button, .arrow-container {
 }
 
 .new-overlay {
-    text-align: center;
+    text-align: left; /* Align text to the left */
     color: black; /* Black text for contrast */
+    padding-left: 20px; /* Move to the left */
+    padding-top: 50px; /* Move up */
 }
 
 .new-overlay h1 {
     font-family: 'N27', Arial, sans-serif;
-    font-size: 4rem;
+    font-size: 6.2rem; /* Match the size of the overlay h1 */
     margin: 0;
+    margin-bottom: 20px;
 }
 
 .new-overlay p {
