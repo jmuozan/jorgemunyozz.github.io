@@ -51,26 +51,32 @@ window.onload = function() {
   document.getElementById(`lang-${selectedLang}`).style.display = 'none';
 
   // Change video size and position after page load
-  const video = document.getElementById('video1');
-  video.style.width = 'calc(100% - 200px)';
-  video.style.height = 'calc(100vh - 100px)';
-  video.style.top = '50px';
-  video.style.left = '0';
-  video.style.position = 'absolute';
+  const video1 = document.getElementById('video1');
+  video1.style.width = 'calc(100% - 200px)';
+  video1.style.height = 'calc(100vh - 100px)';
+  video1.style.top = '50px';
+  video1.style.left = '0';
+  video1.style.position = 'absolute';
 
   // Scroll to the leftmost part of the page on load
   window.scrollTo(0, 0);
 
   // Dynamically set the position of new-layout
+  const textContainer = document.querySelector('.bottom-right');
   const newLayout = document.querySelector('.new-layout');
-  const bodyWidth = document.body.scrollWidth;
-  newLayout.style.left = `${bodyWidth - window.innerWidth + window.innerWidth * 0.5}px`; // Adjust as needed
+  const textContainerRect = textContainer.getBoundingClientRect();
+  const offset = window.innerWidth - textContainerRect.right;
+  const targetScrollX = textContainerRect.right + offset;
+  newLayout.style.left = `${targetScrollX}px`;
 
   // Add event listener to the arrow-container div
   const arrowContainer = document.querySelector('.arrow-container');
   arrowContainer.addEventListener('click', () => {
-    immediateScroll(document.body.scrollWidth - window.innerWidth);
+    immediateScroll(targetScrollX);
   });
+
+  // Save target scroll position globally for use in the wheel event
+  window.targetScrollX = targetScrollX;
 }
 
 window.onclick = function(event) {
@@ -93,7 +99,7 @@ function reloadPage() {
 function immediateScroll(targetX) {
   window.scrollTo({
     left: targetX,
-    behavior: 'auto'
+    behavior: 'smooth'
   });
 }
 
@@ -101,9 +107,9 @@ window.addEventListener('wheel', (event) => {
   // Prevent default vertical and horizontal scroll behavior
   event.preventDefault();
 
-  // If scrolling down or left, scroll to the far right side of the screen
+  // Scroll to the far right side of the screen using the targetScrollX
   if (event.deltaY > 0 || event.deltaX < 0) {
-    immediateScroll(document.body.scrollWidth - window.innerWidth);
+    immediateScroll(window.targetScrollX);
   } else if (event.deltaY < 0) {
     immediateScroll(0); // If scrolling up, scroll to the left side
   }
