@@ -89,7 +89,7 @@ body, html {
 
 .overlay h1 {
     font-family: 'N27', Arial, sans-serif;
-    font-size: 6.2rem;
+    font-size: 6.8rem;
     margin: 0;
     margin-bottom: 20px;
     align-self: flex-start;
@@ -139,7 +139,7 @@ button, .arrow-container {
 }
 
 .overlay .bottom-right .text-container p {
-    font-size: 5rem;
+    font-size: 5.2rem;
     margin: 0;
 }
 
@@ -355,7 +355,7 @@ button, .arrow-container {
     font-size: 6.2rem; /* Match the size of the overlay h1 */
     margin: 0;
     margin-bottom: 20px;
-    line-height: 0.8; /* Adjust line height for better spacing */
+    line-height: 0.95; /* Adjust line height for better spacing */
 }
 
 .new-overlay .medium-text {
