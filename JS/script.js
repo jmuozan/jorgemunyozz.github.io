@@ -27,13 +27,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 600); // duration of the animation + cooldown period
       }
     });
+
+    // Ensure links open in a new tab
+    link.addEventListener('click', function (event) {
+      event.stopPropagation();  // Prevent triggering any parent event listeners
+    });
   });
 
   // Add hover and click event to MEDIA link
   const mediaLink = document.querySelector('.media-link');
   mediaLink.addEventListener('mouseover', toggleMediaMenu);
   mediaLink.addEventListener('click', toggleMediaMenu);
+
+  // Ensure visibility settings are applied on load
+  initializeVisibility();
 });
+
+function initializeVisibility() {
+  const mediaMenu = document.querySelector('.media-menu .links-column');
+  if (mediaMenu.classList.contains('show')) {
+    mediaMenu.style.opacity = '1';
+  } else {
+    mediaMenu.style.opacity = '0';
+  }
+}
 
 function updateTime() {
   const now = new Date();
@@ -110,6 +127,9 @@ window.onload = function () {
   });
 
   window.targetScrollX = targetScrollX;
+
+  // Ensure visibility settings are applied on load
+  initializeVisibility();
 }
 
 function animateVerticalVideo() {

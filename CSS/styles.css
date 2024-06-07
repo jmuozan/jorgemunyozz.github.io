@@ -543,39 +543,40 @@ button, .arrow-container {
 }
 
 .media-menu .links-column {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: max-content;
-  z-index: 0;
-}
-
-.media-menu .links-column.show {
-  display: block;
-  opacity: 1;
-  background-color: transparent;
-  padding: 0;
-  z-index: 0;
-}
-
-.media-menu {
-  position: relative;
-}
-
-.media-menu .links-column a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 5px 0;
-  transition: background-color 0.3s ease;
-}
-
-.media-menu .links-column a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: max-content;
+    z-index: 0;
+  }
+  
+  .media-menu .links-column.show {
+    display: block;
+    opacity: 1;
+    background-color: transparent;
+    padding: 0;
+    z-index: 0;
+  }
+  
+  .media-menu {
+    position: relative;
+  }
+  
+  .media-menu .links-column a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .media-menu .links-column a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
 
 /* Add these styles for the transition effect */
 .transition-block {
