@@ -1,3 +1,29 @@
+document.addEventListener('DOMContentLoaded', function () {
+  // Apply hover animation to links in links-row
+  document.querySelectorAll('.links-row a').forEach(link => {
+    link.addEventListener('mouseover', function () {
+      if (!this.classList.contains('animating')) {
+        this.classList.add('animating');
+        setTimeout(() => {
+          this.classList.remove('animating');
+        }, 600); // duration of the animation + cooldown period
+      }
+    });
+  });
+
+  // Apply hover animation to links in links-column
+  document.querySelectorAll('.links-column a').forEach(link => {
+    link.addEventListener('mouseover', function () {
+      if (!this.classList.contains('animating')) {
+        this.classList.add('animating');
+        setTimeout(() => {
+          this.classList.remove('animating');
+        }, 600); // duration of the animation + cooldown period
+      }
+    });
+  });
+});
+
 function updateTime() {
   const now = new Date();
   const options = { hour: '2-digit', minute: '2-digit' };
@@ -12,11 +38,11 @@ function toggleDropdown() {
   const options = document.getElementById('language-options');
   const selectedLang = document.getElementById('selected-language').innerText.toLowerCase();
   document.querySelectorAll('.dropdown-content div').forEach(option => {
-      if (option.dataset.lang === selectedLang) {
-          option.style.display = 'none';
-      } else {
-          option.style.display = 'block';
-      }
+    if (option.dataset.lang === selectedLang) {
+      option.style.display = 'none';
+    } else {
+      option.style.display = 'block';
+    }
   });
   options.classList.toggle('show');
 }
@@ -27,26 +53,26 @@ function toggleMenu() {
 }
 
 document.querySelectorAll('.dropdown-content div').forEach(option => {
-  option.addEventListener('mouseover', function() {
-      if (!this.classList.contains('animating')) {
-          this.classList.add('animating');
-          setTimeout(() => {
-              this.classList.remove('animating');
-          }, 600); // duration of the animation + cooldown period
-      }
+  option.addEventListener('mouseover', function () {
+    if (!this.classList.contains('animating')) {
+      this.classList.add('animating');
+      setTimeout(() => {
+        this.classList.remove('animating');
+      }, 600); // duration of the animation + cooldown period
+    }
   });
 
-  option.addEventListener('click', function() {
-      const selectedLang = document.getElementById('selected-language');
-      const previousLang = selectedLang.innerText.toLowerCase();
-      selectedLang.innerText = this.innerText;
-      document.getElementById(`lang-${previousLang}`).style.display = 'block';
-      this.style.display = 'none';
-      document.getElementById('language-options').classList.remove('show');
+  option.addEventListener('click', function () {
+    const selectedLang = document.getElementById('selected-language');
+    const previousLang = selectedLang.innerText.toLowerCase();
+    selectedLang.innerText = this.innerText;
+    document.getElementById(`lang-${previousLang}`).style.display = 'block';
+    this.style.display = 'none';
+    document.getElementById('language-options').classList.remove('show');
   });
 });
 
-window.onload = function() {
+window.onload = function () {
   const selectedLang = document.getElementById('selected-language').innerText.toLowerCase();
   document.getElementById(`lang-${selectedLang}`).style.display = 'none';
 
@@ -79,15 +105,15 @@ window.onload = function() {
   window.targetScrollX = targetScrollX;
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (!event.target.matches('#selected-language')) {
-      const dropdowns = document.getElementsByClassName('dropdown-content');
-      for (let i = 0; i < dropdowns.length; i++) {
-          const openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-          }
+    const dropdowns = document.getElementsByClassName('dropdown-content');
+    for (let i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
+    }
   }
 }
 

@@ -397,11 +397,12 @@ button, .arrow-container {
 .links-row a {
     color: white; /* Ensure the links are visible */
     text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth transition */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
 }
 
 .links-row a:hover {
-    color: #aaa; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+    animation: slide-up-disappear 0.3s forwards, slide-down-appear 0.3s 0.3s forwards;
 }
 
 .links-column {
@@ -417,9 +418,10 @@ button, .arrow-container {
     color: white; /* Ensure the links are visible */
     text-decoration: none; /* Remove underline */
     margin-bottom: 10px; /* Spacing between links */
-    transition: color 0.3s; /* Smooth transition */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
 }
 
 .links-column a:hover {
-    color: #aaa; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+    animation: slide-up-disappear 0.3s forwards, slide-down-appear 0.3s 0.3s forwards;
 }
