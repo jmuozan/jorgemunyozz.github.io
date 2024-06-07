@@ -2,7 +2,7 @@
 
 ## Things to add to the website:
 
-- [ ] Landing
+- [x] Landing
 - [ ] About
 - [ ] Works
 - [ ] Publications

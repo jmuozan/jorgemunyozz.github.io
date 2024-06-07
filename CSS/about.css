@@ -133,7 +133,7 @@ body {
     font-weight: bold;
 }
 
-.education, .experience, .languages, .skills, .honors {
+.education, .experience, .languages, .skills, .honors, .certificates {
     margin-bottom: 20px;
 }
 
@@ -152,7 +152,8 @@ h3 {
 .experience .item,
 .languages .item,
 .skills .item,
-.honors .item {
+.honors .item,
+.certificates .item {
     margin-bottom: 15px;
 }
 
@@ -160,7 +161,8 @@ h3 {
 .experience .title,
 .languages .title,
 .skills .title,
-.honors .title {
+.honors .title,
+.certificates .title {
     font-family: 'N27-Regular', Arial, sans-serif; /* Use regular font */
     font-size: 1.25rem;
     display: inline; /* Keep title inline */
@@ -170,7 +172,8 @@ h3 {
 .experience .duration,
 .languages .duration,
 .skills .duration,
-.honors .duration {
+.honors .duration,
+.certificates .duration {
     font-family: 'N27-RegularItalic', Arial, sans-serif; /* Use regular italic font */
     font-size: 1rem;
     display: inline; /* Keep duration inline */
@@ -181,7 +184,8 @@ h3 {
 .experience .institution,
 .languages .institution,
 .skills .institution,
-.honors .institution {
+.honors .institution,
+.certificates .institution {
     font-family: 'N27-Light', Arial, sans-serif; /* Use light font */
     font-size: 1rem;
     display: block; /* Keep institution on a new line */
