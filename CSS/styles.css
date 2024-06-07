@@ -56,9 +56,9 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 150%; /* Adjusted width to reduce horizontal size */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Disable vertical scrolling */
+    width: 100%; /* Adjusted width to 100% */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
     background: #EBEBEB; /* Set background color */
     scroll-behavior: smooth;
     font-family: 'N27', Arial, sans-serif;
@@ -277,6 +277,11 @@ button, .arrow-container {
     .overlay .bottom-right .text-container p {
         font-size: 4rem;
     }
+
+    .links-row {
+        gap: 4rem; /* Adjust spacing between links */
+        row-gap: 2rem; /* Adjust spacing between rows */
+    }
 }
 
 @media (max-width: 992px) {
@@ -286,6 +291,11 @@ button, .arrow-container {
 
     .overlay .bottom-right .text-container p {
         font-size: 3rem;
+    }
+
+    .links-row {
+        gap: 2rem; /* Adjust spacing between links */
+        row-gap: 1.5rem; /* Adjust spacing between rows */
     }
 }
 
@@ -300,6 +310,22 @@ button, .arrow-container {
         height: calc(100vh - 100px);
         left: -100px; /* Move left to center the increased width */
     }
+
+    .links-row {
+        flex-wrap: wrap;
+        gap: 1rem; /* Adjust spacing between links */
+        row-gap: 1rem; /* Adjust spacing between rows */
+        flex-direction: row; /* Ensure proper alignment */
+    }
+
+    .links-row a {
+        flex-basis: calc(33.33% - 1rem); /* Two rows, three items each */
+    }
+
+    .honors-awards {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 576px) {
@@ -313,6 +339,39 @@ button, .arrow-container {
         height: calc(100vh - 100px);
         left: -100px; /* Move left to center the increased width */
     }
+
+    .links-row {
+        flex-wrap: wrap;
+        gap: 0.5rem; /* Further adjust spacing between links */
+        row-gap: 0.5rem; /* Further adjust spacing between rows */
+        flex-direction: row; /* Ensure proper alignment */
+    }
+
+    .links-row a {
+        flex-basis: calc(50% - 0.5rem); /* Three rows, two items each */
+    }
+
+    .honors-awards {
+        display: flex;
+        flex-direction: column;
+        text-align: center; /* Center align text */
+    }
+
+    .new-overlay h1 {
+        font-size: 3rem; /* Smaller font size for small screens */
+    }
+
+    .new-overlay .medium-text {
+        font-size: 2.3rem; /* Adjust size for "HI, I'M AN" */
+    }
+
+    .new-overlay .medium-text-italic {
+        font-size: 1rem; /* Adjust size for "KIND OF" */
+    }
+
+    .new-overlay p {
+        font-size: 0.75rem; /* Smaller paragraph text */
+    }
 }
 
 /* New section styles */
@@ -323,6 +382,7 @@ button, .arrow-container {
     width: 100vw; /* Full width */
     height: 100vh; /* Full height */
     display: flex;
+    flex-direction: column; /* Change to column for better responsiveness */
     align-items: flex-start; /* Align items to the top */
     justify-content: flex-start; /* Align items to the left */
     z-index: 2; /* Ensure it is above other elements */
@@ -355,7 +415,7 @@ button, .arrow-container {
 }
 
 .new-overlay {
-    position: absolute; /* Position absolutely within the layout */
+    position: relative; /* Change to relative for better responsiveness */
     top: 20px; /* Adjust top position */
     left: 20px; /* Adjust left position */
     text-align: left; /* Align text to the left */
@@ -388,6 +448,70 @@ button, .arrow-container {
     color: white; /* Ensure white color for contrast */
 }
 
+@media (max-width: 1200px) {
+    .new-overlay h1 {
+        font-size: 5rem;
+    }
+    .new-overlay .medium-text {
+        font-size: 3.5rem;
+    }
+    .new-overlay .medium-text-italic {
+        font-size: 1.5rem;
+    }
+    .links-row {
+        gap: 5rem; /* Adjust spacing between links */
+    }
+}
+
+@media (max-width: 992px) {
+    .new-overlay h1 {
+        font-size: 4rem;
+    }
+    .new-overlay .medium-text {
+        font-size: 3rem;
+    }
+    .new-overlay .medium-text-italic {
+        font-size: 1.25rem;
+    }
+    .links-row {
+        gap: 3rem; /* Adjust spacing between links */
+    }
+}
+
+@media (max-width: 768px) {
+    .new-overlay h1 {
+        font-size: 3rem;
+    }
+    .new-overlay .medium-text {
+        font-size: 2.5rem;
+    }
+    .new-overlay .medium-text-italic {
+        font-size: 1rem;
+    }
+    .links-row {
+        gap: 2rem; /* Adjust spacing between links */
+    }
+}
+
+@media (max-width: 576px) {
+    .new-overlay h1 {
+        font-size: 2rem; /* Smaller font size for small screens */
+    }
+    .new-overlay .medium-text {
+        font-size: 1.8rem; /* Adjust size for "HI, I'M AN" */
+    }
+    .new-overlay .medium-text-italic {
+        font-size: 0.9rem; /* Adjust size for "KIND OF" */
+    }
+    .new-overlay p {
+        font-size: 0.75rem; /* Smaller paragraph text */
+    }
+    .links-row {
+        gap: 1rem; /* Further adjust spacing between links */
+        font-size: 0.85rem;
+    }
+}
+
 .links-row {
     display: flex;
     flex-wrap: wrap; /* Ensure proper alignment */
@@ -396,7 +520,8 @@ button, .arrow-container {
     font-family: 'N27', Arial, sans-serif;
     font-size: 1.1rem;
     margin-top: 40px;
-    gap: 150px; /* Adjust spacing between links */
+    gap: 9rem; /* Adjust spacing between links */
+    row-gap: 2rem; /* Add spacing between rows */
 }
 
 .links-row a {
@@ -410,29 +535,39 @@ button, .arrow-container {
     animation: slide-up-disappear 0.3s forwards, slide-down-appear 0.3s 0.3s forwards;
 }
 
-.links-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-family: 'N27-Regular', Arial, sans-serif; /* Changed to N27-Regular */
-    font-size: 1rem;
-    margin-top: 20px;
+.media-menu .links-column {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.links-column a {
-    color: white; /* Ensure the links are visible */
-    text-decoration: none; /* Remove underline */
-    margin-bottom: 10px; /* Spacing between links */
-    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
+/* Show the links-column on hover */
+.media-menu:hover .links-column {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  background-color: transparent; /* Remove the background color */
+  padding: 0;
+  z-index: 10;
 }
 
-.links-column a:hover {
-    text-decoration: underline; /* Underline on hover */
-    animation: slide-up-disappear 0.3s forwards, slide-down-appear 0.3s 0.3s forwards;
+.media-menu {
+  position: relative;
 }
 
-/* Add these styles to styles.css */
+.media-menu .links-column a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: background-color 0.3s ease;
+}
 
+.media-menu .links-column a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Add these styles for the transition effect */
 .transition-block {
     position: fixed;
     bottom: -100vh; /* Start off-screen */
