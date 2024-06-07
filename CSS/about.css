@@ -24,19 +24,22 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column; /* Change to column for mobile first approach */
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding: 20px; /* Add padding to avoid content touching screen edges */
 }
 
 .image-section {
     position: relative;
-    flex: 1;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width */
 }
 
 .image-section img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -63,17 +66,86 @@ body {
 
 .title-overlay .line2 {
     display: block;
-    margin-left: -25%; /* Remove or adjust this if necessary */
+    margin-left: -25%;
 }
 
 .text-section {
-    flex: 1;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width */
     padding: 20px;
-    padding-top: 150px; /* Added padding-top to push the text down */
+    padding-top: 150px;
 }
 
 .text-section p {
     font-size: 16px;
     margin-top: 20px;
     color: #333;
+}
+
+.details-section {
+    width: 100%;
+    max-width: 800px; /* Set a maximum width */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contact-info h1 {
+    font-family: 'N27', Arial, sans-serif;
+    font-size: 2rem; /* Adjust font size if needed */
+}
+
+.education, .experience {
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'N27', Arial, sans-serif; /* Apply N27 font-family */
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Change to row for larger screens */
+    }
+
+    .title-overlay {
+        position: static;
+        transform: none;
+        text-align: center;
+    }
+
+    .title-overlay h1 {
+        font-size: 5rem; /* Adjusted font size */
+    }
+
+    .title-overlay .line2 {
+        margin-left: 0; /* Center align text */
+    }
+
+    .text-section {
+        padding-top: 20px; /* Adjusted padding for larger screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .title-overlay h1 {
+        font-size: 7rem; /* Adjusted font size */
+    }
 }
