@@ -56,10 +56,10 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%; /* Adjusted width to 100% */
-    overflow-x: hidden; /* Disable horizontal scrolling */
-    overflow-y: auto; /* Enable vertical scrolling */
-    background: #EBEBEB; /* Set background color */
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #EBEBEB;
     scroll-behavior: smooth;
     font-family: 'N27', Arial, sans-serif;
 }
@@ -69,7 +69,7 @@ body, html {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: #EBEBEB; /* Ensure a consistent background color */
+    background: #EBEBEB;
 }
 
 .video-background {
@@ -80,7 +80,7 @@ body, html {
     height: 100vh;
     object-fit: cover;
     z-index: 1;
-    transition: all 1.5s ease; /* Smooth transition */
+    transition: all 1.5s ease;
 }
 
 .overlay {
@@ -103,8 +103,8 @@ body, html {
     margin-bottom: 20px;
     align-self: flex-start;
     padding-left: 20px;
-    cursor: pointer; /* Added rule to change cursor */
-    line-height: 0.8; /* Adjust line height */
+    cursor: pointer;
+    line-height: 0.8;
 }
 
 .overlay .ai-text {
@@ -117,7 +117,7 @@ body, html {
     font-family: 'N27', Arial, sans-serif;
     position: absolute;
     top: 150px;
-    bottom: 20px; /* Increase this value to move the text further down */
+    bottom: 20px;
     right: 10px;
     text-align: right;
     line-height: 0.85;
@@ -127,15 +127,15 @@ body, html {
 }
 
 .overlay .bottom-right .arrow-container {
-    margin-bottom: 10px; /* Reduced spacing */
+    margin-bottom: 10px;
     position: relative;
     display: inline-block;
-    cursor: pointer; /* Revert to default pointer cursor */
-    overflow: hidden; /* Ensure pseudo-element is contained */
+    cursor: pointer;
+    overflow: hidden;
 }
 
 button, .arrow-container {
-    cursor: pointer; /* Revert to default pointer cursor */
+    cursor: pointer;
 }
 
 .arrow-glyph {
@@ -143,8 +143,8 @@ button, .arrow-container {
 }
 
 .overlay .bottom-right .arrow-glyph {
-    font-size: 6.4rem; /* Adjusted size */
-    color: white; /* Adjust color as needed */
+    font-size: 6.4rem;
+    color: white;
 }
 
 .overlay .bottom-right .text-container p {
@@ -153,7 +153,7 @@ button, .arrow-container {
 }
 
 .overlay .bottom-right .small-text-container {
-    margin-top: 0px; /* Space between the main text and small text */
+    margin-top: 0px;
 }
 
 .overlay .bottom-right .small-text {
@@ -215,22 +215,22 @@ button, .arrow-container {
     position: absolute;
     background-color: black;
     z-index: 1;
-    top: 100%; /* Align items with the selected language */
+    top: 100%;
     left: 50%;
-    transform: translateX(-50%); /* Center align with the selected language */
-    border: none; /* Remove bounding box */
-    text-align: center; /* Center align text */
-    width: max-content; /* Ensure the dropdown fits the content */
+    transform: translateX(-50%);
+    border: none;
+    text-align: center;
+    width: max-content;
 }
 
 .dropdown-content div {
     color: white;
-    padding: 5px 10px; /* Align items properly */
-    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
+    padding: 5px 10px;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .dropdown-content div.animating {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
     animation: slide-up-disappear 0.3s forwards, slide-down-appear 0.3s 0.3s forwards;
 }
 
@@ -279,8 +279,8 @@ button, .arrow-container {
     }
 
     .links-row {
-        gap: 4rem; /* Adjust spacing between links */
-        row-gap: 2rem; /* Adjust spacing between rows */
+        gap: 4rem;
+        row-gap: 2rem;
     }
 }
 
@@ -294,8 +294,8 @@ button, .arrow-container {
     }
 
     .links-row {
-        gap: 2rem; /* Adjust spacing between links */
-        row-gap: 1.5rem; /* Adjust spacing between rows */
+        gap: 2rem;
+        row-gap: 1.5rem;
     }
 }
 
@@ -306,20 +306,20 @@ button, .arrow-container {
     }
 
     .video-background {
-        width: calc(100% + 200px); /* Increase width by 200px */
+        width: calc(100% + 200px);
         height: calc(100vh - 100px);
-        left: -100px; /* Move left to center the increased width */
+        left: -100px;
     }
 
     .links-row {
         flex-wrap: wrap;
-        gap: 1rem; /* Adjust spacing between links */
-        row-gap: 1rem; /* Adjust spacing between rows */
-        flex-direction: row; /* Ensure proper alignment */
+        gap: 1rem;
+        row-gap: 1rem;
+        flex-direction: row;
     }
 
     .links-row a {
-        flex-basis: calc(33.33% - 1rem); /* Two rows, three items each */
+        flex-basis: calc(33.33% - 1rem);
     }
 
     .honors-awards {
@@ -335,124 +335,123 @@ button, .arrow-container {
     }
 
     .video-background {
-        width: calc(100% + 200px); /* Increase width by 200px */
+        width: calc(100% + 200px);
         height: calc(100vh - 100px);
-        left: -100px; /* Move left to center the increased width */
+        left: -100px;
     }
 
     .links-row {
         flex-wrap: wrap;
-        gap: 0.5rem; /* Further adjust spacing between links */
-        row-gap: 0.5rem; /* Further adjust spacing between rows */
-        flex-direction: row; /* Ensure proper alignment */
+        gap: 0.5rem;
+        row-gap: 0.5rem;
+        flex-direction: row;
     }
 
     .links-row a {
-        flex-basis: calc(50% - 0.5rem); /* Three rows, two items each */
+        flex-basis: calc(50% - 0.5rem);
     }
 
     .honors-awards {
         display: flex;
         flex-direction: column;
-        text-align: center; /* Center align text */
+        text-align: center;
     }
 
     .new-overlay h1 {
-        font-size: 3rem; /* Smaller font size for small screens */
+        font-size: 3rem;
     }
 
     .new-overlay .medium-text {
-        font-size: 2.3rem; /* Adjust size for "HI, I'M AN" */
+        font-size: 2.3rem;
     }
 
     .new-overlay .medium-text-italic {
-        font-size: 1rem; /* Adjust size for "KIND OF" */
+        font-size: 1rem;
     }
 
     .new-overlay p {
-        font-size: 0.75rem; /* Smaller paragraph text */
+        font-size: 0.75rem;
     }
 }
 
 @media (max-width: 480px) {
     .links-row {
-        flex-direction: column; /* Stack links in a column */
+        flex-direction: column;
         align-items: center;
     }
 }
 
-/* New section styles */
 .new-layout {
     position: absolute;
     top: 0;
-    left: 100vw; /* Position at the right of the initial view */
-    width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
+    left: 100vw;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: column; /* Change to column for better responsiveness */
-    align-items: flex-start; /* Align items to the top */
-    justify-content: flex-start; /* Align items to the left */
-    z-index: 2; /* Ensure it is above other elements */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 2;
     overflow: hidden;
-    background: #EBEBEB; /* Ensure a consistent background color */
+    background: #EBEBEB;
 }
 
 .new-layout .vertical-video-container {
     position: absolute;
     top: 0;
     right: 0;
-    width: 40vw; /* Adjust width as necessary */
+    width: 40vw;
     height: 100vh;
     overflow: hidden;
-    z-index: 1; /* Set to background */
+    z-index: 1;
 }
 
 .new-layout .vertical-video-background {
     position: absolute;
     top: 0;
-    right: -100vw; /* Start outside the screen */
+    right: -100vw;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: right 1.5s ease; /* Smooth transition */
+    transition: right 1.5s ease;
 }
 
 .new-layout .vertical-video-background.animate-in {
-    right: 0; /* Move into view */
+    right: 0;
 }
 
 .new-overlay {
-    position: relative; /* Change to relative for better responsiveness */
-    top: 20px; /* Adjust top position */
-    left: 20px; /* Adjust left position */
-    text-align: left; /* Align text to the left */
-    color: white; /* White text for contrast */
-    z-index: 2; /* Ensure it's above the video but below other elements */
-    mix-blend-mode: difference; /* Apply blend mode */
+    position: relative;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    color: white;
+    z-index: 2;
+    mix-blend-mode: difference;
 }
 
 .new-overlay h1 {
     font-family: 'N27', Arial, sans-serif;
-    font-size: 6.2rem; /* Match the size of the overlay h1 */
+    font-size: 6.2rem;
     margin: 0;
     margin-bottom: 20px;
-    line-height: 0.9; /* Adjust line height for better spacing */
+    line-height: 0.9;
 }
 
 .new-overlay .medium-text {
     font-family: 'N27-Regular', Arial, sans-serif;
-    font-size: 4.6rem; /* Adjust size for "HI, I'M AN" */
+    font-size: 4.6rem;
 }
 
 .new-overlay .medium-text-italic {
     font-family: 'N27-RegularItalic', Arial, sans-serif;
-    font-size: 2rem; /* Adjust size for "KIND OF" */
+    font-size: 2rem;
 }
 
 .new-overlay p {
     font-family: 'N27-Regular', Arial, sans-serif;
     font-size: 1.5rem;
-    color: white; /* Ensure white color for contrast */
+    color: white;
 }
 
 @media (max-width: 1200px) {
@@ -466,7 +465,7 @@ button, .arrow-container {
         font-size: 1.5rem;
     }
     .links-row {
-        gap: 5rem; /* Adjust spacing between links */
+        gap: 5rem;
     }
 }
 
@@ -481,7 +480,7 @@ button, .arrow-container {
         font-size: 1.25rem;
     }
     .links-row {
-        gap: 3rem; /* Adjust spacing between links */
+        gap: 3rem;
     }
 }
 
@@ -496,50 +495,50 @@ button, .arrow-container {
         font-size: 1rem;
     }
     .links-row {
-        gap: 2rem; /* Adjust spacing between links */
+        gap: 2rem;
     }
 }
 
 @media (max-width: 576px) {
     .new-overlay h1 {
-        font-size: 3.6rem; /* Smaller font size for small screens */
+        font-size: 3.6rem;
     }
     .new-overlay .medium-text {
-        font-size: 1.8rem; /* Adjust size for "HI, I'M AN" */
+        font-size: 1.8rem;
     }
     .new-overlay .medium-text-italic {
-        font-size: 0.9rem; /* Adjust size for "KIND OF" */
+        font-size: 0.9rem;
     }
     .new-overlay p {
-        font-size: 0.75rem; /* Smaller paragraph text */
+        font-size: 0.75rem;
     }
     .links-row {
-        gap: 1rem; /* Further adjust spacing between links */
+        gap: 1rem;
         font-size: 0.85rem;
     }
 }
 
 .links-row {
     display: flex;
-    flex-wrap: wrap; /* Ensure proper alignment */
-    justify-content: center; /* Center align the links */
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     font-family: 'N27', Arial, sans-serif;
     font-size: 1.1rem;
     margin-top: 40px;
-    gap: 5rem; /* Adjust spacing between links */
-    row-gap: 1rem; /* Add spacing between rows */
+    gap: 5rem;
+    row-gap: 1rem;
 }
 
-.links-row a, .media-menu > a {
-    color: white; /* Ensure the links are visible */
-    text-decoration: none; /* Remove underline */
-    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
-    position: relative; /* Ensure dropdown is positioned correctly */
+.links-row a, .media-menu > span {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s, opacity 0.3s;
+    position: relative;
 }
 
-.links-row a:hover, .media-menu > a:hover {
-    text-decoration: underline; /* Underline on hover */
+.links-row a:hover, .media-menu > span:hover {
+    text-decoration: underline;
     animation: slide-up-disappear 0.3s forwards, slide-down-appear 0.3s 0.3s forwards;
 }
 
@@ -550,17 +549,16 @@ button, .arrow-container {
   position: absolute;
   left: 0;
   top: 100%;
-  width: max-content; /* Ensure dropdown width is appropriate */
-  z-index: 0; /* Send behind video */
+  width: max-content;
+  z-index: 0;
 }
 
-/* Show the links-column on hover */
-.media-menu:hover .links-column {
+.media-menu .links-column.show {
   display: block;
   opacity: 1;
-  background-color: transparent; /* Remove the background color */
+  background-color: transparent;
   padding: 0;
-  z-index: 0; /* Send behind video */
+  z-index: 0;
 }
 
 .media-menu {
@@ -582,28 +580,28 @@ button, .arrow-container {
 /* Add these styles for the transition effect */
 .transition-block {
     position: fixed;
-    bottom: -100vh; /* Start off-screen */
+    bottom: -100vh;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: black; /* Black color for transition */
-    z-index: 1000; /* Ensure it is above all other content */
-    transition: bottom 0.5s ease-in-out; /* Smooth transition */
+    background-color: black;
+    z-index: 1000;
+    transition: bottom 0.5s ease-in-out;
 }
 
 .transition-block.show {
-    bottom: 0; /* Move into view */
+    bottom: 0;
 }
 
 .transition-block-background {
     position: fixed;
-    top: -100vh; /* Start off-screen */
+    top: -100vh;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #EBEBEB; /* Same as background color */
-    z-index: 1001; /* Ensure it is above the black block */
-    transition: top 0.5s ease-in-out; /* Smooth transition */
+    background-color: #EBEBEB;
+    z-index: 1001;
+    transition: top 0.5s ease-in-out;
 }
 
 @media (max-width: 992px) {

@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // Add hover and click event to MEDIA link
+  const mediaLink = document.querySelector('.media-link');
+  mediaLink.addEventListener('mouseover', toggleMediaMenu);
+  mediaLink.addEventListener('click', toggleMediaMenu);
 });
 
 function updateTime() {
@@ -135,8 +140,14 @@ window.onclick = function (event) {
   }
 }
 
-function reloadPage() {
-  location.reload();
+function toggleMediaMenu() {
+  const mediaMenu = document.querySelector('.media-menu .links-column');
+  mediaMenu.classList.toggle('show');
+  if (mediaMenu.classList.contains('show')) {
+    mediaMenu.style.opacity = '1';
+  } else {
+    mediaMenu.style.opacity = '0';
+  }
 }
 
 // Hybrid scroll implementation
