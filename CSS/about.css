@@ -16,6 +16,24 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'N27-RegularItalic';
+    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
+         url('../FONT/N27-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Light';
+    src: url('../FONT/N27-Light.woff2') format('woff2'),
+         url('../FONT/N27-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     margin: 0;
     font-family: 'N27-Regular', Arial, sans-serif;
@@ -90,16 +108,32 @@ body {
 }
 
 .contact-info {
-    text-align: left;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
     margin-bottom: 20px;
 }
 
 .contact-info h1 {
     font-family: 'N27', Arial, sans-serif;
-    font-size: 2rem; /* Adjust font size if needed */
+    font-size: 5rem; /* Make this header larger */
+    margin-right: 5vw; /* Increase space between the header and contact details with vw units */
 }
 
-.education, .experience {
+.contact-details {
+    flex: 1; /* Take the remaining space */
+    text-align: right; /* Align text to the right */
+}
+
+.contact-details p {
+    font-family: 'N27-Regular', Arial, sans-serif; /* Use regular font for the content */
+}
+
+.contact-details span {
+    font-family: 'N27', Arial, sans-serif; /* Use bold font for the labels */
+    font-weight: bold;
+}
+
+.education, .experience, .languages, .skills, .honors {
     margin-bottom: 20px;
 }
 
@@ -109,14 +143,65 @@ h1, h2, h3 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 2rem; /* Make h3 larger */
     border-bottom: 2px solid black;
     padding-bottom: 5px;
+}
+
+.education .item,
+.experience .item,
+.languages .item,
+.skills .item,
+.honors .item {
+    margin-bottom: 15px;
+}
+
+.education .title,
+.experience .title,
+.languages .title,
+.skills .title,
+.honors .title {
+    font-family: 'N27-Regular', Arial, sans-serif; /* Use regular font */
+    font-size: 1.25rem;
+    display: inline; /* Keep title inline */
+}
+
+.education .duration,
+.experience .duration,
+.languages .duration,
+.skills .duration,
+.honors .duration {
+    font-family: 'N27-RegularItalic', Arial, sans-serif; /* Use regular italic font */
+    font-size: 1rem;
+    display: inline; /* Keep duration inline */
+    margin-left: 10px; /* Add some space between title and duration */
+}
+
+.education .institution,
+.experience .institution,
+.languages .institution,
+.skills .institution,
+.honors .institution {
+    font-family: 'N27-Light', Arial, sans-serif; /* Use light font */
+    font-size: 1rem;
+    display: block; /* Keep institution on a new line */
 }
 
 p {
     font-size: 1rem;
     line-height: 1.5;
+}
+
+.skills .subsection-title {
+    font-family: 'N27-Bold', Arial, sans-serif; /* Use bold font for subsection titles */
+    font-size: 1rem;
+    display: inline;
+}
+
+.skills .details {
+    font-family: 'N27-Regular', Arial, sans-serif; /* Use regular font for details */
+    font-size: 1rem;
+    display: inline;
 }
 
 /* Media queries for responsiveness */
