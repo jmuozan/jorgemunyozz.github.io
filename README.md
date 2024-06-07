@@ -25,3 +25,5 @@ Furthermore, my work aligns with the philosophy of the Fab Lab network, which ch
 My research at the Fab Lab Barcelona focuses on futures using AI and machine learning, aiming to create sustainable and impactful design interventions. I am deeply inspired by the stories of pioneers in personal fabrication, as detailed in Neil Gershenfeld's "FAB: The Coming Revolution on Your Desktop," which underscores the transformative potential of digital fabrication technologies.
 
 In essence, my journey as an industrial design engineer and my studies at the Institute for Advanced Architecture of Catalonia and the Fab Lab Barcelona reflect a commitment to bridging the gap between traditional craftsmanship and modern technology. I am driven by a vision to design innovative solutions that respond to emerging global trends, ensuring a sustainable and equitable future for all.
+
+Bt0t31jlH3
