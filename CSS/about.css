@@ -27,7 +27,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    padding: 20px;
 }
 
 .image-section {
@@ -43,9 +42,9 @@ body {
 
 .title-overlay {
     position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translate(-20%, -20%);
+    top: 5%;
+    right: 5%;
+    transform: translateX(10%);
     color: rgb(0, 0, 0);
     text-align: left;
 }
@@ -55,7 +54,7 @@ body {
     font-size: 7rem;
     font-weight: bold;
     margin: 0;
-    line-height: 1.2;
+    line-height: 0.9;
 }
 
 .title-overlay .line1 {
@@ -64,12 +63,13 @@ body {
 
 .title-overlay .line2 {
     display: block;
-    margin-left: 50px; /* Adjust this value to unalign the second line */
+    margin-left: -25%; /* Remove or adjust this if necessary */
 }
 
 .text-section {
     flex: 1;
     padding: 20px;
+    padding-top: 150px; /* Added padding-top to push the text down */
 }
 
 .text-section p {
