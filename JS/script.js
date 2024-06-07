@@ -76,7 +76,6 @@ window.onload = function () {
   const selectedLang = document.getElementById('selected-language').innerText.toLowerCase();
   document.getElementById(`lang-${selectedLang}`).style.display = 'none';
 
-  // Change video size and position after page load
   const video1 = document.getElementById('video1');
   video1.style.width = 'calc(100% - 200px)';
   video1.style.height = 'calc(100vh - 100px)';
@@ -84,10 +83,8 @@ window.onload = function () {
   video1.style.left = '0';
   video1.style.position = 'absolute';
 
-  // Scroll to the leftmost part of the page on load
   window.scrollTo(0, 0);
 
-  // Dynamically set the position of new-layout
   const textContainer = document.querySelector('.bottom-right');
   const newLayout = document.querySelector('.new-layout');
   const textContainerRect = textContainer.getBoundingClientRect();
@@ -95,15 +92,30 @@ window.onload = function () {
   const targetScrollX = textContainerRect.right + offset;
   newLayout.style.left = `${targetScrollX}px`;
 
-  // Add event listener to the arrow-container div
   const arrowContainer = document.querySelector('.arrow-container');
   arrowContainer.addEventListener('click', () => {
     immediateScroll(targetScrollX);
+    animateVerticalVideo(); // Trigger animation
   });
 
-  // Save target scroll position globally for use in the wheel event
   window.targetScrollX = targetScrollX;
 }
+
+function animateVerticalVideo() {
+  const verticalVideo = document.querySelector('.vertical-video-background');
+  verticalVideo.classList.add('animate-in');
+}
+
+window.addEventListener('wheel', (event) => {
+  event.preventDefault();
+
+  if (event.deltaY > 0 || event.deltaX < 0) {
+    immediateScroll(window.targetScrollX);
+    animateVerticalVideo(); // Trigger animation
+  } else if (event.deltaY < 0) {
+    immediateScroll(0);
+  }
+});
 
 window.onclick = function (event) {
   if (!event.target.matches('#selected-language')) {
@@ -128,15 +140,3 @@ function immediateScroll(targetX) {
     behavior: 'smooth'
   });
 }
-
-window.addEventListener('wheel', (event) => {
-  // Prevent default vertical and horizontal scroll behavior
-  event.preventDefault();
-
-  // Scroll to the far right side of the screen using the targetScrollX
-  if (event.deltaY > 0 || event.deltaX < 0) {
-    immediateScroll(window.targetScrollX);
-  } else if (event.deltaY < 0) {
-    immediateScroll(0); // If scrolling up, scroll to the left side
-  }
-});

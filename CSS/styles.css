@@ -80,7 +80,7 @@ body, html {
     height: 100vh;
     object-fit: cover;
     z-index: 1;
-    transition: all 1s ease; /* Smooth transition */
+    transition: all 1.5s ease; /* Smooth transition */
 }
 
 .overlay {
@@ -343,10 +343,15 @@ button, .arrow-container {
 .new-layout .vertical-video-background {
     position: absolute;
     top: 0;
-    left: 0;
+    right: -100vw; /* Start outside the screen */
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: right 1.5s ease; /* Smooth transition */
+}
+
+.new-layout .vertical-video-background.animate-in {
+    right: 0; /* Move into view */
 }
 
 .new-overlay {
