@@ -208,6 +208,13 @@ p {
     display: inline;
 }
 
+.proficiency {
+    font-family: 'N27-Light', Arial, sans-serif;
+    font-size: 0.8rem; /* Adjust the size as needed */
+    font-style: italic;
+    margin-left: 10px; /* Add space between the text and the title */
+}
+
 /* Media queries for responsiveness */
 @media (min-width: 768px) {
     .container {
