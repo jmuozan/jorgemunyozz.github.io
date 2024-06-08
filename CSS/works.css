@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'N27';
+    src: url('../FONT/N27-Bold.woff2') format('woff2'),
+         url('../FONT/N27-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Regular';
+    src: url('../FONT/N27-Regular.woff2') format('woff2'),
+         url('../FONT/N27-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-RegularItalic';
+    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
+         url('../FONT/N27-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Light';
+    src: url('../FONT/N27-Light.woff2') format('woff2'),
+         url('../FONT/N27-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'N27-Regular', Arial, sans-serif;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video, #background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+
+.title {
+    font-family: 'N27', Arial, sans-serif;
+    font-size: 12vw;
+    margin: 0;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20vh; /* Large space between title and links */
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+
+.link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.category {
+    font-family: 'N27-Light', Arial, sans-serif;
+    font-size: 1vw; /* Smaller category text */
+    color: black;
+    margin: 0;
+}
+
+.link {
+    font-family: 'N27', Arial, sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #333;
+}
