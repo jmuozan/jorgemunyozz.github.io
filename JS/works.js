@@ -14,15 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
     contentItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             const imageUrl = item.getAttribute('data-image');
-            const itemText = item.textContent.trim();
+            const itemText = item.textContent.trim().replace(/\s+/g, ' '); // Handle multiline text
             document.body.style.setProperty('--bg-image', `url(${imageUrl})`);
             document.body.classList.add('animate-bg');
             dynamicParagraph.textContent = paragraphs[itemText] || "";
+            item.style.textDecoration = 'underline';
         });
 
         item.addEventListener('mouseleave', () => {
             document.body.classList.remove('animate-bg');
             dynamicParagraph.textContent = "";
+            item.style.textDecoration = 'none';
         });
     });
 });

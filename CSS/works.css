@@ -50,15 +50,16 @@ body.animate-bg::before {
     top: 20px;
     left: 20px;
     text-align: left;
-    font-size: 10rem;
+    font-size: clamp(2rem, 8vw, 10rem); /* Use clamp for responsiveness */
     font-family: 'N27-Bold', sans-serif;
     font-weight: bold;
     color: #000;
+    line-height: 0.9; /* Adjust line height for better spacing */
 }
 
 .content {
     position: absolute;
-    top: 250px; /* Reduce top space for the content div */
+    top: 270px; /* Reduce top space for the content div */
     left: 0;
     width: 30%;
     display: flex;
@@ -100,6 +101,31 @@ body.animate-bg::before {
     border: none;
     background: none;
     padding-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.content-item div:hover {
+    text-decoration: underline;
+    animation: hoverEffect 0.6s ease-in-out;
+}
+
+@keyframes hoverEffect {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    51% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .scroll-text {
@@ -123,4 +149,35 @@ body.animate-bg::before {
     font-size: 1rem;
     color: #000;
     text-align: right;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        font-size: clamp(5rem, 10vw, 8rem);
+    }
+
+    .content {
+        width: 50%;
+    }
+
+    .dynamic-paragraph {
+        width: 40%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: clamp(4.65rem, 12vw, 7rem);
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    .dynamic-paragraph {
+        width: 60%;
+        font-size: 0.8rem;
+    }
 }
