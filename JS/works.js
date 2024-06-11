@@ -4,12 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     contentItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             const imageUrl = item.getAttribute('data-image');
-            document.body.style.backgroundImage = `url(${imageUrl})`;
+            document.body.style.setProperty('--bg-image', `url(${imageUrl})`);
             document.body.classList.add('animate-bg');
         });
 
         item.addEventListener('mouseleave', () => {
-            document.body.style.backgroundImage = '';
             document.body.classList.remove('animate-bg');
         });
     });
