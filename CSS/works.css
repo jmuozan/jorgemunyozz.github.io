@@ -47,14 +47,14 @@ body.animate-bg::before {
 
 .header {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 20px;
     text-align: left;
     font-size: clamp(2rem, 8vw, 10rem); /* Use clamp for responsiveness */
     font-family: 'N27-Bold', sans-serif;
     font-weight: bold;
     color: #000;
-    line-height: 0.9; /* Adjust line height for better spacing */
+    line-height: 1; /* Adjust line height for better spacing */
 }
 
 .content {
@@ -85,6 +85,12 @@ body.animate-bg::before {
     color: #777;
     font-size: 0.5rem;
     margin-bottom: 5px;
+}
+
+.content-item a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
 }
 
 .content-item div {
@@ -154,7 +160,7 @@ body.animate-bg::before {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .header {
-        font-size: clamp(5rem, 10vw, 8rem);
+        font-size: clamp(2rem, 10vw, 8rem);
     }
 
     .content {
@@ -169,7 +175,7 @@ body.animate-bg::before {
 
 @media (max-width: 480px) {
     .header {
-        font-size: clamp(4.65rem, 12vw, 7rem);
+        font-size: clamp(2rem, 12vw, 6rem);
     }
 
     .content {

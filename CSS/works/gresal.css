@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'N27-Bold';
+    src: url('../FONT/N27-Bold.woff2') format('woff2'),
+         url('../FONT/N27-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Light';
+    src: url('../FONT/N27-Light.woff2') format('woff2'),
+         url('../FONT/N27-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    font-family: 'N27-Regular', Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-family: 'N27-Bold', sans-serif;
+    font-size: clamp(2rem, 5vw, 6rem);
+    margin: 0;
+}
+
+.subheader {
+    font-family: 'N27-Light', sans-serif;
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 20px auto 0;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
