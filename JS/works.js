@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const contentItems = document.querySelectorAll('.content div');
-    const hoverImage = document.getElementById('hover-image');
+    const contentItems = document.querySelectorAll('.content-item div');
 
     contentItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             const imageUrl = item.getAttribute('data-image');
-            hoverImage.style.backgroundImage = `url(${imageUrl})`;
-            hoverImage.classList.add('visible');
+            document.body.style.backgroundImage = `url(${imageUrl})`;
+            document.body.classList.add('animate-bg');
         });
 
         item.addEventListener('mouseleave', () => {
-            hoverImage.classList.remove('visible');
+            document.body.style.backgroundImage = '';
+            document.body.classList.remove('animate-bg');
         });
     });
 });

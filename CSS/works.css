@@ -1,27 +1,9 @@
 @font-face {
-    font-family: 'N27';
+    font-family: 'N27-Bold';
     src: url('../FONT/N27-Bold.woff2') format('woff2'),
          url('../FONT/N27-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'N27-Regular';
-    src: url('../FONT/N27-Regular.woff2') format('woff2'),
-         url('../FONT/N27-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'N27-RegularItalic';
-    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
-         url('../FONT/N27-RegularItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -38,72 +20,98 @@ body {
     margin: 0;
     font-family: 'N27-Regular', Arial, sans-serif;
     background-color: #f2f2f2;
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background repeat */
+    height: 100vh; /* Full height of the viewport */
+    transition: background-image 0.5s ease; /* Smooth transition for background image change */
+}
+
+body.animate-bg {
+    animation: shrink-background 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth animation */
+}
+
+@keyframes shrink-background {
+    0% {
+        background-size: cover;
+    }
+    100% {
+        background-size: 50%; /* Adjust this value as needed */
+    }
 }
 
 .header {
-    position: relative;
-    text-align: center;
-    font-size: 5rem;
-    font-family: 'N27', sans-serif;
-    color: #000;
-    margin-top: 50px;
-}
-
-.navbar {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 20px;
-    font-size: 1rem;
-    font-family: 'N27-Regular', sans-serif;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    font-size: 10rem;
+    font-family: 'N27-Bold', sans-serif;
+    font-weight: bold;
+    color: #000;
 }
 
 .content {
     position: absolute;
-    top: 40rem; /* Adjust this value to move the content further down */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
+    top: 300px; /* Increase space between the header and the list */
+    left: 0;
+    width: 30%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 40px; /* Increase the gap between content items */
+    padding-left: 10px; /* Add padding to the left */
 }
 
-.content div {
+.content-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Align text to the left */
+    line-height: 1.2;
+    gap: 10px; /* Increase the space between category and content */
+}
+
+.content-item .category {
+    font-family: 'N27-Light', sans-serif !important; /* Ensure N27-Light is used */
+    font-weight: normal !important; /* Ensure font weight is normal */
+    color: #777;
+    font-size: 0.5rem;
+    margin-bottom: 5px;
+}
+
+.content-item div {
     font-size: 1.5rem;
-    font-family: 'N27-Regular', sans-serif;
+    font-family: 'N27', sans-serif;
+    font-weight: bold;
     color: #000;
     cursor: pointer;
     position: relative;
+    text-align: left; /* Align text to the left */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    border: none;
+    background: none;
+    padding-left: 5px; /* Add padding to the content */
 }
 
 .image {
-    width: 100%;
-    height: 300px;
-    background-image: url('path_to_your_image.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    display: none; /* Remove this as the body background now covers it */
 }
 
 #hover-image {
     display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    z-index: 1000;
-    transition: opacity 0.3s ease;
-    opacity: 0;
 }
 
-#hover-image.visible {
-    display: block;
-    opacity: 1;
+.scroll-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'N27-Light', sans-serif;
+    font-size: 0.75rem;
+    color: #777;
+    text-align: center;
 }
