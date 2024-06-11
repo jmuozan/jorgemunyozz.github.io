@@ -50,23 +50,22 @@ body.animate-bg::before {
     top: 10px;
     left: 20px;
     text-align: left;
-    font-size: clamp(2rem, 8vw, 10rem); /* Use clamp for responsiveness */
+    font-size: clamp(2rem, 8vw, 10rem);
     font-family: 'N27-Bold', sans-serif;
     font-weight: bold;
     color: #000;
-    line-height: 1; /* Adjust line height for better spacing */
+    line-height: 1;
 }
 
 .content {
     position: absolute;
-    top: 270px; /* Reduce top space for the content div */
-    left: 0;
-    width: 30%;
+    top: 31%;
+    left: 1%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px; /* Reduce gap between content items */
-    padding-left: 10px;
+    gap: 20px;
 }
 
 .content-item {
@@ -76,14 +75,14 @@ body.animate-bg::before {
     align-items: flex-start;
     text-align: left;
     line-height: 1.2;
-    gap: 5px; /* Further reduce the gap between category and content */
+    gap: 5px;
 }
 
 .content-item .category {
-    font-family: 'N27-Light', sans-serif !important;
-    font-weight: normal !important;
+    font-family: 'N27-Light', sans-serif;
+    font-weight: normal;
     color: #777;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     margin-bottom: 5px;
 }
 
@@ -95,14 +94,14 @@ body.animate-bg::before {
 
 .content-item div {
     font-size: 1.5rem;
-    font-family: 'N27', sans-serif;
+    font-family: 'N27-Bold', sans-serif;
     font-weight: bold;
     color: #000;
     cursor: pointer;
     position: relative;
     text-align: left;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     border: none;
     background: none;
@@ -148,7 +147,7 @@ body.animate-bg::before {
 
 .dynamic-paragraph {
     position: absolute;
-    top: 250px; /* Align with the top of the content div */
+    top: 20%;
     right: 10px;
     width: 30%;
     font-family: 'N27-Light', sans-serif;
@@ -186,4 +185,31 @@ body.animate-bg::before {
         width: 60%;
         font-size: 0.8rem;
     }
+}
+
+/* Add these styles for the transition effect */
+.transition-block {
+    position: fixed;
+    bottom: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.transition-block.show {
+    bottom: 0;
+}
+
+.transition-block-background {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EBEBEB;
+    z-index: 1001;
+    transition: top 0.5s ease-in-out;
 }

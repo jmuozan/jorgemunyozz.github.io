@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'N27-Bold';
-    src: url('../FONT/N27-Bold.woff2') format('woff2'),
-         url('../FONT/N27-Bold.woff') format('woff');
+    src: url('../../FONT/N27-Bold.woff2') format('woff2'),
+         url('../../FONT/N27-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'N27-Light';
-    src: url('../FONT/N27-Light.woff2') format('woff2'),
-         url('../FONT/N27-Light.woff') format('woff');
+    src: url('../../FONT/N27-LightItalic.woff2') format('woff2'),
+         url('../../FONT/N27-LightItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -30,7 +30,7 @@ header {
 
 h1 {
     font-family: 'N27-Bold', sans-serif;
-    font-size: clamp(2rem, 5vw, 6rem);
+    font-size: clamp(3rem, 7vw, 8rem); /* Increase the size */
     margin: 0;
 }
 
@@ -48,6 +48,11 @@ main {
 }
 
 main img {
-    width: 100%;
+    width: 90%; /* Normal size */
     height: auto;
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure it's a block element for centering */
+    transition: transform 1s ease-in-out; /* Add transition for smooth effect */
+    transform-origin: center center; /* Center the transformation */
+    transform: scale(1.5); /* Initially larger */
 }

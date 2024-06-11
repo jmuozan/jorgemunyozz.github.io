@@ -12,7 +12,15 @@
         <p class="subheader">An exemplar heritage-led scheme, featuring new homes, retail and employment spaces, all wrapped in beautiful public realm.</p>
     </header>
     <main>
-        <img src="path_to_your_image.png" alt="Faraday Works Image">
+        <img id="main-image" src="../../IMG/PORTFOLIO/GRESAL/FOTO-1.jpg" alt="Image">
     </main>
+    <script>
+        window.addEventListener('load', () => {
+            const image = document.getElementById('main-image');
+            setTimeout(() => {
+                image.style.transform = 'scale(1)'; // Reduce to normal size
+            }, 500); // Delay for the effect
+        });
+    </script>
 </body>
 </html>
