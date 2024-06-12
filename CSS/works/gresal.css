@@ -188,5 +188,113 @@ main img {
 .interactive-gallery .text-content {
     flex: 1;
     align-self: flex-start; /* Align the text content to the start (top) */
-    margin-top: 0; /* Ensure there is no extra margin pushing it down */
+}
+
+.new-layout,
+.new-layout-2 {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.new-layout img {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.new-layout-2 {
+    padding: 0; /* Remove padding for the section */
+}
+
+.new-layout-2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0; /* Remove margin for the image */
+}
+
+.text-image-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    align-items: center;
+}
+
+.text-image-layout .text-image-layout-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.text-image-layout .text-content-right {
+    width: 65%;
+    text-align: right;
+}
+
+.text-image-layout img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-image-layout .text-content h3 {
+    margin-top: 10px;
+    font-family: 'N27-Bold', sans-serif;
+}
+
+.text-image-layout .text-content p {
+    font-family: 'N27-Light', sans-serif;
+}
+
+.case-layout {
+    position: relative;
+    text-align: center;
+}
+
+.case-layout .case-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px); /* Adjust width to account for left and right padding */
+}
+
+.case-layout .case-header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'N27-Bold', sans-serif;
+}
+
+.case-layout .case-header .next-case {
+    font-family: 'N27-Regular', sans-serif;
+    color: black;
+    text-decoration: none;
+    align-self: center;
+    font-size: 1rem;
+}
+
+.case-layout img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    align-items: flex-start;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-newsletter {
+    text-align: right;
 }
