@@ -3,17 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faraday Works</title>
+    <title>GRESAL</title>
     <link rel="stylesheet" href="../../CSS/works/gresal.css">
 </head>
 <body>
     <header>
-        <h1>GRESAL</h1>
-        <p class="subheader">An exemplar heritage-led scheme, featuring new homes, retail and employment spaces, all wrapped in beautiful public realm.</p>
+        <div class="header-content">
+            <p class="subheader">An exemplar heritage-led scheme, featuring new homes, retail and employment spaces, all wrapped in beautiful public realm.</p>
+            <h1>GRESAL</h1>
+        </div>
     </header>
     <main>
         <img id="main-image" src="../../IMG/PORTFOLIO/GRESAL/FOTO-1.jpg" alt="Image">
     </main>
+    <section class="info-section">
+        <div class="info-left">
+            <p><strong>Client</strong>U+I / Studio Egret West</p>
+            <p><strong>Location</strong>London, UK</p>
+            <p><strong>Category</strong>Mixed Use</p>
+            <p><strong>Project stage</strong>Marketing & Sales</p>
+            <p><strong>Deliverables</strong>Imagery, Animation, Branding</p>
+        </div>
+        <div class="info-right">
+            <p>Faraday Works is a complex site with a fascinating history and the site demanded a creative response that was forward thinking without neglecting the past.</p>
+        </div>
+    </section>
+    <section class="custom-photography-section">
+        <div class="text-content">
+            <h2>Custom photography</h2>
+            <p>We will always ensure we shoot sites accurately, especially those that require our services for planning. For this project we visited the site on numerous occasions for both aerial and ground photography as well as surveyance photography for our verified views.</p>
+        </div>
+        <div class="image-content">
+            <img src="../../IMG/PORTFOLIO/GRESAL/Expo_2.jpg" alt="Custom Photography">
+        </div>
+    </section>
+    <section class="interactive-gallery">
+        <div class="big-image">
+            <img id="big-image" src="../../IMG/PORTFOLIO/GRESAL/Expo_2.jpg" alt="Big Image">
+        </div>
+        <div class="thumbnail-gallery">
+            <img class="thumbnail selected" src="../../IMG/PORTFOLIO/GRESAL/Expo_1.jpg" alt="Thumb 1" onclick="changeImage(this, '../../IMG/PORTFOLIO/GRESAL/Expo_1.jpg')">
+            <img class="thumbnail" src="../../IMG/PORTFOLIO/GRESAL/Prototipo cartulina.jpeg" alt="Thumb 2" onclick="changeImage(this, '../../IMG/PORTFOLIO/GRESAL/Prototipo cartulina.jpeg')">
+            <img class="thumbnail" src="../../IMG/PORTFOLIO/GRESAL/Sketches.png" alt="Thumb 3" onclick="changeImage(this, '../../IMG/PORTFOLIO/GRESAL/Sketches.png')">
+            <img class="thumbnail" src="../../IMG/PORTFOLIO/GRESAL/Renders.70.png" alt="Thumb 4" onclick="changeImage(this, '../../IMG/PORTFOLIO/GRESAL/Renders.70.png')">
+            <img class="thumbnail" src="../../IMG/PORTFOLIO/GRESAL/Perspectiva idea tras C-Sketch.png" alt="Thumb 5" onclick="changeImage(this, '../../IMG/PORTFOLIO/GRESAL/Perspectiva idea tras C-Sketch.png')">
+        </div>
+        <div class="text-content">
+            <h2>Our sketches</h2>
+            <p>The sketches we produced were a wide exploration from our team. Our goal was to create a selection of imagery that showcased the tension between the design and the airspace surrounding it.</p>
+        </div>
+    </section>
     <script>
         window.addEventListener('load', () => {
             const image = document.getElementById('main-image');
@@ -21,6 +60,29 @@
                 image.style.transform = 'scale(1)'; // Reduce to normal size
             }, 500); // Delay for the effect
         });
+
+        function changeImage(element, src) {
+            const bigImage = document.getElementById('big-image');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            // Remove the selected class from all thumbnails
+            thumbnails.forEach(thumbnail => {
+                thumbnail.classList.remove('selected');
+            });
+
+            // Add the selected class to the clicked thumbnail
+            element.classList.add('selected');
+
+            bigImage.classList.add('fade-out');
+            setTimeout(() => {
+                bigImage.src = src;
+                bigImage.classList.remove('fade-out');
+                bigImage.classList.add('fade-in');
+            }, 300);
+            setTimeout(() => {
+                bigImage.classList.remove('fade-in');
+            }, 600);
+        }
     </script>
 </body>
 </html>

@@ -24,21 +24,31 @@ body {
 }
 
 header {
-    text-align: center;
     padding: 40px 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    margin-right: 10%; /* Adjust according to the image width margin */
 }
 
 h1 {
     font-family: 'N27-Bold', sans-serif;
     font-size: clamp(3rem, 7vw, 8rem); /* Increase the size */
     margin: 0;
+    align-self: flex-start; /* Align h1 to the start of the flex container */
+    margin-left: 10%; /* Adjust according to the image width margin */
 }
 
 .subheader {
     font-family: 'N27-Light', sans-serif;
     font-size: 1.25rem;
     max-width: 800px;
-    margin: 20px auto 0;
+    margin: 0 0 20px auto;
+    text-align: right;
 }
 
 main {
@@ -55,4 +65,128 @@ main img {
     transition: transform 1s ease-in-out; /* Add transition for smooth effect */
     transform-origin: center center; /* Center the transformation */
     transform: scale(1.5); /* Initially larger */
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    align-items: center;
+}
+
+.info-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%;
+}
+
+.info-left p {
+    margin: 10px 0;
+}
+
+.info-left p strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and value */
+}
+
+.info-right {
+    width: 45%;
+    text-align: right;
+}
+
+.info-right p {
+    font-family: 'N27-Light', sans-serif;
+    font-size: 1.25rem;
+}
+
+.custom-photography-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    align-items: flex-end; /* Align items to the end */
+}
+
+.custom-photography-section .text-content {
+    width: 40%; /* Adjusted to fit better with the larger image */
+}
+
+.custom-photography-section .image-content {
+    width: 55%; /* Make the image container larger */
+}
+
+.custom-photography-section img {
+    width: 100%;
+    height: auto;
+}
+
+.interactive-gallery {
+    display: flex;
+    padding: 40px 20px;
+    align-items: flex-start; /* Align items to the start (top) */
+    gap: 20px;
+}
+
+.interactive-gallery .big-image {
+    flex: 1;
+    position: relative;
+    max-width: 60%; /* Ensure the big image container has a maximum width */
+}
+
+.interactive-gallery .big-image img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.interactive-gallery .thumbnail-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.interactive-gallery .thumbnail-gallery .thumbnail {
+    width: 80px; /* Ensure the thumbnails have the same width */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ensure the thumbnails cover the container without distortion */
+    position: relative; /* For positioning the pseudo-element */
+}
+
+.interactive-gallery .thumbnail-gallery .thumbnail::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7); /* White filter */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Ensure the filter doesn't interfere with click events */
+}
+
+.interactive-gallery .thumbnail-gallery .thumbnail.selected::before {
+    opacity: 1; /* Show the white filter on the selected thumbnail */
+}
+
+.interactive-gallery .thumbnail-gallery .thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.interactive-gallery .text-content {
+    flex: 1;
+    align-self: flex-start; /* Align the text content to the start (top) */
+    margin-top: 0; /* Ensure there is no extra margin pushing it down */
 }
