@@ -147,7 +147,7 @@ body.animate-bg::before {
 
 .dynamic-paragraph {
     position: absolute;
-    top: 20%;
+    top: 50%;
     right: 10px;
     width: 30%;
     font-family: 'N27-Light', sans-serif;
