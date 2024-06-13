@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLOW FURNITURE</title>
+    <link rel="stylesheet" href="../../CSS/works/gresal.css">
+</head>
+<body>
+    <a href="../../index.html" class="home-link">HOME</a>
+    <header>
+        <div class="header-content">
+            <p class="subheader">Slow Furniture: A Sustainable Approach to Evolving Design</p>
+            <h1>SLOW FURNITURE</h1>
+        </div>
+    </header>
+    <main>
+        <img id="main-image" src="../../IMG/PORTFOLIO/SLOW_FURNITURE/1-FUNCTION.png" alt="Image">
+    </main>
+    <section class="info-section">
+        <div class="info-left">
+            <p><strong>YEAR</strong>2023</p>
+            <p><strong>KIND</strong>INDIVIDUAL</p>
+            <p><strong>CATEGORY</strong>PRODUCT</p>
+            <p><strong>FUNCTION</strong>DESIGN, RESEARCH, RENDERING AND MODELS</p>
+        </div>
+        <div class="info-right">
+            <p>In the context of growing environmental concerns, the project Slow Furniture aims to address the significant problem of furniture waste. Each year, the European Union generates around 10 million tons of furniture waste, with a staggering 90% ending up in landfills or being incinerated​​​​. This project explores a sustainable solution by designing multifunctional, long-lasting, and emotionally engaging furniture that adapts to the changing needs of users over time.</p>
+        </div>
+    </section>
+    <section class="custom-photography-section">
+        <div class="text-content">
+            <h2>THE PROBLEM</h2>
+            <p>The rapid production and disposal cycle of modern furniture, often referred to as "fast furniture," is driven by the low cost and poor quality of materials. This results in short-lived products that are quickly discarded. A significant portion of this waste comes from children's furniture, which is outgrown rapidly. Surveys indicate that 47.1% of people replace furniture because their needs change, and 41.2% do so because the furniture breaks​​. This cycle of use and disposal contributes to environmental degradation and the depletion of resources.</p>
+        </div>
+        <div class="image-content">
+            <img src="../../IMG/PORTFOLIO/SLOW_FURNITURE/2-CONTEXT.jpg" alt="Custom Photography">
+        </div>
+    </section>
+    <section class="interactive-gallery">
+        <div class="big-image">
+            <img id="big-image" src="../../IMG/PORTFOLIO/SLOW_FURNITURE/3-SKETCHES.gif" alt="Big Image">
+        </div>
+        <div class="thumbnail-gallery">
+            <img class="thumbnail selected" src="../../IMG/PORTFOLIO/SLOW_FURNITURE/3.8-SKETCHES.png" alt="Thumb 1" onclick="changeImage(this, '../../IMG/PORTFOLIO/SLOW_FURNITURE/3-SKETCHES.gif')">
+            <img class="thumbnail selected" src="../../IMG/PORTFOLIO/SLOW_FURNITURE/4.2-SKETCHES.png" alt="Thumb 2" onclick="changeImage(this, '../../IMG/PORTFOLIO/SLOW_FURNITURE/4-SKETCHES.gif')">
+            <img class="thumbnail selected" src="../../IMG/PORTFOLIO/SLOW_FURNITURE/5.9-MODELS.jpg" alt="Thumb 3" onclick="changeImage(this, '../../IMG/PORTFOLIO/SLOW_FURNITURE/5-MODELS.gif')">
+            <img class="thumbnail selected" src="../../IMG/PORTFOLIO/SLOW_FURNITURE/6.2-ANA.png" alt="Thumb 4" onclick="changeImage(this, '../../IMG/PORTFOLIO/SLOW_FURNITURE/6-ANA.gif')">
+            <img class="thumbnail selected" src="../../IMG/PORTFOLIO/SLOW_FURNITURE/7-EXPLODED.png" alt="Thumb 5" onclick="changeImage(this, '../../IMG/PORTFOLIO/SLOW_FURNITURE/7-EXPLODED.png')">
+
+        </div>
+        <div class="text-content">
+            <h2></h2>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </section>
+    <section class="new-layout">
+        <img src="../../IMG/PORTFOLIO/SLOW_FURNITURE/8-SOLUTIONS.gif" alt="New Layout">
+    </section>
+    <section class="new-layout-2">
+        <img src="../../IMG/PORTFOLIO/SLOW_FURNITURE/9-DETAILS.gif" alt="New Layout 2">
+    </section>
+    <section class="text-image-layout">
+        <div class="text-image-layout-content">
+            <img src="../../IMG/PORTFOLIO/SLOW_FURNITURE/10-HERO.gif" alt="LAST">
+        </div>
+        <div class="text-content-right">
+            <h2></h2>
+            <p></p>
+        </div>
+    </section>
+    <section class="case-layout">
+        <div class="case-header">
+            <h1>HAPPY MEAL OF THE FUTURE</h1>
+            <a href="./mcdonalds.html" class="next-case">NEXT WORK</a>
+        </div>
+        <div class="case-image-wrapper">
+            <img src="../../IMG/PORTFOLIO/SLOW_FURNITURE/11-NEXT_HERO.jpg" alt="expo" class="case-image">
+        </div>
+    </section>
+    <div id="hover-image" class="hover-image">
+        <img src="../../IMG/PORTFOLIO/SLOW_FURNITURE/12-NEXT_HERO.png" alt="Small Image">
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const image = document.getElementById('main-image');
+            setTimeout(() => {
+                image.style.transform = 'scale(1)'; // Reduce to normal size
+            }, 500); // Delay for the effect
+        });
+
+        function changeImage(element, src) {
+            const bigImage = document.getElementById('big-image');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            // Remove the selected class from all thumbnails
+            thumbnails.forEach(thumbnail => {
+                thumbnail.classList.remove('selected');
+            });
+
+            // Add the selected class to the clicked thumbnail
+            element.classList.add('selected');
+
+            bigImage.classList.add('fade-out');
+            setTimeout(() => {
+                bigImage.src = src;
+                bigImage.classList.remove('fade-out');
+                bigImage.classList.add('fade-in');
+            }, 300);
+            setTimeout(() => {
+                bigImage.classList.remove('fade-in');
+            }, 600);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hoverImage = document.getElementById('hover-image');
+            const caseHeader = document.querySelector('.case-header');
+            const caseImageWrapper = document.querySelector('.case-image-wrapper');
+
+            function showHoverImage(e) {
+                hoverImage.style.display = 'block';
+                hoverImage.style.left = `${e.pageX + 15}px`;
+                hoverImage.style.top = `${e.pageY + 15}px`;
+            }
+
+            function hideHoverImage() {
+                hoverImage.style.display = 'none';
+            }
+
+            function moveHoverImage(e) {
+                hoverImage.style.left = `${e.pageX + 15}px`;
+                hoverImage.style.top = `${e.pageY + 15}px`;
+            }
+
+            caseHeader.addEventListener('mouseover', showHoverImage);
+            caseHeader.addEventListener('mousemove', moveHoverImage);
+            caseHeader.addEventListener('mouseout', hideHoverImage);
+
+            caseImageWrapper.addEventListener('mouseover', showHoverImage);
+            caseImageWrapper.addEventListener('mousemove', moveHoverImage);
+            caseImageWrapper.addEventListener('mouseout', hideHoverImage);
+
+            caseHeader.addEventListener('click', () => {
+                window.location.href = './mcdonalds.html';
+            });
+
+            caseImageWrapper.addEventListener('click', () => {
+                window.location.href = './mcdonalds.html';
+            });
+        });
+    </script>
+</body>
+</html>
