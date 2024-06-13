@@ -14,3 +14,5 @@
 - [X] CV
 - [ ] Open source code
 - [ ] Events
+- [ ] AI.RTISANSHIP SITE
+
