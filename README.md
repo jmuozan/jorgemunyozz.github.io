@@ -40,3 +40,7 @@ Trapeque is designed with sustainability and simplicity at its core. The toys ar
 The texture of the handmade cardboard evokes a connection to nature, reinforcing environmental awareness. Accessories for each character, also made from the same biodegradable materials, are interchangeable across different editions of the toy. This ensures that new and existing toys remain compatible, extending their play value and lifespan.
 
 Trapeque represents a solution to the educational, social, and environmental needs of today’s society. It enables children to learn and play in an eco-friendly manner, offering endless possibilities for fun in various situations. Through Trapeque, children can enjoy a dynamic and enriching play experience while being mindful of their environmental impact.
+
+
+
+http://iida.unitrain.org/en/about/winners/
