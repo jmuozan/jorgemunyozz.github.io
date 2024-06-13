@@ -16,11 +16,56 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'N27-Regular';
+    src: url('../../FONT/N27-Regular.woff2') format('woff2'),
+         url('../../FONT/N27-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     margin: 0;
     font-family: 'N27-Regular', Arial, sans-serif;
     background-color: #fff;
     color: #333;
+}
+
+.home-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'N27-Bold', sans-serif;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.6s ease;
+    z-index: 1000;
+}
+
+.home-link:hover {
+    animation: hoverAnim 0.6s ease forwards;
+    text-decoration: underline; /* Add underline on hover */
+}
+
+@keyframes hoverAnim {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    51% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 header {
@@ -37,7 +82,7 @@ header {
 
 h1 {
     font-family: 'N27-Bold', sans-serif;
-    font-size: clamp(3rem, 7vw, 8rem); /* Increase the size */
+    font-size: clamp(4rem, 9vw, 9rem); /* Increase the size */
     margin: 0;
     align-self: flex-start; /* Align h1 to the start of the flex container */
     margin-left: 10%; /* Adjust according to the image width margin */
@@ -79,26 +124,26 @@ main img {
     flex-direction: column;
     align-items: flex-start;
     width: 45%;
+    margin-left: 4%; /* Move to the right */
 }
 
 .info-left p {
     margin: 10px 0;
+    font-family: 'N27-Regular', sans-serif; /* Apply regular font */
 }
 
 .info-left p strong {
     display: block;
     font-weight: bold;
+    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
     margin-bottom: 5px; /* Space between label and value */
 }
 
 .info-right {
     width: 45%;
     text-align: right;
-}
-
-.info-right p {
-    font-family: 'N27-Light', sans-serif;
-    font-size: 1.25rem;
+    font-family: 'N27-Light', sans-serif; /* Apply light font */
+    margin-right: 4%
 }
 
 .custom-photography-section {
@@ -110,6 +155,11 @@ main img {
 
 .custom-photography-section .text-content {
     width: 40%; /* Adjusted to fit better with the larger image */
+    font-family: 'N27-Light', sans-serif; /* Apply regular font */
+}
+
+.custom-photography-section .text-content h2 {
+    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
 }
 
 .custom-photography-section .image-content {
@@ -188,6 +238,11 @@ main img {
 .interactive-gallery .text-content {
     flex: 1;
     align-self: flex-start; /* Align the text content to the start (top) */
+    font-family: 'N27-Light', sans-serif; /* Apply regular font */
+}
+
+.interactive-gallery .text-content h2 {
+    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
 }
 
 .new-layout,
@@ -225,12 +280,17 @@ main img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 65%;
 }
 
 .text-image-layout .text-content-right {
     width: 65%;
     text-align: right;
+    font-family: 'N27-Light', sans-serif; /* Apply light font */
+}
+
+.text-image-layout .text-content-right h2{
+    font-family: 'N27-Bold', sans-serif; /* Apply light font */
 }
 
 .text-image-layout img {
@@ -241,42 +301,45 @@ main img {
 
 .text-image-layout .text-content h3 {
     margin-top: 10px;
-    font-family: 'N27-Bold', sans-serif;
+    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
 }
 
 .text-image-layout .text-content p {
-    font-family: 'N27-Light', sans-serif;
+    font-family: 'N27-Light', sans-serif; /* Apply light font */
 }
 
 .case-layout {
-    position: relative;
     text-align: center;
+    cursor: pointer; /* Change cursor to pointer for case-layout elements */
 }
 
 .case-layout .case-header {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     display: flex;
     justify-content: space-between;
     width: calc(100% - 40px); /* Adjust width to account for left and right padding */
+    margin: 20px;
+    margin-top: 80px;
 }
 
 .case-layout .case-header h1 {
     font-size: 3rem;
     margin: 0;
-    font-family: 'N27-Bold', sans-serif;
+    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
 }
 
 .case-layout .case-header .next-case {
-    font-family: 'N27-Regular', sans-serif;
+    font-family: 'N27-Regular', sans-serif; /* Apply regular font */
     color: black;
     text-decoration: none;
     align-self: center;
     font-size: 1rem;
 }
 
-.case-layout img {
+.case-layout .case-image-wrapper {
+    position: relative;
+}
+
+.case-layout .case-image {
     width: 100%;
     height: auto;
     display: block;
@@ -285,16 +348,102 @@ main img {
 .footer-layout {
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px;
+    padding: 2px 20px;
     align-items: flex-start;
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1px;
+    margin-left: 5%;
+    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
 }
 
 .footer-newsletter {
     text-align: right;
+    font-family: 'N27-Light', sans-serif; /* Apply light font */
+    margin-right: 5%;
+}
+
+#hover-image {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#hover-image img {
+    width: 200px; /* Adjust the size of the hover image */
+    height: auto;
+    display: block;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .interactive-gallery {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the start (top) */
+    }
+
+    .interactive-gallery .thumbnail-gallery {
+        flex-direction: row; /* Change thumbnails to a row */
+        flex-wrap: wrap; /* Allow thumbnails to wrap to the next line */
+        justify-content: center; /* Center the thumbnails */
+        gap: 5px; /* Adjust gap between thumbnails */
+        width: 100%; /* Full width for the gallery */
+        margin-top: 20px; /* Space above the thumbnails */
+    }
+
+    .interactive-gallery .thumbnail-gallery .thumbnail {
+        width: auto; /* Let thumbnails adjust width automatically */
+        height: 80px; /* Ensure the thumbnails have the same height */
+        flex: 1 1 calc(50% - 10px); /* Two thumbnails per row */
+        max-width: calc(50% - 10px); /* Ensure max width */
+    }
+
+    .interactive-gallery .text-content {
+        order: 2; /* Move text-content above thumbnail-gallery */
+        width: 100%; /* Full width for the text content */
+    }
+
+    /* Position images above the text they share the screen with */
+    .text-image-layout .text-image-layout-content,
+    .interactive-gallery .big-image,
+    .custom-photography-section .image-content,
+    .text-image-layout .text-content-right {
+        order: -1; /* Move images above text */
+        width: 100%;
+    }
+
+    .text-image-layout .text-content-right {
+        margin-top: 20px; /* Add space between image and text */
+    }
+}
+
+/* Add these styles for the transition effect */
+.transition-block {
+    position: fixed;
+    bottom: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.transition-block.show {
+    bottom: 0;
+}
+
+.transition-block-background {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EBEBEB;
+    z-index: 1001;
+    transition: top 0.5s ease-in-out;
 }
