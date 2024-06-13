@@ -447,3 +447,12 @@ main img {
     z-index: 1001;
     transition: top 0.5s ease-in-out;
 }
+
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
