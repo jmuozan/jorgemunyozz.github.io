@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const dynamicParagraph = document.querySelector('.dynamic-paragraph');
 
     const paragraphs = {
-        "REENCUENTRO": "Description for REENCUENTRO",
-        "AI.RTISANSHIP": "Description for AI.RTISANSHIP",
-        "SLOW FURNITURE": "Description for SLOW FURNITURE",
-        "HAPPY MEAL OF THE FUTURE": "Description for HAPPY MEAL OF THE FUTURE",
-        "GRESAL": "Description for GRESAL",
-        "TALENT-HOP": "Description for TALENT-HOP"
+        "REENCUENTRO": "DESIGNIGN AN EMOTIONAL COLLECTION OF FURNITURE INSPIRED IN THE FISHERMANS OF L'ALBUFERA",
+        "AI.RTISANSHIP": "DESIGNING A NEW WAY TO TEACH CRAFTS",
+        "SLOW FURNITURE": "DESIGNING AN EVOLUTIONARY, DURABLE AND EMOTIONAL PIECE OF FURNITURE",
+        "HAPPY MEAL OF THE FUTURE": "DESIGNING AND PROTOTYPING THE FUTURE OF HAPPY MEAL TOYS",
+        "GRESAL": "DESIGNING A CRAFTS PIECE",
+        "TALENT-HOP": "DESIGNING SUSTAINABLE PACKAGING SOLUTIONS"
     };
 
     contentItems.forEach(item => {
