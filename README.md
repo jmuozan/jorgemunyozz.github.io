@@ -6,13 +6,14 @@
 - [x] About
 - [x] Works
 - [ ] Publications
-- [ ] VIDEO LANDING_1
-- [ ] VIDEO LANDING_2
+- [x] VIDEO LANDING_1
+- [x] VIDEO LANDING_2
 - [ ] Lab (work not for the portfolio)
 - [ ] Blogposts
-- [ ] Honors and Awards
+- [x] Honors and Awards
 - [X] CV
 - [ ] Open source code
 - [ ] Events
-- [ ] AI.RTISANSHIP SITE
+- [x] AI.RTISANSHIP SITE
+- [ ] LINKS TO CERTIFICATES
 
