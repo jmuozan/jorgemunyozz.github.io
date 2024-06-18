@@ -10,24 +10,22 @@ body, html {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: #f5f5f5;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Ensure smooth scrolling */
 }
 
 .image-container {
     display: flex;
     flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    height: 80vh;
-    width: 100vw;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap;
 }
 
 .image-container img {
-    flex: none;
-    scroll-snap-align: start;
-    width: 100vw;
-    height: 80vh;
-    object-fit: cover;
+    height: auto;
+    max-height: 80vh;
+    margin: 0 10px;
+    object-fit: contain;
 }
