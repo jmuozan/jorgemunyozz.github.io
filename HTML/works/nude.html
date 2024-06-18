@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REENCUENTRO</title>
-    <link rel="stylesheet" href="../../CSS/works/gresal.css">
+    <link rel="stylesheet" href="../../CSS/works/nude.css">
 </head>
 <body>
     <a href="../../index.html" class="home-link">HOME</a>
@@ -90,20 +90,18 @@
         window.addEventListener('load', () => {
             const image = document.getElementById('main-image');
             setTimeout(() => {
-                image.style.transform = 'scale(1)'; // Reduce to normal size
-            }, 500); // Delay for the effect
+                image.style.transform = 'scale(1)';
+            }, 500);
         });
 
         function changeImage(element, src) {
             const bigImage = document.getElementById('big-image');
             const thumbnails = document.querySelectorAll('.thumbnail');
 
-            // Remove the selected class from all thumbnails
             thumbnails.forEach(thumbnail => {
                 thumbnail.classList.remove('selected');
             });
 
-            // Add the selected class to the clicked thumbnail
             element.classList.add('selected');
 
             bigImage.classList.add('fade-out');
@@ -146,11 +144,11 @@
             caseImageWrapper.addEventListener('mouseout', hideHoverImage);
 
             caseHeader.addEventListener('click', () => {
-                window.location.href = './mcdonalds.html';
+                window.location.href = './airtisanship.html';
             });
 
             caseImageWrapper.addEventListener('click', () => {
-                window.location.href = './mcdonalds.html';
+                window.location.href = './airtisanship.html';
             });
         });
     </script>
