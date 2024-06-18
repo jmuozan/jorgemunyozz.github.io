@@ -46,7 +46,7 @@ body {
 
 .home-link:hover {
     animation: hoverAnim 0.6s ease forwards;
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline;
 }
 
 @keyframes hoverAnim {
@@ -77,15 +77,15 @@ header {
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-    margin-right: 10%; /* Adjust according to the image width margin */
+    margin-right: 10%;
 }
 
 h1 {
     font-family: 'N27-Bold', sans-serif;
-    font-size: clamp(4rem, 9vw, 9rem); /* Increase the size */
+    font-size: clamp(4rem, 9vw, 9rem);
     margin: 0;
-    align-self: flex-start; /* Align h1 to the start of the flex container */
-    margin-left: 10%; /* Adjust according to the image width margin */
+    align-self: flex-start;
+    margin-left: 10%;
 }
 
 .subheader {
@@ -103,13 +103,13 @@ main {
 }
 
 main img {
-    width: 90%; /* Normal size */
+    width: 90%;
     height: auto;
-    margin: 0 auto; /* Center the image */
-    display: block; /* Ensure it's a block element for centering */
-    transition: transform 1s ease-in-out; /* Add transition for smooth effect */
-    transform-origin: center center; /* Center the transformation */
-    transform: scale(1.5); /* Initially larger */
+    margin: 0 auto;
+    display: block;
+    transition: transform 1s ease-in-out;
+    transform-origin: center center;
+    transform: scale(1.5);
 }
 
 .info-section {
@@ -124,46 +124,46 @@ main img {
     flex-direction: column;
     align-items: flex-start;
     width: 45%;
-    margin-left: 4%; /* Move to the right */
+    margin-left: 4%;
 }
 
 .info-left p {
     margin: 10px 0;
-    font-family: 'N27-Regular', sans-serif; /* Apply regular font */
+    font-family: 'N27-Regular', sans-serif;
 }
 
 .info-left p strong {
     display: block;
     font-weight: bold;
-    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
-    margin-bottom: 5px; /* Space between label and value */
+    font-family: 'N27-Bold', sans-serif;
+    margin-bottom: 5px;
 }
 
 .info-right {
     width: 45%;
     text-align: right;
-    font-family: 'N27-Light', sans-serif; /* Apply light font */
-    margin-right: 4%
+    font-family: 'N27-Light', sans-serif;
+    margin-right: 4%;
 }
 
 .custom-photography-section {
     display: flex;
     justify-content: space-between;
     padding: 40px 20px;
-    align-items: flex-end; /* Align items to the end */
+    align-items: flex-end;
 }
 
 .custom-photography-section .text-content {
-    width: 40%; /* Adjusted to fit better with the larger image */
-    font-family: 'N27-Light', sans-serif; /* Apply regular font */
+    width: 40%;
+    font-family: 'N27-Light', sans-serif;
 }
 
 .custom-photography-section .text-content h2 {
-    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
+    font-family: 'N27-Bold', sans-serif;
 }
 
 .custom-photography-section .image-content {
-    width: 55%; /* Make the image container larger */
+    width: 55%;
 }
 
 .custom-photography-section img {
@@ -174,21 +174,21 @@ main img {
 .interactive-gallery {
     display: flex;
     padding: 40px 20px;
-    align-items: flex-start; /* Align items to the start (top) */
+    align-items: flex-start;
     gap: 20px;
 }
 
 .interactive-gallery .big-image {
     flex: 1;
     position: relative;
-    max-width: 60%; /* Ensure the big image container has a maximum width */
+    max-width: 60%;
 }
 
 .interactive-gallery .big-image img {
     width: 100%;
     height: auto;
     transition: opacity 0.3s ease-in-out;
-    object-fit: cover; /* Ensure the image covers the container without distortion */
+    object-fit: cover;
 }
 
 .fade-out {
@@ -206,12 +206,12 @@ main img {
 }
 
 .interactive-gallery .thumbnail-gallery .thumbnail {
-    width: 80px; /* Ensure the thumbnails have the same width */
+    width: 80px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
-    object-fit: cover; /* Ensure the thumbnails cover the container without distortion */
-    position: relative; /* For positioning the pseudo-element */
+    object-fit: cover;
+    position: relative;
 }
 
 .interactive-gallery .thumbnail-gallery .thumbnail::before {
@@ -221,14 +221,14 @@ main img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.7); /* White filter */
+    background: rgba(255, 255, 255, 0.7);
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none; /* Ensure the filter doesn't interfere with click events */
+    pointer-events: none;
 }
 
 .interactive-gallery .thumbnail-gallery .thumbnail.selected::before {
-    opacity: 1; /* Show the white filter on the selected thumbnail */
+    opacity: 1;
 }
 
 .interactive-gallery .thumbnail-gallery .thumbnail:hover {
@@ -237,12 +237,12 @@ main img {
 
 .interactive-gallery .text-content {
     flex: 1;
-    align-self: flex-start; /* Align the text content to the start (top) */
-    font-family: 'N27-Light', sans-serif; /* Apply regular font */
+    align-self: flex-start;
+    font-family: 'N27-Light', sans-serif;
 }
 
 .interactive-gallery .text-content h2 {
-    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
+    font-family: 'N27-Bold', sans-serif;
 }
 
 .new-layout,
@@ -259,14 +259,14 @@ main img {
 }
 
 .new-layout-2 {
-    padding: 0; /* Remove padding for the section */
+    padding: 0;
 }
 
 .new-layout-2 img {
     width: 100%;
     height: auto;
     display: block;
-    margin: 0; /* Remove margin for the image */
+    margin: 0;
 }
 
 .text-image-layout {
@@ -286,11 +286,11 @@ main img {
 .text-image-layout .text-content-right {
     width: 65%;
     text-align: right;
-    font-family: 'N27-Light', sans-serif; /* Apply light font */
+    font-family: 'N27-Light', sans-serif;
 }
 
-.text-image-layout .text-content-right h2{
-    font-family: 'N27-Bold', sans-serif; /* Apply light font */
+.text-image-layout .text-content-right h2 {
+    font-family: 'N27-Bold', sans-serif;
 }
 
 .text-image-layout img {
@@ -301,22 +301,22 @@ main img {
 
 .text-image-layout .text-content h3 {
     margin-top: 10px;
-    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
+    font-family: 'N27-Bold', sans-serif;
 }
 
 .text-image-layout .text-content p {
-    font-family: 'N27-Light', sans-serif; /* Apply light font */
+    font-family: 'N27-Light', sans-serif;
 }
 
 .case-layout {
     text-align: center;
-    cursor: pointer; /* Change cursor to pointer for case-layout elements */
+    cursor: pointer;
 }
 
 .case-layout .case-header {
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 40px); /* Adjust width to account for left and right padding */
+    width: calc(100% - 40px);
     margin: 20px;
     margin-top: 80px;
 }
@@ -324,11 +324,11 @@ main img {
 .case-layout .case-header h1 {
     font-size: 3rem;
     margin: 0;
-    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
+    font-family: 'N27-Bold', sans-serif;
 }
 
 .case-layout .case-header .next-case {
-    font-family: 'N27-Regular', sans-serif; /* Apply regular font */
+    font-family: 'N27-Regular', sans-serif;
     color: black;
     text-decoration: none;
     align-self: center;
@@ -357,12 +357,12 @@ main img {
     flex-direction: column;
     gap: 1px;
     margin-left: 5%;
-    font-family: 'N27-Bold', sans-serif; /* Apply bold font */
+    font-family: 'N27-Bold', sans-serif;
 }
 
 .footer-newsletter {
     text-align: right;
-    font-family: 'N27-Light', sans-serif; /* Apply light font */
+    font-family: 'N27-Light', sans-serif;
     margin-right: 5%;
 }
 
@@ -374,7 +374,7 @@ main img {
 }
 
 #hover-image img {
-    width: 200px; /* Adjust the size of the hover image */
+    width: 200px;
     height: auto;
     display: block;
 }
@@ -382,42 +382,94 @@ main img {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .interactive-gallery {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: flex-start; /* Align items to the start (top) */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .interactive-gallery .big-image {
+        max-width: 95%;
+    }
+
+    .interactive-gallery .big-image {
+        width: 100%;
+    }
+
+    .interactive-gallery .big-image img {
+        width: 100%;
+        height: auto;
     }
 
     .interactive-gallery .thumbnail-gallery {
-        flex-direction: row; /* Change thumbnails to a row */
-        flex-wrap: wrap; /* Allow thumbnails to wrap to the next line */
-        justify-content: center; /* Center the thumbnails */
-        gap: 5px; /* Adjust gap between thumbnails */
-        width: 100%; /* Full width for the gallery */
-        margin-top: 20px; /* Space above the thumbnails */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        width: 100%;
+        margin-top: 20px;
     }
 
     .interactive-gallery .thumbnail-gallery .thumbnail {
-        width: auto; /* Let thumbnails adjust width automatically */
-        height: 80px; /* Ensure the thumbnails have the same height */
-        flex: 1 1 calc(50% - 10px); /* Two thumbnails per row */
-        max-width: calc(50% - 10px); /* Ensure max width */
+        width: auto;
+        height: 80px;
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
     }
 
     .interactive-gallery .text-content {
-        order: 2; /* Move text-content above thumbnail-gallery */
-        width: 100%; /* Full width for the text content */
+        order: 2;
+        width: 100%;
     }
 
-    /* Position images above the text they share the screen with */
     .text-image-layout .text-image-layout-content,
     .interactive-gallery .big-image,
     .custom-photography-section .image-content,
     .text-image-layout .text-content-right {
-        order: -1; /* Move images above text */
+        order: -1;
         width: 100%;
     }
 
     .text-image-layout .text-content-right {
-        margin-top: 20px; /* Add space between image and text */
+        margin-top: 20px;
+    }
+
+    header .header-content h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    header .header-content .subheader {
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Custom styles for specific sections */
+    .custom-photography-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-photography-section .text-content,
+    .custom-photography-section .image-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-image-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-image-layout .text-image-layout-content,
+    .text-image-layout .text-content-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-image-layout .text-content-right {
+        margin-top: 20px;
     }
 }
 
@@ -448,11 +500,31 @@ main img {
     transition: top 0.5s ease-in-out;
 }
 
-
 .video-section {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0px;
+    width: 100%;
 }
 
+.responsive-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    background: #000;
+    margin: 0 auto;
+}
+
+.responsive-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
