@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('container');
     const imageContainer = document.getElementById('image-container');
-    const images = imageContainer.querySelectorAll('img');
+    const images = Array.from(imageContainer.querySelectorAll('img'));
     const totalImages = images.length;
-    const halfLength = totalImages / 6;
 
     container.scrollLeft = imageContainer.scrollWidth / 4;
 
@@ -16,10 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     container.addEventListener('scroll', () => {
-        if (container.scrollLeft >= imageContainer.scrollWidth / 2) {
-            container.scrollLeft = container.scrollLeft - (imageContainer.scrollWidth / 2);
+        if (container.scrollLeft >= imageContainer.scrollWidth - container.clientWidth) {
+            images.forEach(img => {
+                const clone = img.cloneNode();
+                imageContainer.appendChild(clone);
+            });
         } else if (container.scrollLeft <= 0) {
-            container.scrollLeft = container.scrollLeft + (imageContainer.scrollWidth / 2);
+            const currentScrollWidth = imageContainer.scrollWidth;
+            images.reverse().forEach(img => {
+                const clone = img.cloneNode();
+                imageContainer.insertBefore(clone, imageContainer.firstChild);
+            });
+            container.scrollLeft = currentScrollWidth / 4;
         }
     });
 });
