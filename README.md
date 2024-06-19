@@ -13,7 +13,7 @@
 - [x] Honors and Awards
 - [X] CV
 - [ ] Open source code
-- [ ] Events
+- [X] GALLERY
 - [x] AI.RTISANSHIP SITE
 - [ ] LINKS TO CERTIFICATES
 
