@@ -1,32 +1,57 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('container');
-    const imageContainer = document.getElementById('image-container');
-    const images = Array.from(imageContainer.querySelectorAll('img'));
-    const totalImages = images.length;
+let target = 0;
+let current = 0;
+let ease = 0.075;
 
-    container.scrollLeft = imageContainer.scrollWidth / 4;
+const slider = document.querySelector(".slider");
+const sliderWrapper = document.querySelector(".slider-wrapper");
+const slides = document.querySelectorAll(".slide");
 
-    container.addEventListener('wheel', (event) => {
-        event.preventDefault();
-        container.scrollBy({
-            left: event.deltaY * 4, // Adjust the multiplier for faster/slower scroll
-            behavior: 'smooth'
-        });
-    });
+let maxScroll = sliderWrapper.offsetWidth - window.innerWidth;
 
-    container.addEventListener('scroll', () => {
-        if (container.scrollLeft >= imageContainer.scrollWidth - container.clientWidth) {
-            images.forEach(img => {
-                const clone = img.cloneNode();
-                imageContainer.appendChild(clone);
-            });
-        } else if (container.scrollLeft <= 0) {
-            const currentScrollWidth = imageContainer.scrollWidth;
-            images.reverse().forEach(img => {
-                const clone = img.cloneNode();
-                imageContainer.insertBefore(clone, imageContainer.firstChild);
-            });
-            container.scrollLeft = currentScrollWidth / 4;
+function lerp(start, end, factor) {
+    return start + (end - start) * factor;
+}
+
+function updateScaleAndPosition() {
+    slides.forEach((slide) => {
+        const rect = slide.getBoundingClientRect();
+        const centerPosition = (rect.left + rect.right) / 2;
+        const distanceFromCenter = centerPosition - window.innerWidth / 2;
+
+        let scale, offsetX;
+        if (distanceFromCenter > 0) {
+            scale = Math.min(1.75, 1 + distanceFromCenter / window.innerWidth);
+            offsetX = (scale - 1) * 300;
+        } else {
+            scale = Math.max(
+                0.5, 
+                1 - Math.abs(distanceFromCenter) / window.innerWidth
+            );
+            offsetX = 0;
         }
+
+        gsap.set(slide, { scale: scale, x: offsetX });
     });
+}
+
+function update() {
+    current = lerp(current, target, ease);
+
+    gsap.set(".slider-wrapper", {
+        x: -current,
+    });
+
+    updateScaleAndPosition();
+    requestAnimationFrame(update);
+}
+window.addEventListener("resize", () => {
+    maxScroll = sliderWrapper.offsetWidth - window.innerWidth;
 });
+
+window.addEventListener("wheel", (e) => {
+    target += e.deltaY;
+    target = Math.max(0, target);
+    target = Math.min(maxScroll, target);
+});
+
+update();
