@@ -1,3 +1,39 @@
+@font-face {
+    font-family: 'N27';
+    src: url('../FONT/N27-Bold.woff2') format('woff2'),
+         url('../FONT/N27-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Regular';
+    src: url('../FONT/N27-Regular.woff2') format('woff2'),
+         url('../FONT/N27-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-RegularItalic';
+    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
+         url('../FONT/N27-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Light';
+    src: url('../FONT/N27-Light.woff2') format('woff2'),
+         url('../FONT/N27-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +45,11 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    font-family: 'N27-Regular', sans-serif;
+}
+h1{
+    font-size: 4rem;
+    line-height: 0.8;
 }
 
 .logo {
@@ -18,8 +59,8 @@ body {
 .logo a {
     text-decoration: none;
     color: #000;
-    font-family: "PP Neue Montreal";
-    font-weight: 500;
+    font-family: 'N27', sans-serif;
+    font-weight: bold;
 }
 .sidebar {
     width: 100vh;
@@ -29,7 +70,7 @@ body {
     transform: rotate(-90deg) translate(-100%, 0);
     transform-origin: left top;
     padding: 1.5em 3em;
-    font-family: "PP Neue Montreal";
+    font-family: 'N27-Light', sans-serif;
 }
 .sidebar > div:nth-child(1) {
     flex: 2;
@@ -41,7 +82,7 @@ body {
     gap: 6em;
 }
 p#header {
-    font-family: "Timmons NY 2.0";
+    font-family: 'N27', sans-serif;
     text-transform: uppercase;
     font-size: 7.5rem;
     line-height: 85%;
@@ -64,11 +105,14 @@ p#header {
 }
 .slide {
     width: 400px;
-    height: 500px;
+    height: auto;
     background: #e3e3e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-img {
+.slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 }

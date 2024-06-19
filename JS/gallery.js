@@ -5,6 +5,7 @@ let ease = 0.075;
 const slider = document.querySelector(".slider");
 const sliderWrapper = document.querySelector(".slider-wrapper");
 const slides = document.querySelectorAll(".slide");
+const description = document.getElementById("description");
 
 let maxScroll = sliderWrapper.offsetWidth - window.innerWidth;
 
@@ -44,6 +45,7 @@ function update() {
     updateScaleAndPosition();
     requestAnimationFrame(update);
 }
+
 window.addEventListener("resize", () => {
     maxScroll = sliderWrapper.offsetWidth - window.innerWidth;
 });
@@ -52,6 +54,13 @@ window.addEventListener("wheel", (e) => {
     target += e.deltaY;
     target = Math.max(0, target);
     target = Math.min(maxScroll, target);
+});
+
+slides.forEach((slide) => {
+    slide.addEventListener("mouseover", () => {
+        const img = slide.querySelector("img");
+        description.innerHTML = img.getAttribute("data-description");
+    });
 });
 
 update();
