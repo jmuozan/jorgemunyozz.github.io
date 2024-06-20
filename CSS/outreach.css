@@ -62,14 +62,19 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background: #000;
-    color: #fff;
+    background: #EBEBEB;
+    color: black;
 }
 
 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 1s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.5);
 }
 
 .container {
@@ -92,7 +97,7 @@ nav {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-family: "N27-Bold";
     text-transform: uppercase;
     font-size: 12px;
@@ -112,7 +117,7 @@ a {
 .marker {
     width: 1px;
     height: 100%;
-    background: #fff;
+    background: black;
 }
 
 .scroller {
@@ -122,7 +127,7 @@ a {
     transform: translate(0%, -50%);
     font-family: "N27-Bold";
     text-transform: uppercase;
-    background: #000;
+    background: #EBEBEB;
     cursor: pointer;
     line-height: 120%;
 }
@@ -140,6 +145,7 @@ section {
 .img {
     width: 100%;
     height: 100%;
+    overflow: hidden; /* Ensure the image stays within its container */
 }
 
 h1 {
