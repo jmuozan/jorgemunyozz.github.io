@@ -1,3 +1,57 @@
+@font-face {
+    font-family: 'N27-Medium';
+    src: url('../FONT/N27-Medium.woff2') format('woff2'),
+         url('../FONT/N27-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-MediumItalic';
+    src: url('../FONT/N27-MediumItalic.woff2') format('woff2'),
+         url('../FONT/N27-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Bold';
+    src: url('../FONT/N27-Bold.woff2') format('woff2'),
+         url('../FONT/N27-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Regular';
+    src: url('../FONT/N27-Regular.woff2') format('woff2'),
+         url('../FONT/N27-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-RegularItalic';
+    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
+         url('../FONT/N27-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura-Bold-Italic';
+    src: url('../FONT/Futura-Bold-Italic.woff2') format('woff2'),
+         url('../FONT/Futura-Bold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +93,7 @@ nav {
 a {
     text-decoration: none;
     color: #fff;
-    font-family: "Akkurat Mono";
+    font-family: "N27-Bold";
     text-transform: uppercase;
     font-size: 12px;
 }
@@ -66,7 +120,7 @@ a {
     top: 50%;
     left: 0;
     transform: translate(0%, -50%);
-    font-family: "Akkurat Mono";
+    font-family: "N27-Bold";
     text-transform: uppercase;
     background: #000;
     cursor: pointer;
@@ -90,7 +144,7 @@ section {
 
 h1 {
     width: 50%;
-    font-family: "PP Neue Montreal";
+    font-family: "N27-Bold";
     font-weight: 400;
     font-size: 40px;
     text-transform: uppercase;
@@ -98,7 +152,7 @@ h1 {
 
 p {
     width: 40%;
-    font-family: "PP Neue Montreal";
+    font-family: "N27-Regular";
     font-weight: 400;
     font-size: 16px;
 }

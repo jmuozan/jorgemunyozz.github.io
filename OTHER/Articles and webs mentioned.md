@@ -10,7 +10,7 @@
 
 - [Catàleg exposició Premis Artesania CV 2022](https://www.centroartesaniacv.com/galeria/documentos/1672397676_1.PDF)  
 
-- [Elisava Grad Show]()
+- [Elisava Grad Show](https://www.elisava.net/en/agenda/elisavas-masters-grad-show-gathers-the-final-projects-by-students-of-eight-master-programmes/)
 
 - [MDEFest]()
 
