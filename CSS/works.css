@@ -16,6 +16,23 @@
     font-display: swap;
 }
 
+.home-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'N27-Bold', sans-serif;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.6s ease;
+    z-index: 1000;
+}
+
+.home-link:hover {
+    animation: hoverAnim 0.6s ease forwards;
+    text-decoration: underline;
+}
+
 body {
     margin: 0;
     font-family: 'N27-Regular', Arial, sans-serif;
@@ -47,7 +64,7 @@ body.animate-bg::before {
 
 .header {
     position: absolute;
-    top: 10px;
+    top: 25px;
     left: 20px;
     text-align: left;
     font-size: clamp(2rem, 8vw, 10rem);
