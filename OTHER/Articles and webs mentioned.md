@@ -1,5 +1,7 @@
 - [InfoSOS slow furniture](https://infosos.es/jorge-munoz-el-concepto-de-muebles-que-pueden-evolucionar-y-son-sostenibles-tiene-un-gran-futuro/)
 
+- [UNESCO IIDA Awards](http://iida.unitrain.org/en/about/winners/)
+
 - [UPV Unesco IIDA Awards](https://www.upv.es/noticias-upv/noticia-14469-premios-unesco-es.html)
 
 - [Talent-Hop 2022](https://www.etsid.upv.es/talent-hop-2022-primera-edicion-de-los-premios-de-diseno-para-productos-de-las-tiendas-ale-hop/)
