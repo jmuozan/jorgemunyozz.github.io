@@ -78,10 +78,41 @@ body {
     padding-top: 0.5%;
     text-decoration: none;
     align-self: flex-start; /* Ensure the home link stays at the top */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease; /* Add transition for underline */
 }
 
 .home-link:hover {
     text-decoration: underline;
+    animation: moveUp 0.3s ease-in-out forwards, moveDown 0.3s ease-in-out 0.3s forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .outreach-text {
@@ -182,7 +213,22 @@ p {
 }
 
 .img-container img {
-    max-height: 75vh; /* Set maximum height of images to 75% of viewport height */
+    max-height: 85vh; /* Set maximum height of images to 75% of viewport height */
     height: auto;
     width: auto; /* Allow images to scale */
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center; /* Ensure the image scales from its center */
+}
+
+.img-container img:hover {
+    animation: enlarge 1.3s ease-in-out forwards;
+}
+
+@keyframes enlarge {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2); /* Adjust the scale factor as needed */
+    }
 }

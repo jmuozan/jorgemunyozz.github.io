@@ -573,10 +573,6 @@ button, .arrow-container {
     transition: background-color 0.3s ease;
   }
   
-  .media-menu .links-column a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
 
 /* Add these styles for the transition effect */
 .transition-block {
