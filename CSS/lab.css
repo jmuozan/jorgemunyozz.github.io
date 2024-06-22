@@ -172,6 +172,7 @@ body {
     width: 60%; /* Set a smaller fixed width for all images */
     max-width: 150px; /* Ensure images are smaller */
     margin: 10px 0;
+    cursor: pointer; /* Change cursor to pointer for better UX */
 }
 
 /* Add these styles for the transition effect */
@@ -199,4 +200,37 @@ body {
     background-color: #EBEBEB;
     z-index: 1001;
     transition: top 0.5s ease-in-out;
+}
+
+/* Styles for enlarged image */
+.enlarged-image-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlarged-image-container img {
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+.enlarged-image-container.show {
+    display: flex;
+    animation: enlarge 0.5s ease-in-out forwards;
+}
+
+@keyframes enlarge {
+    from {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
 }
