@@ -91,7 +91,7 @@ body {
 
 .outreach-title {
     font-family: 'N27-Bold', Arial, sans-serif;
-    font-size: 6rem; /* Adjust font size as needed */
+    font-size: 4rem; /* Adjust font size as needed */
     color: #333;
     display: block;
 }
@@ -123,11 +123,19 @@ body {
 }
 
 section {
-    min-width: 100vw; /* Each section takes full viewport width */
     flex: 0 0 auto; /* Disable flex-grow and flex-shrink */
     padding: 20px;
     box-sizing: border-box;
     scroll-snap-align: start; /* Snap each section to the start of the viewport */
+    display: flex; /* Use flexbox for section layout */
+    flex-direction: row; /* Arrange child elements in a row */
+    margin: 0; /* Remove margin */
+}
+
+.text-columns {
+    display: flex;
+    flex-direction: column; /* Arrange text elements in a column */
+    flex: 1; /* Allow text columns to take available space */
 }
 
 h1 {
@@ -140,6 +148,10 @@ p {
     font-family: 'N27-Regular', Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
+    padding-left: 10%;
+    max-width: 600px; /* Adjust the value to your desired width */
+    flex: 1; /* Allow paragraphs to take available space */
+    margin: 0 auto; /* Center the paragraph */
 }
 
 .img-container {
