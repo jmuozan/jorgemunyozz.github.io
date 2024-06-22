@@ -2,7 +2,7 @@
 
 ## Things to add to the website:
 
-- [ ] OUTREACH
+- [x] OUTREACH
 - [ ] LAB 
 - [ ] BLOG
 - [ ] UPDATE CV
