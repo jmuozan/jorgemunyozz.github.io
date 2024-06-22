@@ -128,20 +128,37 @@ body {
 
 .left-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%; /* Significantly reduced width */
+    justify-content: flex-end; /* Move content to the right */
+    align-items: flex-start; /* Align items to the top */
+    width: 30%; /* Adjust width to make room for more right section */
     height: 100%;
+    padding-right: 10%; /* Add padding to push the text further */
+    padding-top: 5%; /* Move the text up */
+}
+
+.center-text {
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 12rem; /* Adjust font size if needed */
+    padding-left: 2%; /* Remove any default margin */
+}
+
+.subtitle-text {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 1.5rem; /* Smaller font size */
+    color: #666; /* Lighter color */
+    margin-top: 0.1rem;
+    padding-left: 6%; /* Space between LAB and subtitle */
 }
 
 .right-section {
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align items to the top */
-    width: 80%; /* Significantly increased width */
+    justify-content: flex-start; /* Align items to the left of the section */
+    align-items: flex-start;
+    width: 70%; /* Adjust width to move it further to the right */
     height: 100%;
     overflow-y: auto; /* Enable vertical scrolling */
-    padding-top: 20px; /* Add padding to ensure the first image is fully visible */
+    padding-top: 10px;
+    padding-left: 45%; /* Add padding to move the section more to the right */
 }
 
 .carousel {
@@ -155,11 +172,6 @@ body {
     width: 60%; /* Set a smaller fixed width for all images */
     max-width: 150px; /* Ensure images are smaller */
     margin: 10px 0;
-}
-
-.center-text {
-    font-family: 'N27-Bold', Arial, sans-serif;
-    font-size: 12rem;
 }
 
 /* Add these styles for the transition effect */
