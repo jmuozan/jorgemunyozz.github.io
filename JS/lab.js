@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
             // Set final position and size
             requestAnimationFrame(() => {
                 enlargedImageContainer.classList.add('show');
-                enlargedImageContainer.style.top = '35%';
+                enlargedImageContainer.style.top = '25%';
                 enlargedImageContainer.style.left = '50%';
-                enlargedImageContainer.style.transform = 'translate(-50%, -35%)';
+                enlargedImageContainer.style.transform = 'translate(-40%, -25%)';
                 enlargedImageContainer.style.width = '55vw';
                 enlargedImageContainer.style.height = 'auto'; // Maintain aspect ratio
             });
