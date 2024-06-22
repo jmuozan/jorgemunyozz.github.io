@@ -31,13 +31,23 @@ document.addEventListener("DOMContentLoaded", function() {
     // Auto-scroll carousel (example functionality)
     const carousel = document.querySelector('.carousel');
     let scrollPosition = 0;
-    setInterval(() => {
-        scrollPosition += 1;
-        carousel.scrollTop = scrollPosition;
-        if (scrollPosition >= carousel.scrollHeight - carousel.clientHeight) {
-            scrollPosition = 0;
-        }
-    }, 50);
+    let scrollInterval;
+
+    function startAutoScroll() {
+        scrollInterval = setInterval(() => {
+            scrollPosition += 1;
+            carousel.scrollTop = scrollPosition;
+            if (scrollPosition >= carousel.scrollHeight - carousel.clientHeight) {
+                scrollPosition = 0;
+            }
+        }, 50);
+    }
+
+    function stopAutoScroll() {
+        clearInterval(scrollInterval);
+    }
+
+    startAutoScroll();
 
     // New code for enlarging image
     const images = document.querySelectorAll('.carousel img');
@@ -46,27 +56,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
     images.forEach(image => {
         image.addEventListener('click', function() {
+            stopAutoScroll();
             const rect = this.getBoundingClientRect();
             enlargedImage.src = this.src;
+
+            // Set initial position and size
             enlargedImageContainer.style.top = `${rect.top}px`;
             enlargedImageContainer.style.left = `${rect.left}px`;
             enlargedImageContainer.style.width = `${rect.width}px`;
             enlargedImageContainer.style.height = `${rect.height}px`;
+            enlargedImageContainer.style.transform = 'translate(0, 0)';
             enlargedImageContainer.style.display = 'flex';
 
+            // Trigger reflow to ensure the transition starts
+            window.getComputedStyle(enlargedImageContainer).transform;
+
+            // Set final position and size
             requestAnimationFrame(() => {
                 enlargedImageContainer.classList.add('show');
-                enlargedImageContainer.style.top = '50%';
+                enlargedImageContainer.style.top = '35%';
                 enlargedImageContainer.style.left = '50%';
-                enlargedImageContainer.style.transform = 'translate(-50%, -50%)';
-                enlargedImageContainer.style.width = '';
-                enlargedImageContainer.style.height = '';
+                enlargedImageContainer.style.transform = 'translate(-50%, -35%)';
+                enlargedImageContainer.style.width = '55vw';
+                enlargedImageContainer.style.height = 'auto'; // Maintain aspect ratio
             });
         });
     });
 
     enlargedImageContainer.addEventListener('click', function() {
-        this.classList.remove('show');
-        this.style.display = 'none';
+        enlargedImageContainer.classList.remove('show');
+        enlargedImageContainer.style.display = 'none';
+        startAutoScroll();
     });
 });
