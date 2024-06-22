@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    width: 100vw; /* Ensure the container takes up the full width of the viewport */
+    scroll-behavior: smooth; /* Optional: Enable smooth scrolling */
+}
+
+/* Hide the scrollbar */
+.container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.container {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+section {
+    min-width: 100vw; /* Each section takes full viewport width */
+    flex: 0 0 auto; /* Disable flex-grow and flex-shrink */
+    padding: 20px;
+    box-sizing: border-box;
+    scroll-snap-align: start; /* Snap each section to the start of the viewport */
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.img-container {
+    display: flex; /* Use flexbox to arrange images horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling if images overflow */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Hide the scrollbar in the image container */
+.img-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.img-container {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.img-container a {
+    display: inline-block; /* Display images in a row */
+    vertical-align: middle; /* Align images vertically */
+    margin-right: 10px; /* Optional: Add some spacing between images */
+}
+
+.img-container a:last-child {
+    margin-right: 0; /* Remove margin from last image to prevent extra space */
+}
+
+.img-container img {
+    max-height: 75vh; /* Set maximum height of images to 75% of viewport height */
+    height: auto;
+    width: auto; /* Allow images to scale */
+}
