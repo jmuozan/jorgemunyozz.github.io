@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Scroll to the leftmost part of the container on page load
     document.documentElement.scrollLeft = 0;
 
-    // Apply transition effect to HOME link
     document.querySelector('.home-link').addEventListener('click', function(event) {
         event.preventDefault();
         const href = this.href;
@@ -18,18 +16,26 @@ document.addEventListener("DOMContentLoaded", function() {
         transitionBlockBackground.classList.add('transition-block-background');
         document.body.appendChild(transitionBlockBackground);
 
-        // Trigger the transition
         setTimeout(() => {
             transitionBlock.classList.add('show');
-        }, 10); // Slight delay to ensure the transition is visible
+        }, 10);
 
-        // Add event listener for transition end
         transitionBlock.addEventListener('transitionend', () => {
-            // Start the second transition
             transitionBlockBackground.style.top = '0';
             transitionBlockBackground.addEventListener('transitionend', () => {
-                window.location.href = href; // Redirect to the new page after transition
+                window.location.href = href;
             });
         });
     }
+
+    // Auto-scroll carousel (example functionality)
+    const carousel = document.querySelector('.carousel');
+    let scrollPosition = 0;
+    setInterval(() => {
+        scrollPosition += 1;
+        carousel.scrollTop = scrollPosition;
+        if (scrollPosition >= carousel.scrollHeight - carousel.clientHeight) {
+            scrollPosition = 0;
+        }
+    }, 50);
 });
