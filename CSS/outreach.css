@@ -52,147 +52,210 @@
     font-display: swap;
 }
 
-.home-link {
-    position: absolute;
-    top: 20px;
-    left: 35px;
-    font-family: 'N27-Bold', sans-serif;
-    font-size: 1rem;
-    color: black;
-    text-decoration: none;
-    transition: all 0.6s ease;
+body {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.home-link {
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 1rem;
+    color: #333;
+    padding-left: 1%;
+    padding-top: 0.5%;
+    text-decoration: none;
+    align-self: flex-start; /* Ensure the home link stays at the top */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease; /* Add transition for underline */
 }
 
 .home-link:hover {
-    animation: hoverAnim 0.6s ease forwards;
     text-decoration: underline;
+    animation: moveUp 0.3s ease-in-out forwards, moveDown 0.3s ease-in-out 0.3s forwards;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-    background: #EBEBEB;
-    color: black;
+@keyframes moveDown {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-img {
-    width: auto;
-    height: 75%; /* Adjusted to the desired height */
-    object-fit: cover;
-    transition: transform 1s ease-in-out;
+.outreach-text {
+    text-align: right;
+    padding-right: 2%;
 }
 
-img:hover {
-    transform: scale(1.5);
+.outreach-title {
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 4rem; /* Adjust font size as needed */
+    color: #333;
+    display: block;
+}
+
+.outreach-subtitle {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 0.75rem;
+    color: #666;
+    display: block;
 }
 
 .container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1500vw;
-    height: 90vh;
     display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    width: 100vw; /* Ensure the container takes up the full width of the viewport */
+    scroll-behavior: smooth; /* Optional: Enable smooth scrolling */
+    margin-top: 50px; /* Add margin to avoid overlap with the fixed top bar */
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    padding: 2em;
-    display: flex;
-    justify-content: space-between;
+/* Hide the scrollbar */
+.container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
 }
 
-a {
-    text-decoration: none;
-    color: black;
-    font-family: "N27-Bold";
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-.timeline {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 10vh;
-    padding: 2.25em 1em;
-    display: flex;
-    justify-content: space-around;
-}
-
-.marker {
-    width: 1px;
-    height: 100%;
-    background: black;
-}
-
-.scroller {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0%, -50%);
-    font-family: "N27-Bold";
-    text-transform: uppercase;
-    background: #EBEBEB;
-    cursor: pointer;
-    line-height: 120%;
+.container {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
 }
 
 section {
-    position: relative;
-    width: auto; /* Allow the section to grow in width */
-    height: 100%;
-    padding: 6em 2em 0 2em;
+    flex: 0 0 auto; /* Disable flex-grow and flex-shrink */
+    padding: 20px;
+    box-sizing: border-box;
+    scroll-snap-align: start; /* Snap each section to the start of the viewport */
+    display: flex; /* Use flexbox for section layout */
+    flex-direction: row; /* Arrange child elements in a row */
+    margin: 0; /* Remove margin */
+}
+
+.text-columns {
     display: flex;
-    gap: 2em;
-    overflow: visible; /* Ensure all images are visible */
-}
-
-.img {
-    flex: 0 0 auto;
-    height: 100%; /* Maintain the height for consistency */
-    overflow: hidden;
-}
-
-.img img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 1s ease-in-out;
-}
-
-.img:hover img {
-    transform: scale(1.05);
+    flex-direction: column; /* Arrange text elements in a column */
+    flex: 1; /* Allow text columns to take available space */
 }
 
 h1 {
-    width: 50%;
-    font-family: "N27-Bold";
-    font-weight: 400;
-    font-size: 40px;
-    text-transform: uppercase;
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 p {
-    width: 40%;
-    font-family: "N27-Regular";
-    font-weight: 400;
-    font-size: 16px;
-    text-align: right; /* Align text to the right */
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 10%;
+    max-width: 600px; /* Adjust the value to your desired width */
+    flex: 1; /* Allow paragraphs to take available space */
+    margin: 0 auto; /* Center the paragraph */
 }
 
-#section-1, #section-13 {
-    display: flex;
-    justify-content: space-between;
+.img-container {
+    display: flex; /* Use flexbox to arrange images horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling if images overflow */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Hide the scrollbar in the image container */
+.img-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.img-container {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.img-container a {
+    display: inline-block; /* Display images in a row */
+    vertical-align: middle; /* Align images vertically */
+    margin-right: 10px; /* Optional: Add some spacing between images */
+}
+
+.img-container a:last-child {
+    margin-right: 0; /* Remove margin from last image to prevent extra space */
+}
+
+.img-container img {
+    max-height: 85vh; /* Set maximum height of images to 75% of viewport height */
+    height: auto;
+    width: auto; /* Allow images to scale */
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center; /* Ensure the image scales from its center */
+}
+
+.img-container img:hover {
+    animation: enlarge 1.3s ease-in-out forwards;
+}
+
+@keyframes enlarge {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2); /* Adjust the scale factor as needed */
+    }
+}
+
+/* Add these styles for the transition effect */
+.transition-block {
+    position: fixed;
+    bottom: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.transition-block.show {
+    bottom: 0;
+}
+
+.transition-block-background {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EBEBEB;
+    z-index: 1001;
+    transition: top 0.5s ease-in-out;
 }
