@@ -14,4 +14,8 @@ Also you can check inside ```OTHER/REFERENCES``` the websites I used as an inspi
 - [ ] UPDATE CV
 - [ ] MAKE PDF CV
 - [ ] LINKS TO CERTIFICATES
+- [ ] RESPONSIVE OUTREACH
+- [ ] RESPONSIVE GALLERY
+- [ ] OPTIMIZE WEB
+- [ ] TRANSLATIONS
 

@@ -28,37 +28,41 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Auto-scroll carousel (example functionality)
-    const carousel = document.querySelector('.carousel');
-    let scrollPosition = 0;
-    let scrollInterval;
-
-    function startAutoScroll() {
-        scrollInterval = setInterval(() => {
-            scrollPosition += 1;
-            carousel.scrollTop = scrollPosition;
-            if (scrollPosition >= carousel.scrollHeight - carousel.clientHeight) {
-                scrollPosition = 0;
-            }
-        }, 50);
-    }
-
-    function stopAutoScroll() {
-        clearInterval(scrollInterval);
-    }
-
-    startAutoScroll();
-
-    // New code for enlarging image
+    // New code for enlarging image and showing unique content
     const images = document.querySelectorAll('.carousel img');
     const enlargedImageContainer = document.getElementById('enlargedImageContainer');
     const enlargedImage = document.getElementById('enlargedImage');
 
-    images.forEach(image => {
+    const imageContents = [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatem, voluptatum iure sequi obcaecati quibusdam tempora illum repudiandae reiciendis ducimus blanditiis laudantium sint adipisci quasi delectus ipsa doloribus! Illum, modi.Hic odio rem placeat eligendi eaque! Deserunt doloremque placeat eius consectetur vero, laboriosam repudiandae facere ipsum consequuntur iste aliquid illo commodi. Minus ab non iste rem. Dignissimos, voluptatibus excepturi? Nostrum?Harum aliquid adipisci molestiae asperiores omnis nobis accusantium ducimus sapiente quibusdam porro esse laborum rerum amet, laudantium exercitationem architecto repudiandae earum, optio impedit vel accusamus. Beatae sit nostrum rerum! Modi.Totam ea, quos non officia impedit vel est et sit reiciendis beatae ducimus optio, animi, incidunt aperiam ad excepturi possimus voluptatum dolorum porro tempore facere. Qui quod delectus deleniti. Magnam.Vitae totam a alias quo autem obcaecati temporibus quae ullam, necessitatibus corrupti quaerat maxime praesentium rem reprehenderit optio repudiandae incidunt ratione. Et magni libero illo! Impedit sapiente velit eius asperiores",
+        "This is the content for Image 2.",
+        "This is the content for Image 3.",
+        "This is the content for Image 4.",
+        "This is the content for Image 5.",
+        "This is the content for Image 6.",
+        "This is the content for Image 7.",
+        "This is the content for Image 8.",
+        "This is the content for Image 9."
+    ];
+
+    function createNewContent(content) {
+        const newContent = document.createElement('div');
+        newContent.classList.add('new-content');
+        newContent.innerHTML = `<p>${content}</p>`;
+        enlargedImageContainer.appendChild(newContent);
+        console.log("New content added:", content); // Debugging line
+    }
+
+    images.forEach((image, index) => {
         image.addEventListener('click', function() {
-            stopAutoScroll();
             const rect = this.getBoundingClientRect();
             enlargedImage.src = this.src;
+
+            // Remove existing new content
+            const existingContent = document.querySelector('.new-content');
+            if (existingContent) {
+                existingContent.remove();
+            }
 
             // Set initial position and size
             enlargedImageContainer.style.top = `${rect.top}px`;
@@ -71,14 +75,20 @@ document.addEventListener("DOMContentLoaded", function() {
             // Trigger reflow to ensure the transition starts
             window.getComputedStyle(enlargedImageContainer).transform;
 
-            // Set final position and size
+            // Set final position and size with animation
             requestAnimationFrame(() => {
                 enlargedImageContainer.classList.add('show');
-                enlargedImageContainer.style.top = '25%';
+                enlargedImageContainer.style.top = '50%';
                 enlargedImageContainer.style.left = '50%';
-                enlargedImageContainer.style.transform = 'translate(-40%, -25%)';
-                enlargedImageContainer.style.width = '55vw';
+                enlargedImageContainer.style.transform = 'translate(-50%, -50%)';
+                enlargedImageContainer.style.width = '50vw';
                 enlargedImageContainer.style.height = 'auto'; // Maintain aspect ratio
+
+                // Add new content after 1 second
+                setTimeout(() => {
+                    createNewContent(imageContents[index]);
+                    document.querySelector('.new-content').classList.add('fade-in');
+                }, 1000);
             });
         });
     });
@@ -86,6 +96,10 @@ document.addEventListener("DOMContentLoaded", function() {
     enlargedImageContainer.addEventListener('click', function() {
         enlargedImageContainer.classList.remove('show');
         enlargedImageContainer.style.display = 'none';
-        startAutoScroll();
+        // Remove new content when closing the image
+        const newContent = document.querySelector('.new-content');
+        if (newContent) {
+            newContent.remove();
+        }
     });
 });
