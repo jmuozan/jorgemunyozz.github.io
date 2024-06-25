@@ -62,7 +62,8 @@ body {
     padding: 0;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     background: #EBEBEB;
@@ -126,7 +127,7 @@ body {
 .container {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Updated to 100vh for full height */
     margin-top: 1%;
     overflow: hidden;
 }
@@ -160,7 +161,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     width: 70%;
-    height: 100%;
+    height: 100%; /* Updated to 100% for full height */
     overflow: hidden;
     padding-top: 10px;
     padding-left: 50%;
@@ -172,7 +173,7 @@ body {
     align-items: center;
     width: 100%;
     overflow-y: auto;
-    height: 80vh;
+    height: 100%; /* Ensures carousel takes full height */
 }
 
 .carousel::-webkit-scrollbar {
@@ -184,6 +185,41 @@ body {
     max-width: 150px;
     margin: 10px 0;
     cursor: pointer;
+}
+
+.project-info-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+}
+
+.project-info-left, .project-info-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-info-text {
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 1rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.project-info-title {
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.project-info-description {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
 }
 
 /* Transition effect styles */
@@ -246,11 +282,44 @@ body {
 }
 
 .new-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
     margin-top: 20px;
     padding: 10px;
-    text-align: center;
+    text-align: left; /* Align text to the left */
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.new-content .project-info-left,
+.new-content .project-info-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-content .project-info-text {
+    font-family: 'N27-Bold', Arial, sans-serif; /* Ensure consistent font family */
+    font-size: 1rem; /* Adjust font size to match the provided image */
+    color: #333;
+    text-transform: uppercase;
+}
+
+.new-content .project-info-title {
+    font-family: 'N27-Bold', Arial, sans-serif; /* Ensure consistent font family */
+    font-size: 1.5rem; /* Adjust font size to match the provided image */
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.new-content .project-info-description {
+    font-family: 'N27-Regular', Arial, sans-serif; /* Ensure consistent font family */
+    font-size: 1rem; /* Adjust font size to match the provided image */
+    color: #666; /* Set text color to a light gray */
+    line-height: 1.5; /* Set line height for better readability */
+    margin: 0 0 10px; /* Adjust margins to ensure proper spacing */
 }
 
 @keyframes fadeIn {

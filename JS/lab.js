@@ -33,17 +33,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const enlargedImageContainer = document.getElementById('enlargedImageContainer');
     const enlargedImage = document.getElementById('enlargedImage');
 
+    // Define different content for each image
     const imageContents = [
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatem, voluptatum iure sequi obcaecati quibusdam tempora illum repudiandae reiciendis ducimus blanditiis laudantium sint adipisci quasi delectus ipsa doloribus! Illum, modi.Hic odio rem placeat eligendi eaque! Deserunt doloremque placeat eius consectetur vero, laboriosam repudiandae facere ipsum consequuntur iste aliquid illo commodi. Minus ab non iste rem. Dignissimos, voluptatibus excepturi? Nostrum?Harum aliquid adipisci molestiae asperiores omnis nobis accusantium ducimus sapiente quibusdam porro esse laborum rerum amet, laudantium exercitationem architecto repudiandae earum, optio impedit vel accusamus. Beatae sit nostrum rerum! Modi.Totam ea, quos non officia impedit vel est et sit reiciendis beatae ducimus optio, animi, incidunt aperiam ad excepturi possimus voluptatum dolorum porro tempore facere. Qui quod delectus deleniti. Magnam.Vitae totam a alias quo autem obcaecati temporibus quae ullam, necessitatibus corrupti quaerat maxime praesentium rem reprehenderit optio repudiandae incidunt ratione. Et magni libero illo! Impedit sapiente velit eius asperiores",
-        // Additional contents...
+        `<div class="project-info-left"><div class="project-info-text">[PROJECT INFO 1]</div></div><div class="project-info-right"><div class="project-info-title">(Re)Discover Iconic Designs 1</div><div class="project-info-description">Description for Image 1</div></div>`,
+        `<div class="project-info-left"><div class="project-info-text">[PROJECT INFO 2]</div></div><div class="project-info-right"><div class="project-info-title">(Re)Discover Iconic Designs 2</div><div class="project-info-description">Description for Image 2</div></div>`,
+        `<div class="project-info-left"><div class="project-info-text">[PROJECT INFO 3]</div></div><div class="project-info-right"><div class="project-info-title">(Re)Discover Iconic Designs 3</div><div class="project-info-description">Description for Image 3</div></div>`
     ];
 
     function createNewContent(content) {
         const newContent = document.createElement('div');
         newContent.classList.add('new-content');
-        newContent.innerHTML = `<p>${content}</p>`;
+        newContent.innerHTML = content;
         enlargedImageContainer.appendChild(newContent);
-        console.log("New content added:", content); // Debugging line
     }
 
     images.forEach((image, index) => {
