@@ -531,10 +531,6 @@ main img {
 
 /* Add this at the end of your CSS file */
 .wip-link {
-    font-family: 'N27-Bold', sans-serif;
-    font-size: clamp(4rem, 9vw, 9rem);
-    margin: 0;
-    margin-left: 10%;
     color: inherit; /* To ensure it inherits the same color as the h1 */
     text-decoration: none; /* To remove any link styles */
 }
