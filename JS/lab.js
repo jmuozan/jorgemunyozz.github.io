@@ -35,9 +35,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Define different content for each image
     const imageContents = [
-        `<div class="project-info-left"><div class="project-info-text">[PROJECT INFO 1]</div></div><div class="project-info-right"><div class="project-info-title">(Re)Discover Iconic Designs 1</div><div class="project-info-description">Description for Image 1</div></div>`,
-        `<div class="project-info-left"><div class="project-info-text">[PROJECT INFO 2]</div></div><div class="project-info-right"><div class="project-info-title">(Re)Discover Iconic Designs 2</div><div class="project-info-description">Description for Image 2</div></div>`,
-        `<div class="project-info-left"><div class="project-info-text">[PROJECT INFO 3]</div></div><div class="project-info-right"><div class="project-info-title">(Re)Discover Iconic Designs 3</div><div class="project-info-description">Description for Image 3</div></div>`
+        `<div class="project-info-container">
+            <div class="project-info-left">[PROJECT INFO 1]</div>
+            <div class="project-info-right">
+                <div class="project-info-title">(Re)Discover Iconic Designs 1</div>
+                <div class="project-info-description">Description for Image 1</div>
+            </div>
+        </div>`,
+        `<div class="project-info-container">
+            <div class="project-info-left">[PROJECT INFO 2]</div>
+            <div class="project-info-right">
+                <div class="project-info-title">(Re)Discover Iconic Designs 2</div>
+                <div class="project-info-description">Description for Image 2</div>
+            </div>
+        </div>`,
+        `<div class="project-info-container">
+            <div class="project-info-left">[PROJECT INFO 3]</div>
+            <div class="project-info-right">
+                <div class="project-info-title">(Re)Discover Iconic Designs 3</div>
+                <div class="project-info-description">Description for Image 3</div>
+            </div>
+        </div>`
     ];
 
     function createNewContent(content) {
@@ -49,14 +67,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     images.forEach((image, index) => {
         image.addEventListener('click', function() {
-            const rect = this.getBoundingClientRect();
-            enlargedImage.src = this.src;
-
             // Remove existing new content
             const existingContent = document.querySelector('.new-content');
             if (existingContent) {
                 existingContent.remove();
             }
+
+            const rect = this.getBoundingClientRect();
+            enlargedImage.src = this.src;
 
             // Set initial position and size
             enlargedImageContainer.style.top = `${rect.top}px`;

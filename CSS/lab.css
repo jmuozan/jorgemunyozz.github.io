@@ -189,26 +189,21 @@ body {
 
 .project-info-container {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    height: 100%;
-    margin-top: 2%;
+    margin-top: 20px;
 }
 
-.project-info-left, .project-info-right {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.project-info-text {
+.project-info-left {
     font-family: 'N27-Bold', Arial, sans-serif;
     font-size: 1rem;
     color: #333;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-.project-info-title {
+.project-info-right {
     font-family: 'N27-Bold', Arial, sans-serif;
     font-size: 1.5rem;
     color: #000;
@@ -283,8 +278,10 @@ body {
 
 .new-content {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin-top: 20px;
     padding: 10px;
     text-align: left; /* Align text to the left */
@@ -292,22 +289,15 @@ body {
     animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-.new-content .project-info-left,
-.new-content .project-info-right {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.new-content .project-info-text {
+.new-content .project-info-left {
     font-family: 'N27-Bold', Arial, sans-serif; /* Ensure consistent font family */
     font-size: 1rem; /* Adjust font size to match the provided image */
     color: #333;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-.new-content .project-info-title {
+.new-content .project-info-right {
     font-family: 'N27-Bold', Arial, sans-serif; /* Ensure consistent font family */
     font-size: 1.5rem; /* Adjust font size to match the provided image */
     color: #000;
