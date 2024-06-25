@@ -1,3 +1,6 @@
+/* Updated CSS for the lab.html */
+
+/* Font faces */
 @font-face {
     font-family: 'N27-Medium';
     src: url('../FONT/N27-Medium.woff2') format('woff2'),
@@ -39,7 +42,7 @@
     src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
          url('../FONT/N27-RegularItalic.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -52,11 +55,12 @@
     font-display: swap;
 }
 
+/* Body and layout */
 body {
     font-family: 'N27-Regular', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Hide both horizontal and vertical overflow */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,66 +127,66 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: 1%; /* Add margin to avoid overlap with the fixed top bar */
-    overflow: hidden; /* Hide overflow in container */
+    margin-top: 1%;
+    overflow: hidden;
 }
 
 .left-section {
     display: flex;
-    justify-content: flex-end; /* Move content to the right */
-    align-items: flex-start; /* Align items to the top */
-    width: 30%; /* Adjust width to make room for more right section */
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 30%;
     height: 100%;
-    padding-right: 10%; /* Add padding to push the text further */
-    padding-top: 5%; /* Move the text up */
+    padding-right: 10%;
+    padding-top: 5%;
 }
 
 .center-text {
     font-family: 'N27-Bold', Arial, sans-serif;
-    font-size: 12rem; /* Adjust font size if needed */
-    padding-left: 2%; /* Remove any default margin */
+    font-size: 12rem;
+    padding-left: 2%;
 }
 
 .subtitle-text {
     font-family: 'N27-Regular', Arial, sans-serif;
-    font-size: 1.5rem; /* Smaller font size */
-    color: #666; /* Lighter color */
+    font-size: 1.5rem;
+    color: #666;
     margin-top: 0.1rem;
-    padding-left: 6%; /* Space between LAB and subtitle */
+    padding-left: 6%;
 }
 
 .right-section {
     display: flex;
-    justify-content: flex-start; /* Align items to the left of the section */
+    justify-content: flex-start;
     align-items: flex-start;
-    width: 70%; /* Adjust width to move it further to the right */
+    width: 70%;
     height: 100%;
-    overflow: hidden; /* Hide overflow in right section */
+    overflow: hidden;
     padding-top: 10px;
-    padding-left: 50%; /* Add padding to move the section more to the right */
+    padding-left: 50%;
 }
 
 .carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Ensure carousel takes full width */
-    overflow-y: auto; /* Enable vertical scrolling */
-    height: 80vh; /* Set a specific height to make it scrollable */
+    width: 100%;
+    overflow-y: auto;
+    height: 80vh;
 }
 
 .carousel::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
+    display: none;
 }
 
 .carousel img {
-    width: 60%; /* Set a smaller fixed width for all images */
-    max-width: 150px; /* Ensure images are smaller */
+    width: 60%;
+    max-width: 150px;
     margin: 10px 0;
-    cursor: pointer; /* Change cursor to pointer for better UX */
+    cursor: pointer;
 }
 
-/* Add these styles for the transition effect */
+/* Transition effect styles */
 .transition-block {
     position: fixed;
     bottom: -100vh;
@@ -209,33 +213,24 @@ body {
     transition: top 0.5s ease-in-out;
 }
 
-/* Styles for enlarged image */
+/* Enlarged image styles */
 .enlarged-image-container {
     position: fixed;
     z-index: 2000;
     display: none;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     pointer-events: none;
     transition: all 0.5s ease-in-out;
-    flex-direction: column; /* Add this to ensure new content is below the image */
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: 80vh; /* Set a maximum height to make it scrollable */
-    width: 50vw; /* Set a consistent width */
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 80vh;
+    max-width: 80vw;
+    width: auto;
+    height: auto;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the enlarged image */
-}
-
-.enlarged-image-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
-}
-
-.enlarged-image-container img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain;
-    transition: transform 0.5s ease-in-out; /* Smooth transition for image transformation */
+    transform: translate(-50%, -50%);
 }
 
 .enlarged-image-container.show {
@@ -243,13 +238,18 @@ body {
     pointer-events: all;
 }
 
-/* Styles for new content */
+.enlarged-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out;
+}
+
 .new-content {
     margin-top: 20px;
     padding: 10px;
-    border: none; /* Remove background color and border */
     text-align: center;
-    opacity: 0; /* Initial opacity for fade-in effect */
+    opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
 }
 
@@ -262,7 +262,6 @@ body {
     }
 }
 
-/* Additional animations */
 @keyframes enlargeImage {
     from {
         transform: scale(1);
@@ -272,14 +271,10 @@ body {
     }
 }
 
-.enlarged-image-container.show img {
-    animation: enlargeImage 0.5s ease-in-out forwards;
-}
-
 /* Hide scrollbar for all browsers */
 .carousel, .enlarged-image-container {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .carousel::-webkit-scrollbar, .enlarged-image-container::-webkit-scrollbar {
