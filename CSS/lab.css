@@ -312,6 +312,13 @@ body {
     margin: 0 0 10px; /* Adjust margins to ensure proper spacing */
 }
 
+.new-content iframe {
+    width: 100%;
+    max-width: 756px; /* Ensure the iframe has the same size as the image */
+    height: 491px; /* Ensure the iframe has the same height as the image */
+    margin-top: 10px; /* Space between the description and the video */
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

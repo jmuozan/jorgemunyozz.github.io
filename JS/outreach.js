@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Determine scroll direction and adjust the scroll distance
         const scrollDirection = (event.deltaY || event.detail || event.wheelDelta);
-        const scrollDistance = scrollDirection * 5; // Adjust multiplier as needed
+        const scrollDistance = scrollDirection * 10; // Adjust multiplier as needed
 
         // Scroll horizontally
         container.scrollLeft += scrollDistance;

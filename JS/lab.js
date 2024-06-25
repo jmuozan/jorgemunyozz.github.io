@@ -38,9 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
         `<div class="project-info-container">
             <div class="project-info-left">[PROJECT INFO 1]</div>
             <div class="project-info-right">
-                <div class="project-info-title">(Re)Discover Iconic Designs 1</div>
+                <div class="project-info-title">Mycelium Growth Algorithm Test with Grasshopper</div>
                 <div class="project-info-description">Description for Image 1</div>
             </div>
+            <iframe width="756" height="491" src="https://www.youtube.com/embed/yVQuy9OzqqA?si=-mGsJMcWWDPAQAXX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>`,
         `<div class="project-info-container">
             <div class="project-info-left">[PROJECT INFO 2]</div>
@@ -48,13 +49,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="project-info-title">(Re)Discover Iconic Designs 2</div>
                 <div class="project-info-description">Description for Image 2</div>
             </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yVQuy9OzqqA?si=-mGsJMcWWDPAQAXX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>`,
         `<div class="project-info-container">
             <div class="project-info-left">[PROJECT INFO 3]</div>
             <div class="project-info-right">
-                <div class="project-info-title">(Re)Discover Iconic Designs 3</div>
+                <div class="project-info-title">Pulse</div>
                 <div class="project-info-description">Description for Image 3</div>
             </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yVQuy9OzqqA?si=-mGsJMcWWDPAQAXX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>`
     ];
 
