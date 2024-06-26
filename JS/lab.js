@@ -36,28 +36,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // Define different content for each image
     const imageContents = [
         `<div class="project-info-container">
-            <div class="project-info-left">[PROJECT INFO 1]</div>
+            <div class="project-info-left">[PROJECT INFO]</div>
             <div class="project-info-right">
                 <div class="project-info-title">Mycelium Growth Algorithm Test with Grasshopper</div>
-                <div class="project-info-description">Description for Image 1</div>
+                <div class="project-info-description">This has been my first atempt at a personal project with grasshopper. I tried to create a growing algorithm of mycelium trying to parametrize everything. I didn't got the results I expected but I managed to get different shapes that looked interesting to me. I rendered the mesh result with keyshot trying to experiment with translucent materials. You can download the file <a href='../OTHER/MODELS/MYCELIUM/Mycelium.gh'>here</a></div>
             </div>
             <iframe width="756" height="491" src="https://www.youtube.com/embed/yVQuy9OzqqA?si=-mGsJMcWWDPAQAXX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>`,
         `<div class="project-info-container">
-            <div class="project-info-left">[PROJECT INFO 2]</div>
-            <div class="project-info-right">
-                <div class="project-info-title">(Re)Discover Iconic Designs 2</div>
-                <div class="project-info-description">Description for Image 2</div>
-            </div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/yVQuy9OzqqA?si=-mGsJMcWWDPAQAXX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>`,
-        `<div class="project-info-container">
-            <div class="project-info-left">[PROJECT INFO 3]</div>
+            <div class="project-info-left">[PROJECT INFO]</div>
             <div class="project-info-right">
                 <div class="project-info-title">Pulse</div>
-                <div class="project-info-description">Description for Image 3</div>
+                <div class="project-info-description">Beign fascinated by the idea of tapping into the subtle conversations within the botanical world in a group, we decided to try to understand the complex signals emanated from plants detected by the ECG sensor. The project holds promising potential for unlocking profound insights into plant communication and behavior. Understanding these signals could lead to innovative applications, such as enhanced agricultural practices, environmental monitoring, and possibly even fostering more meaningful connections between humans and the botanical world. The project's future success could mark a significant leap forward in our comprehension of nature's intricate language, offering opportunities for sustainable advancements and deeper engagement with the plant kingdom.</div>
             </div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/yVQuy9OzqqA?si=-mGsJMcWWDPAQAXX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="756" height="491" src="https://www.youtube.com/embed/3a1IpfX1REI?si=7ArCZdmeiUMWXmAO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="756" height="491" src="https://www.youtube.com/embed/v7DfLnNG7B8?si=X3BUVuhMqAvX1lRZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>`,
+        `<div class="project-info-container">
+            <div class="project-info-left">[PROJECT INFO]</div>
+            <div class="project-info-right">
+                <div class="project-info-title">Experimenting with new materials in Keyshot</div>
+                <div class="project-info-description">Experimenting with multilayered materials playing with different opacity maps to get results.</div>
+            </div>
+            <img src="../IMG/LAB/3-KEYSHOT_MATERIAL/MATERIAL_GRAPH.png" alt="Image 1">
         </div>`
     ];
 
