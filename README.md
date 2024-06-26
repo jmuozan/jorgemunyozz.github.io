@@ -9,13 +9,14 @@ Also you can check inside ```OTHER/REFERENCES``` the websites I used as an inspi
 ## Things to add to the website:
 
 - [x] OUTREACH
-- [ ] LAB 
+- [x] LAB 
 - [ ] BLOG
 - [ ] UPDATE CV
 - [ ] MAKE PDF CV
 - [ ] LINKS TO CERTIFICATES
 - [ ] RESPONSIVE OUTREACH
 - [ ] RESPONSIVE GALLERY
+- [ ] RESPONSIVE LAB
 - [ ] OPTIMIZE WEB
 - [ ] TRANSLATIONS
 
