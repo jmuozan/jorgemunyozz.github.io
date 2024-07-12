@@ -11,8 +11,8 @@ Also you can check inside ```OTHER/REFERENCES``` the websites I used as an inspi
 - [x] OUTREACH
 - [x] LAB 
 - [ ] BLOG
-- [ ] UPDATE CV
-- [ ] MAKE PDF CV
+- [x] UPDATE CV
+- [x] MAKE PDF CV
 - [ ] LINKS TO CERTIFICATES
 - [ ] RESPONSIVE OUTREACH
 - [ ] RESPONSIVE GALLERY
