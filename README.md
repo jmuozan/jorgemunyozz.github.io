@@ -10,6 +10,12 @@ Also you can check inside ```OTHER/REFERENCES``` the websites I used as an inspi
 
 - [x] OUTREACH
 - [x] LAB 
+- [ ] LAB CLAY PRINTING
+- [ ] LAB HOLOGRAMS
+- [ ] LAB WEBSITE
+- [ ] LAB GRASSHOPPER TO KEYSHOT
+- [ ] OUTREACH DAFNE+ SYMPOSIUM
+- [ ] GALLERY CLAY, GH ANIMATIONS, COMPUTER VISIONHOLOGRAMS
 - [ ] BLOG
 - [x] UPDATE CV
 - [x] MAKE PDF CV
