@@ -10,17 +10,11 @@ Also feel free to take as much of the code as you need just `git clone https://g
 
 ## Things to add to the website:
 
-- [x] OUTREACH
-- [x] LAB 
 - [ ] LAB CLAY PRINTING
 - [ ] LAB HOLOGRAMS
 - [ ] LAB WEBSITE
 - [ ] LAB GRASSHOPPER TO KEYSHOT
-- [ ] OUTREACH DAFNE+ SYMPOSIUM
-- [X] GALLERY CLAY, GH ANIMATIONS, COMPUTER VISIONHOLOGRAMS
 - [ ] BLOG
-- [x] UPDATE CV
-- [x] MAKE PDF CV
 - [ ] LINKS TO CERTIFICATES
 - [ ] RESPONSIVE OUTREACH
 - [ ] RESPONSIVE GALLERY
