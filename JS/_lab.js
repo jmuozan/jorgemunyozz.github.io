@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const enlargedImageContainer = document.getElementById('enlargedImageContainer');
     const enlargedImage = document.getElementById('enlargedImage');
 
-    // Define different content for each image
+    // Define different content for each imag
     const imageContents = [
         `<div class="project-info-container">
             <div class="project-info-left">[PROJECT INFO]</div>
