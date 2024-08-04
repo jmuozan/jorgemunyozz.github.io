@@ -3,32 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE LAB</title>
-    <link rel="stylesheet" href="../CSS/lab.css">
+    <title>Codegrid | Project Overview Modal Animation</title>
+    <link rel="stylesheet" href="../CSS/lab.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <div class="top-bar">
-        <a href="../index.html" class="home-link">HOME</a>
+    <div class="nav">
+        <p>Nanotech</p>
+        <p>Showreel</p>
+    </div>
+    <div class="footer">
+        <p>Codegrid 2023 &copy;</p>
+    </div>
+    <div class="overlay">
+        <div class="overlay-header">
+            <div class="col">
+                <h1 id="item-name">Item Name</h1>
+                <p id="item-category">Item category</p>
+            </div>
+            <div class="col"></div>
+                <p id="close-btn">Close</p>
+        </div>
+    </div>
+    <div class="item-details">
+        <p>
+            <a href="#" id="item-link"><i class="ph-bold ph-arrow-up-right"></i> View Site</a>
+        </p>
+        <p id="item-copy">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum distinctio iure totam id consectetur provident deleniti. Laborum, quia, modi a corporis et, blanditiis aliquid illum aut aperiam eligendi exercitationem doloribus.
+        Pariatur, repellat expedita ex quibusdam accusamus, ut vitae blanditiis veniam perspiciatis eius esse laboriosam cumque eaque, nulla eos. Perspiciatis ullam assumenda non aperiam eveniet sunt rem fuga eligendi, architecto eos?
+        Incidunt et, recusandae ipsa consequatur harum laborum nam? Beatae quam numquam, nisi deleniti ipsam, facere necessitatibus autem pariatur incidunt ducimus enim? Iure sequi obcaecati dolorem nisi nobis ea voluptatibus adipisci.
+        Deleniti voluptatem libero, laborum earum voluptatum corporis. Tenetur quo eos veniam eum ut nemo quam, non repudiandae modi fugit eaque corporis voluptates similique quaerat quidem soluta doloremque libero. Quaerat, esse?</p>
+    </div>
+    <div class="img-container">
+        <img src="../IMG/LAB/1-MYCELIUM/1-MYCELIUM.png" id="item-img" alt="">
     </div>
     <div class="container">
-        <div class="left-section">
-            <div>
-                <div class="center-text">LAB</div>
-                <div class="subtitle-text">Open source experimenting</div>
+        <div class="items">
+            <div class="item">
+                <div class="item-index">02</div>
+                <div class="item-name">Item Name 02</div>
+                <div class="item-year">2023</div>
             </div>
-        </div>
-        <div class="right-section">
-            <div class="carousel">
-                <img src="../IMG/LAB/1-MYCELIUM/1-MYCELIUM.png" alt="Image 1">
-                <img src="../IMG/LAB/2-PULSE/4-PULSE_2.png" alt="Image 2">
-                <img src="../IMG/LAB/3-KEYSHOT_MATERIAL/5-3D_SCAN.png" alt="Image 3">
-                <img src="../IMG/LAB/2-PULSE/4-PULSE_2.png" alt="Image 4">
+            <div class="item">
+                <div class="item-index">03</div>
+                <div class="item-name">Item Name 03</div>
+                <div class="item-year">2023</div>
+            </div>
+            <div class="item">
+                <div class="item-index">04</div>
+                <div class="item-name">Item Name 04</div>
+                <div class="item-year">2023</div>
+            </div>
+            <div class="item">
+                <div class="item-index">05</div>
+                <div class="item-name">Item Name 05</div>
+                <div class="item-year">2023</div>
+            </div>
+            <div class="item">
+                <div class="item-index">06</div>
+                <div class="item-name">Item Name 06</div>
+                <div class="item-year">2023</div>
             </div>
         </div>
     </div>
-    <div class="enlarged-image-container" id="enlargedImageContainer">
-        <img id="enlargedImage" src="" alt="Enlarged Image">
-    </div>
-    <script src="../JS/lab.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
