@@ -10,6 +10,10 @@ Also feel free to take as much of the code as you need just `git clone https://g
 
 ## Things to add to the website:
 
+- [ ] REDO LAB
+- [ ] WORKS MENU CHANGE
+- [ ] GRASSHOPPER AI
+- [ ] CHANGE ABOUT
 - [ ] LAB CLAY PRINTING
 - [ ] LAB HOLOGRAMS
 - [ ] LAB WEBSITE
