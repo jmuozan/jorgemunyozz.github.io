@@ -8,22 +8,14 @@ Also you can check inside `OTHER/REFERENCES` the websites I used as an inspirati
 
 Also feel free to take as much of the code as you need just `git clone https://github.com/jmuozan/jorgemunyozz.github.io.git` on your terminal. ;)
 
-## Things to add to the website:
+## Things to add (or change) to the website:
 
 - [x] REDO LAB
 - [ ] WORKS MENU CHANGE
 - [ ] INDIVIDUAL LAB PROJECTS POSTS
-- [ ] CHANGE GALLERY
+- [x] CHANGE GALLERY
 - [ ] CHANGE ABOUT
-- [ ] LAB CLAY PRINTING
-- [ ] LAB HOLOGRAMS
-- [ ] LAB WEBSITE
-- [ ] LAB GRASSHOPPER TO KEYSHOT
-- [ ] BLOG
+- [ ] CHANGE OUTREACH
 - [ ] LINKS TO CERTIFICATES
-- [ ] RESPONSIVE OUTREACH
-- [ ] RESPONSIVE GALLERY
-- [ ] RESPONSIVE LAB
+- [ ] GALLERY ADD IMAGES
 - [ ] OPTIMIZE WEB
-- [ ] TRANSLATIONS
-
