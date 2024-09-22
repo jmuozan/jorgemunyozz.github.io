@@ -330,4 +330,10 @@
     background: url("./images/08.png") no-repeat 50% 50%;
     background-size: cover;
   }
+
+  #hover-image {
+    width: 500px;
+    height: auto;
+    pointer-events: none; /* Avoid issues clicking through images */
+  }
   

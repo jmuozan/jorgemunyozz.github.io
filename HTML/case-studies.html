@@ -32,78 +32,57 @@
 
       <!-- studies -->
       <section class="studies">
-        <div class="study">
+        <div class="study" data-image="../IMG/LAB/2-PULSE/PULSE_3.png/">
           <div class="study-category">Research</div>
-          <div class="study-icon">
-            <div class="study-icon-img" id="project-1"></div>
-          </div>
           <div class="study-name">PULSE</div>
           <div class="study-year">2023</div>
         </div>
 
-        <div class="study">
+        <div class="study" data-image="../IMG/LAB/1-MYCELIUM/1-MYCELIUM.png">
           <div class="study-category">Research</div>
-          <div class="study-icon">
-            <div class="study-icon-img" id="project-2"></div>
-          </div>
           <div class="study-name">Grasshopper Mycelium Growth Definition</div>
           <div class="study-year">2023</div>
         </div>
 
-        <div class="study">
+        <div class="study" data-image="../IMG/LAB/6_CLAY_PRINTING/CLAY_1.JPG">
           <div class="study-category">Fabrication</div>
-          <div class="study-icon">
-            <div class="study-icon-img" id="project-3"></div>
-          </div>
           <div class="study-name">Clay printing</div>
           <div class="study-year">2024</div>
         </div>
 
-        <div class="study">
+        <div class="study" data-image="../IMG/LAB/7-ML_AIRTISANSHIP/ML_1.png">
           <div class="study-category">Research</div>
-          <div class="study-icon">
-            <div class="study-icon-img" id="project-4"></div>
-          </div>
           <div class="study-name">Machine Learning Gesture detection</div>
           <div class="study-year">2024</div>
         </div>
 
-        <div class="study">
+        <div class="study" data-image="../IMG/LAB/4-WEBSITE/WEBSITE_1.png">
           <div class="study-category">Design</div>
-          <div class="study-icon">
-            <div class="study-icon-img" id="project-5"></div>
-          </div>
           <div class="study-name">Personal Website Design</div>
           <div class="study-year">2024</div>
         </div>
 
-        <div class="study">
+        <div class="study" data-image="../IMG/LAB/5-AI_GRASSHOPPER/GCODE.png">
           <div class="study-category">Personal</div>
-          <div class="study-icon">
-            <div class="study-icon-img" id="project-6"></div>
-          </div>
           <div class="study-name">AI Tools Grasshopper Plugin Developement</div>
           <div class="study-year">2024</div>
         </div>
 
-        <div class="study">
+        <div class="study" data-image="../IMG/LAB/1-MYCELIUM/1-MYCELIUM.png">
           <div class="study-category">Research</div>
-          <div class="study-icon">
-            <div class="study-icon-img" id="project-7"></div>
-          </div>
           <div class="study-name">AI Generated Holograms</div>
           <div class="study-year">2024</div>
         </div>
 
         <div class="study" id="final-study">
           <div class="study-category">Personal</div>
-          <div class="study-icon">
-            <div class="study-icon-img" id="project-8"></div>
-          </div>
           <div class="study-name">Robots</div>
           <div class="study-year">2024</div>
         </div>
       </section>
+
+      <img id="hover-image" style="display:none; position:absolute; z-index:1000;" />
+
 
       <!-- footer 
       <footer id="relative">
@@ -126,4 +105,23 @@
     </div>
   </body>
   
+  <script>
+    const hoverImage = document.getElementById('hover-image');
+
+document.querySelectorAll('.study').forEach(studyDiv => {
+  studyDiv.addEventListener('mousemove', (e) => {
+    const imageUrl = studyDiv.getAttribute('data-image');
+    if (imageUrl) {
+      hoverImage.src = imageUrl;
+      hoverImage.style.display = 'block';
+      hoverImage.style.top = (e.pageY) + 'px';
+      hoverImage.style.left = (e.pageX) + 'px';
+    }
+  });
+
+  studyDiv.addEventListener('mouseleave', () => {
+    hoverImage.style.display = 'none';
+  });
+});
+  </script>
 </html>
