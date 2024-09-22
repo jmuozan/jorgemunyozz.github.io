@@ -13,6 +13,7 @@ Also feel free to take as much of the code as you need just `git clone https://g
 - [ ] REDO LAB
 - [ ] WORKS MENU CHANGE
 - [ ] GRASSHOPPER AI
+- [ ] CHANGE GALLERY
 - [ ] CHANGE ABOUT
 - [ ] LAB CLAY PRINTING
 - [ ] LAB HOLOGRAMS
