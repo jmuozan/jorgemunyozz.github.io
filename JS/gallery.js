@@ -1,8 +1,8 @@
 let currentIndex = 1;
-let totalSlides = 7;
+let totalSlides = 15;
 
 const updateActiveSlide = () => {
-  document.querySelectorAll(".title").forEach((el, index) => {
+  document.querySelectorAll(".img-top img, .img-bottom img").forEach((el, index) => {
     if (index === currentIndex) {
       el.classList.add("active");
     } else {
