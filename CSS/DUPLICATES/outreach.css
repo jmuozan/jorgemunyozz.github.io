@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'N27-Medium';
+    src: url('../FONT/N27-Medium.woff2') format('woff2'),
+         url('../FONT/N27-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-MediumItalic';
+    src: url('../FONT/N27-MediumItalic.woff2') format('woff2'),
+         url('../FONT/N27-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Bold';
+    src: url('../FONT/N27-Bold.woff2') format('woff2'),
+         url('../FONT/N27-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Regular';
+    src: url('../FONT/N27-Regular.woff2') format('woff2'),
+         url('../FONT/N27-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-RegularItalic';
+    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
+         url('../FONT/N27-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura-Bold-Italic';
+    src: url('../FONT/Futura-Bold-Italic.woff2') format('woff2'),
+         url('../FONT/Futura-Bold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+body {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #EBEBEB;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.home-link {
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 1rem;
+    color: #333;
+    padding-left: 1%;
+    padding-top: 0.5%;
+    text-decoration: none;
+    align-self: flex-start; /* Ensure the home link stays at the top */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease; /* Add transition for underline */
+}
+
+.home-link:hover {
+    text-decoration: underline;
+    animation: moveUp 0.3s ease-in-out forwards, moveDown 0.3s ease-in-out 0.3s forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.outreach-text {
+    text-align: right;
+    padding-right: 2%;
+}
+
+.outreach-title {
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 4rem; /* Adjust font size as needed */
+    color: #333;
+    display: block;
+}
+
+.outreach-subtitle {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 0.75rem;
+    color: #666;
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    width: 100vw; /* Ensure the container takes up the full width of the viewport */
+    scroll-behavior: smooth; /* Optional: Enable smooth scrolling */
+    margin-top: 50px; /* Add margin to avoid overlap with the fixed top bar */
+}
+
+/* Hide the scrollbar */
+.container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.container {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+section {
+    flex: 0 0 auto; /* Disable flex-grow and flex-shrink */
+    padding: 20px;
+    box-sizing: border-box;
+    scroll-snap-align: start; /* Snap each section to the start of the viewport */
+    display: flex; /* Use flexbox for section layout */
+    flex-direction: row; /* Arrange child elements in a row */
+    margin: 0; /* Remove margin */
+}
+
+.text-columns {
+    display: flex;
+    flex-direction: column; /* Arrange text elements in a column */
+    flex: 1; /* Allow text columns to take available space */
+}
+
+h1 {
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 10%;
+    max-width: 600px; /* Adjust the value to your desired width */
+    flex: 1; /* Allow paragraphs to take available space */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.img-container {
+    display: flex; /* Use flexbox to arrange images horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling if images overflow */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Hide the scrollbar in the image container */
+.img-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.img-container {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.img-container a {
+    display: inline-block; /* Display images in a row */
+    vertical-align: middle; /* Align images vertically */
+    margin-right: 10px; /* Optional: Add some spacing between images */
+}
+
+.img-container a:last-child {
+    margin-right: 0; /* Remove margin from last image to prevent extra space */
+}
+
+.img-container img {
+    max-height: 85vh; /* Set maximum height of images to 75% of viewport height */
+    height: auto;
+    width: auto; /* Allow images to scale */
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center; /* Ensure the image scales from its center */
+}
+
+.img-container img:hover {
+    animation: enlarge 1.3s ease-in-out forwards;
+}
+
+@keyframes enlarge {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2); /* Adjust the scale factor as needed */
+    }
+}
+
+/* Add these styles for the transition effect */
+.transition-block {
+    position: fixed;
+    bottom: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.transition-block.show {
+    bottom: 0;
+}
+
+.transition-block-background {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EBEBEB;
+    z-index: 1001;
+    transition: top 0.5s ease-in-out;
+}
