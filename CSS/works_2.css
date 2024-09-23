@@ -212,3 +212,54 @@
     text-decoration: none;
     color: #000000; /* Purple color */
   }
+
+
+  .menu-item {
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    padding: 0 2em;
+    color: #000;
+    text-decoration: none; /* Ensure links have no text decoration */
+  }
+  
+  .menu-item .info,
+  .menu-item .name,
+  .menu-item .tag {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .menu-item .info,
+  .menu-item .tag {
+    flex: 1;
+    height: 14px;
+    font-size: 14px;
+  }
+  
+  .menu-item .name {
+    flex: 4;
+    height: 55px;
+    font-size: 60px;
+    text-align: center;
+  }
+  
+  .menu-item .info p:nth-child(2),
+  .menu-item .name p:nth-child(2),
+  .menu-item .tag p:nth-child(2) {
+    top: 100%;
+    color: #000;
+  }
+  
+  .menu:hover .menu-item .info p:nth-child(1),
+  .menu:hover .menu-item .name p:nth-child(1),
+  .menu:hover .menu-item .tag p:nth-child(1) {
+    color: rgb(165, 165, 165);
+  }
+  
+  .menu-item:hover .info p:nth-child(1),
+  .menu-item:hover .name p:nth-child(1),
+  .menu-item:hover .tag p:nth-child(1) {
+    color: rgb(165, 165, 165);
+    text-decoration: none;
+  }
