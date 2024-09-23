@@ -1,0 +1,310 @@
+@font-face {
+    font-family: 'N27';
+    src: url('../FONT/N27-Bold.woff2') format('woff2'),
+         url('../FONT/N27-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Regular';
+    src: url('../FONT/N27-Regular.woff2') format('woff2'),
+         url('../FONT/N27-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-RegularItalic';
+    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
+         url('../FONT/N27-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'N27-Light';
+    src: url('../FONT/N27-Light.woff2') format('woff2'),
+         url('../FONT/N27-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    font-family: 'N27-Regular', Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-section {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Increased max-width for larger images */
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.title{
+    line-height: 0.93;
+}
+
+.title-overlay {
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.title-overlay h1 {
+    font-family: 'N27', Arial, sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 0.9;
+}
+
+.title-overlay .line1 {
+    display: block;
+}
+
+.title-overlay .line2 {
+    display: block;
+}
+
+.text-section {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.text-section p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.details-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-info h1 {
+    font-family: 'N27', Arial, sans-serif;
+    font-size: 5rem;
+    margin-right: 5vw;
+    flex: 1 1 100%; /* Allow header to take full width */
+}
+
+.contact-details {
+    flex: 1 1 100%; /* Allow contact details to take full width */
+    text-align: right;
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+.contact-details p {
+    font-family: 'N27-Regular', Arial, sans-serif;
+}
+
+.contact-details span {
+    font-family: 'N27', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.education, .experience, .languages, .skills, .honors, .certificates {
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'N27', Arial, sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2rem;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+.education .item,
+.experience .item,
+.languages .item,
+.skills .item,
+.honors .item,
+.certificates .item {
+    margin-bottom: 15px;
+}
+
+.education .title,
+.experience .title,
+.languages .title,
+.skills .title,
+.honors .title,
+.certificates .title {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 1.25rem;
+    display: inline;
+    text-transform: uppercase; /* Make titles uppercase */
+}
+
+.education .duration,
+.experience .duration,
+.languages .duration,
+.skills .duration,
+.honors .duration,
+.certificates .duration {
+    font-family: 'N27-RegularItalic', Arial, sans-serif;
+    font-size: 1rem;
+    display: inline;
+    margin-left: 10px;
+}
+
+.education .institution,
+.experience .institution,
+.languages .institution,
+.skills .institution,
+.honors .institution,
+.certificates .institution {
+    font-family: 'N27-Light', Arial, sans-serif;
+    font-size: 1rem;
+    display: block;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.skills .subsection-title {
+    font-family: 'N27-Bold', Arial, sans-serif;
+    font-size: 1rem;
+    display: inline;
+}
+
+.skills .details {
+    font-family: 'N27-Regular', Arial, sans-serif;
+    font-size: 1rem;
+    display: inline;
+}
+
+.proficiency {
+    font-family: 'N27-Light', Arial, sans-serif;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .image-section {
+        order: 1;
+    }
+
+    .text-section {
+        order: 2;
+        padding-top: 0;
+        margin-left: 20px;
+    }
+
+    .details-section {
+        margin-top: 40px;
+    }
+
+    .title-overlay {
+        text-align: left;
+    }
+
+    .title-overlay h1 {
+        font-size: 5rem;
+    }
+
+    .title-overlay .line2 {
+        margin-left: 0;
+    }
+
+    .contact-info {
+        flex-wrap: nowrap; /* Reset to nowrap for larger screens */
+    }
+
+    .contact-info h1,
+    .contact-details {
+        flex: 1 1 auto; /* Distribute space evenly */
+    }
+
+    .contact-details {
+        margin-top: 0; /* Remove margin for larger screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .title-overlay h1 {
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .title-overlay {
+        text-align: center;
+    }
+
+    .image-section {
+        order: 2;
+    }
+
+    .text-section {
+        order: 1;
+        padding-top: 20px;
+    }
+
+    .details-section {
+        order: 3;
+        margin-top: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column; /* Align vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info h1 {
+        margin-right: 0;
+    }
+
+    .contact-details {
+        text-align: center;
+        margin-top: 10px;
+    }
+}

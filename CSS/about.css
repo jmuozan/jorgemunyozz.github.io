@@ -1,310 +1,353 @@
 @font-face {
-    font-family: 'N27';
-    src: url('../FONT/N27-Bold.woff2') format('woff2'),
-         url('../FONT/N27-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'N27-Medium';
+  src: url('../FONT/N27-Medium.woff2') format('woff2'),
+       url('../FONT/N27-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'N27-Regular';
-    src: url('../FONT/N27-Regular.woff2') format('woff2'),
-         url('../FONT/N27-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'N27-MediumItalic';
+  src: url('../FONT/N27-MediumItalic.woff2') format('woff2'),
+       url('../FONT/N27-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'N27-RegularItalic';
-    src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
-         url('../FONT/N27-RegularItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'N27-Bold';
+  src: url('../FONT/N27-Bold.woff2') format('woff2'),
+       url('../FONT/N27-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'N27-Light';
-    src: url('../FONT/N27-Light.woff2') format('woff2'),
-         url('../FONT/N27-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'N27-Regular';
+  src: url('../FONT/N27-Regular.woff2') format('woff2'),
+       url('../FONT/N27-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'N27-RegularItalic';
+  src: url('../FONT/N27-RegularItalic.woff2') format('woff2'),
+       url('../FONT/N27-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
 body {
-    margin: 0;
-    font-family: 'N27-Regular', Arial, sans-serif;
-    background-color: #f2f2f2;
+  font-family: "N27-Bold";
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.image-section {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Increased max-width for larger images */
-}
-
-.image-section img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.title{
-    line-height: 0.93;
-}
-
-.title-overlay {
-    color: rgb(0, 0, 0);
-    text-align: left;
-}
-
-.title-overlay h1 {
-    font-family: 'N27', Arial, sans-serif;
-    font-size: 5rem;
-    font-weight: bold;
-    margin: 0;
-    line-height: 0.9;
-}
-
-.title-overlay .line1 {
-    display: block;
-}
-
-.title-overlay .line2 {
-    display: block;
-}
-
-.text-section {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    padding-top: 50px;
-}
-
-.text-section p {
-    font-size: 16px;
-    margin-top: 10px;
-    color: #333;
-}
-
-.details-section {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.contact-info h1 {
-    font-family: 'N27', Arial, sans-serif;
-    font-size: 5rem;
-    margin-right: 5vw;
-    flex: 1 1 100%; /* Allow header to take full width */
-}
-
-.contact-details {
-    flex: 1 1 100%; /* Allow contact details to take full width */
-    text-align: right;
-    margin-top: 10px; /* Add margin for spacing */
-}
-
-.contact-details p {
-    font-family: 'N27-Regular', Arial, sans-serif;
-}
-
-.contact-details span {
-    font-family: 'N27', Arial, sans-serif;
-    font-weight: bold;
-}
-
-.education, .experience, .languages, .skills, .honors, .certificates {
-    margin-bottom: 20px;
-}
-
-h1, h2, h3 {
-    font-family: 'N27', Arial, sans-serif;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 2rem;
-    border-bottom: 2px solid black;
-    padding-bottom: 5px;
-}
-
-.education .item,
-.experience .item,
-.languages .item,
-.skills .item,
-.honors .item,
-.certificates .item {
-    margin-bottom: 15px;
-}
-
-.education .title,
-.experience .title,
-.languages .title,
-.skills .title,
-.honors .title,
-.certificates .title {
-    font-family: 'N27-Regular', Arial, sans-serif;
-    font-size: 1.25rem;
-    display: inline;
-    text-transform: uppercase; /* Make titles uppercase */
-}
-
-.education .duration,
-.experience .duration,
-.languages .duration,
-.skills .duration,
-.honors .duration,
-.certificates .duration {
-    font-family: 'N27-RegularItalic', Arial, sans-serif;
-    font-size: 1rem;
-    display: inline;
-    margin-left: 10px;
-}
-
-.education .institution,
-.experience .institution,
-.languages .institution,
-.skills .institution,
-.honors .institution,
-.certificates .institution {
-    font-family: 'N27-Light', Arial, sans-serif;
-    font-size: 1rem;
-    display: block;
+a {
+  color: var(--colors-primary);
+  text-decoration: none;
 }
 
 p {
+  font-family: "N27-Medium";
+  font-size: 1.25rem;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.content {
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__img {
+  height: 400px; /* Set a fixed height */
+  width: auto;   /* Allow the width to adjust automatically */
+  max-width: 100%; /* Ensure it doesn't exceed the container's width */
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+@media screen and (min-width: 50em) {
+  .content {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--colors-background);
+}
+
+.container#dark {
+  background: var(--colors-primary);
+}
+
+.gradient {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background: var(--colors-background);
+  background: linear-gradient(
+    0deg,
+    rgba(40, 40, 40, 0) 0%,
+    var(--colors-background) 100%
+  );
+}
+
+/* nav */
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  z-index: 1000000 !important;
+}
+
+nav#light a {
+  color: var(--colors-background);
+}
+
+nav .nav-links {
+  display: flex;
+}
+
+nav .nav-logo .nav-link,
+nav .nav-links .nav-link {
+  padding: 1rem;
+}
+
+nav .nav-logo {
+  font-size: 1rem;
+}
+
+/* header */
+header {
+  position: absolute;
+  top: 35%;
+  left: 2%;
+  text-align: left;
+}
+
+header #name {
+  font-family: "N27-Bold";
+  font-size: 4rem;
+}
+
+/* footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+footer#relative {
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+footer .footer-col {
+  flex: 1;
+  text-align: center;
+}
+
+footer .footer-col p {
+  font-size: 0.825rem;
+}
+
+footer#light p {
+  color: var(--colors-background);
+}
+
+/* about */
+section.about {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+section.about .about-col p {
+  color: var(--colors-background);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  section.about {
+    gap: 0;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  section.about .about-col p {
     font-size: 1rem;
-    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
 }
 
-.skills .subsection-title {
-    font-family: 'N27-Bold', Arial, sans-serif;
-    font-size: 1rem;
-    display: inline;
+/* studies */
+section.studies {
+  width: 100%;
+  padding-top: 10rem;
 }
 
-.skills .details {
-    font-family: 'N27-Regular', Arial, sans-serif;
-    font-size: 1rem;
-    display: inline;
+section.studies .study {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--colors-primary);
 }
 
-.proficiency {
-    font-family: 'N27-Light', Arial, sans-serif;
-    font-size: 0.8rem;
-    font-style: italic;
-    margin-left: 10px;
+section.studies .study#final-study {
+  border-bottom: 1px solid var(--colors-primary);
 }
 
-/* Media queries for responsiveness */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .image-section {
-        order: 1;
-    }
-
-    .text-section {
-        order: 2;
-        padding-top: 0;
-        margin-left: 20px;
-    }
-
-    .details-section {
-        margin-top: 40px;
-    }
-
-    .title-overlay {
-        text-align: left;
-    }
-
-    .title-overlay h1 {
-        font-size: 5rem;
-    }
-
-    .title-overlay .line2 {
-        margin-left: 0;
-    }
-
-    .contact-info {
-        flex-wrap: nowrap; /* Reset to nowrap for larger screens */
-    }
-
-    .contact-info h1,
-    .contact-details {
-        flex: 1 1 auto; /* Distribute space evenly */
-    }
-
-    .contact-details {
-        margin-top: 0; /* Remove margin for larger screens */
-    }
+section.studies .study > div {
+  padding: 1rem;
 }
 
-@media (min-width: 1200px) {
-    .title-overlay h1 {
-        font-size: 7rem;
-    }
+section.studies .study .study-category {
+  flex: 2;
+  text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+section.studies .study .study-icon {
+  flex: 2;
+}
 
-    .title-overlay {
-        text-align: center;
-    }
+section.studies .study .study-icon .study-icon-img {
+  width: 100px;
+  height: 100px;
+  background: var(--colors-primary);
+}
 
-    .image-section {
-        order: 2;
-    }
+section.studies .study .study-name {
+  flex: 10;
+  font-family: "N27-Medium";
+  font-size: 4.5rem;
+}
 
-    .text-section {
-        order: 1;
-        padding-top: 20px;
-    }
+section.studies .study .study-year {
+  flex: 1;
+}
 
-    .details-section {
-        order: 3;
-        margin-top: 10px;
-    }
+@media (max-width: 900px) {
+  section.studies .study .study-category {
+    font-size: 0.75rem;
+  }
 
-    .contact-info {
-        flex-direction: column; /* Align vertically */
-        align-items: center;
-        text-align: center;
-    }
+  section.studies .study .study-year {
+    display: none;
+  }
 
-    .contact-info h1 {
-        margin-right: 0;
-    }
+  section.studies .study .study-icon .study-icon-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 0.5rem;
+  }
 
-    .contact-details {
-        text-align: center;
-        margin-top: 10px;
-    }
+  section.studies .study .study-name {
+    font-size: 2rem;
+  }
+}
+
+#project-1 {
+  background: url("../IMG/LAB/2-PULSE/3-PULSE_1.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#project-2 {
+  background: url("../IMG/LAB/1-MYCELIUM/1-MYCELIUM.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#project-3 {
+  background: url("../IMG/LAB/6-CLAY_PRINT/CLAY_PRINT.JPG") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#project-4 {
+  background: url("../IMG/LAB/8-ML/AIRTISANSHIP_1.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#project-5 {
+  background: url("../IMG/LAB/4-WEBSITE/WEBSITE_1.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#project-6 {
+  background: url("../IMG/LAB/7-GCODE/GCODE.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#project-7 {
+  background: url("../IMG/LAB/9-HOLOGRAMS/Animation.gif") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#project-8 {
+  background: url("./images/08.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#hover-image {
+  width: 500px;
+  height: auto;
+  pointer-events: none; /* Avoid issues clicking through images */
+}
+
+.intro{
+  width: 38%;
+  padding-bottom: 1%;
+}
+
+.footer-col:not(#middle-col) {
+  display: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
