@@ -11,7 +11,7 @@ Also feel free to take as much of the code as you need just `git clone https://g
 ## Things to add (or change) to the website:
 
 - [x] REDO LAB
-- [ ] WORKS MENU CHANGE
+- [x] WORKS MENU CHANGE
 - [ ] INDIVIDUAL LAB PROJECTS POSTS
 - [x] CHANGE GALLERY
 - [ ] CHANGE ABOUT
