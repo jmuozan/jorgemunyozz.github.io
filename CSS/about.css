@@ -60,7 +60,7 @@ a {
 }
 
 p {
-  font-family: "N27-Medium";
+  font-family: "N27-Regular";
   font-size: 1.25rem;
 }
 
@@ -340,6 +340,7 @@ section.studies .study .study-year {
 .intro{
   width: 38%;
   padding-bottom: 1%;
+  font-family: 'N27-Regular';
 }
 
 .footer-col:not(#middle-col) {
