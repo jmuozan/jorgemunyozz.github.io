@@ -1,67 +1,109 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const contentItems = document.querySelectorAll('.content-item div');
-    const dynamicParagraph = document.querySelector('.dynamic-paragraph');
+document.addEventListener("DOMContentLoaded", function () {
+  const imageSources = [
+    "../IMG/WORKS/REENCUENTRO.jpeg",
+    "../IMG/LAB/7-ML_AIRTISANSHIP/ML_1.png",
+    "../IMG/WORKS/SLOW_FURNITURE.png",
+    "../IMG/WORKS/HAPPY_MEAL.jpg",
+    "../IMG/WORKS/GRESAL.jpg",
+    "../IMG/LAB/5-AI_GRASSHOPPER/GCODE.png",
+    "../IMG/WORKS/TALENT-HOP.png",
+    "",
+  ];
 
-    const paragraphs = {
-        "REENCUENTRO": "DESIGNIGN AN EMOTIONAL COLLECTION OF FURNITURE INSPIRED IN THE FISHERMANS OF L'ALBUFERA",
-        "AI.RTISANSHIP": "DESIGNING A NEW WAY TO TEACH CRAFTS",
-        "SLOW FURNITURE": "DESIGNING AN EVOLUTIONARY, DURABLE AND EMOTIONAL PIECE OF FURNITURE",
-        "HAPPY MEAL OF THE FUTURE": "DESIGNING AND PROTOTYPING THE FUTURE OF HAPPY MEAL TOYS",
-        "GRESAL": "DESIGNING A CRAFTS PIECE",
-        "TALENT-HOP": "DESIGNING SUSTAINABLE PACKAGING SOLUTIONS"
-    };
+  const menuItems = document.querySelectorAll(".menu-item");
 
-    contentItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            const imageUrl = item.getAttribute('data-image');
-            const itemText = item.textContent.trim().replace(/\s+/g, ' '); // Handle multiline text
-            document.body.style.setProperty('--bg-image', `url(${imageUrl})`);
-            document.body.classList.add('animate-bg');
-            dynamicParagraph.textContent = paragraphs[itemText] || "";
-            item.style.textDecoration = 'underline';
-        });
+  menuItems.forEach((item) => {
+    const copyElements = item.querySelectorAll(".info, .name, .tag");
 
-        item.addEventListener('mouseleave', () => {
-            document.body.classList.remove('animate-bg');
-            dynamicParagraph.textContent = "";
-            item.style.textDecoration = 'none';
-        });
+    copyElements.forEach((div) => {
+      const copy = div.querySelector("p");
+      if (copy) {
+        const duplicateCopy = document.createElement("p");
+        duplicateCopy.textContent = copy.textContent;
+        div.appendChild(duplicateCopy);
+      }
     });
+  });
 
-    // Apply hover animation to links
-    document.querySelectorAll('.content-item a').forEach(link => {
-        link.addEventListener('mouseover', function () {
-            if (!this.classList.contains('animating')) {
-                this.classList.add('animating');
-                setTimeout(() => {
-                    this.classList.remove('animating');
-                }, 600); // duration of the animation + cooldown period
-            }
-        });
-
-        // Add click event for transition effect
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            triggerTransition(this.href);
-        });
+  const appendImages = (src) => {
+    const preview1 = document.querySelector(".preview-img-1");
+  
+    const img1 = document.createElement("img");
+    img1.src = src;
+    img1.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
+  
+    // Set a fixed height and let the width adapt based on the image's proportions
+    img1.style.height = "100%";  // Image height adapts to the container's height
+    img1.style.width = "auto";   // The width adjusts based on the image's aspect ratio
+    img1.style.objectFit = "contain"; // Ensures the image fits properly maintaining aspect ratio
+  
+    preview1.textContent = '';  // Clear previous content if any
+    preview1.appendChild(img1);
+  
+    gsap.to([img1], {
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+      duration: 1,
+      ease: "power3.out",
+      onComplete: function () {
+        removeExtraImages(preview1);
+      },
     });
+  };
 
-    function triggerTransition(href) {
-        const transitionBlock = document.querySelector('.transition-block');
-        const transitionBlockBackground = document.querySelector('.transition-block-background');
-
-        // Trigger the transition
-        setTimeout(() => {
-            transitionBlock.classList.add('show');
-        }, 10); // Slight delay to ensure the transition is visible
-
-        // Add event listener for transition end
-        transitionBlock.addEventListener('transitionend', () => {
-            // Start the second transition
-            transitionBlockBackground.style.top = '0';
-            transitionBlockBackground.addEventListener('transitionend', () => {
-                window.location.href = href; // Redirect to the new page after transition
-            });
-        });
+  function removeExtraImages(container) {
+    while (container.children.length > 10) {
+      container.removeChild(container.firstChild);
     }
+  }
+
+  document.querySelectorAll(".menu-item").forEach((item, index) => {
+    item.addEventListener("mouseover", () => {
+      mouseOverAnimation(item);
+      appendImages(imageSources[index]);
+    });
+
+    item.addEventListener("mouseout", () => {
+      mouseOutAnimation(item);
+    });
+  });
+
+  const mouseOverAnimation = (elem) => {
+    gsap.to(elem.querySelectorAll("p:nth-child(1)"), {
+      top: "-100%",
+      duration: 0.3,
+    });
+    gsap.to(elem.querySelectorAll("p:nth-child(2)"), {
+      top: "0%",
+      duration: 0.3,
+    });
+  };
+
+  const mouseOutAnimation = (elem) => {
+    gsap.to(elem.querySelectorAll("p:nth-child(1)"), {
+      top: "0%",
+      duration: 0.3,
+    });
+    gsap.to(elem.querySelectorAll("p:nth-child(2)"), {
+      top: "100%",
+      duration: 0.3,
+    });
+  };
+
+  document.querySelector(".menu").addEventListener("mouseout", function () {
+    gsap.to(".preview-img img", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+      duration: 1,
+      ease: "power3.out",
+    });
+  });
+
+  document.addEventListener("mousemove", function (e) {
+    const preview = document.querySelector(".preview");
+    gsap.to(preview, {
+      x: e.clientX + 300,
+      y: e.clientY,
+      duration: 1,
+      ease: "power3.out",
+    });
+  });
 });

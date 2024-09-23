@@ -27,26 +27,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const appendImages = (src) => {
     const preview1 = document.querySelector(".preview-img-1");
-    const preview2 = document.querySelector(".preview-img-2");
-
+  
     const img1 = document.createElement("img");
-    const img2 = document.createElement("img");
-
     img1.src = src;
     img1.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
-    img2.src = src;
-    img2.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
-
+  
+    // Set a fixed height and let the width adapt based on the image's proportions
+    img1.style.height = "100%";  // Image height adapts to the container's height
+    img1.style.width = "auto";   // The width adjusts based on the image's aspect ratio
+    img1.style.objectFit = "contain"; // Ensures the image fits properly maintaining aspect ratio
+  
+    preview1.textContent = '';  // Clear previous content if any
     preview1.appendChild(img1);
-    preview2.appendChild(img2);
-
-    gsap.to([img1, img2], {
+  
+    gsap.to([img1], {
       clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
       duration: 1,
       ease: "power3.out",
       onComplete: function () {
         removeExtraImages(preview1);
-        removeExtraImages(preview2);
       },
     });
   };
