@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const imageSources = [
     "../IMG/WORKS/REENCUENTRO.jpeg",
     "../IMG/LAB/7-ML_AIRTISANSHIP/ML_1.png",
+    "../IMG/PORTFOLIO/NON_PLANAR/PRINTING.jpg",
     "../IMG/WORKS/SLOW_FURNITURE.png",
+    "../IMG/LAB/5-AI_GRASSHOPPER/GCODE.png",
     "../IMG/WORKS/HAPPY_MEAL.jpg",
     "../IMG/WORKS/GRESAL.jpg",
-    "../IMG/LAB/5-AI_GRASSHOPPER/GCODE.png",
     "../IMG/WORKS/TALENT-HOP.png",
-    "",
   ];
 
   const menuItems = document.querySelectorAll(".menu-item");
