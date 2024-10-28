@@ -1,1 +1,161 @@
-ffff
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NON-PLANAR</title>
+    <link rel="stylesheet" href="../../CSS/works/non-planar.css">
+</head>
+<body>
+    <a href="../../index.html" class="home-link">HOME</a> 
+    <header>
+        <div class="header-content">
+            <p class="subheader">Cork bio-material robotic 3d printing</p>
+            <h1>BIO ADDITIVE ROBOTIC MANUFACTURING</h1>
+        </div>
+    </header>
+    <main>
+        <img id="main-image" src="../../IMG/PORTFOLIO/NON_PLANAR/ROBOT.gif" alt="Image">
+    </main>
+    <section class="info-section">
+        <div class="info-left">
+            <p><strong>YEAR</strong>2024</p>
+            <p><strong>KIND</strong>GROUP</p>
+            <p><strong>CATEGORY</strong>RESEARCH</p>
+            <p><strong>FUNCTION</strong>DESIGN PROTOTYPING, GRASSHOPPER, MANUFACTURING</p>
+        </div>
+        <div class="info-right">
+            <p>In today's quickly evolving world, the preservation of traditional craftsmanship stands at a critical crossroads. This project aims to globalize and modernize the transmission of ancient craftsmanship knowledge through AI. Its primary mission is safeguarding cultural heritage and providing invaluable educational resources for future generations.</p>
+        </div>
+    </section>
+    <section class="custom-photography-section">
+        <div class="text-content">
+            <h2>NEW MATERIALS AND NEW METHODS</h2>
+            <p>This project investigates the integration of robotic 3D printing with sustainable biomaterials to create innovative architectural structures. It explores the pressing need to reduce carbon emissions in buildings by focusing on both operational and embodied energy. Using a bio-composite cork material derived from recycled cork stoppers, the project explored advanced additive manufacturing methods through robotic fabrication, aiming to improve resource efficiency and minimize waste.</p>
+        </div>
+        <div class="image-content">
+            <img src="../../IMG/PORTFOLIO/NON_PLANAR/1ST.jpg" alt="Custom Photography">
+        </div>
+    </section>
+    <section class="interactive-gallery">
+        <div class="big-image">
+            <img id="big-image" src="../../IMG/MDEF/3-HERO.gif" alt="Big Image">
+        </div>
+        <div class="thumbnail-gallery">
+            <img class="thumbnail selected" src="../../IMG/MDEF/3-HERO.gif" alt="Thumb 1" onclick="changeImage(this, '../../IMG/MDEF/3-HERO.gif')">
+            <img class="thumbnail" src="../../IMG/MDEF/4-HERO.gif" alt="Thumb 2" onclick="changeImage(this, '../../IMG/MDEF/4-HERO.gif')">
+            <img class="thumbnail" src="../../IMG/MDEF/5-ME.gif" alt="Thumb 3" onclick="changeImage(this, '../../IMG/MDEF/5-ME.gif')">
+            <img class="thumbnail" src="../../IMG/MDEF/6-ME.gif" alt="Thumb 4" onclick="changeImage(this, '../../IMG/MDEF/6-ME.gif')">
+        </div>
+        <div class="text-content">
+            <h2>ROBOTIC FABRICATION</h2>
+            <p>The use of robotic arms with multiple axes enhances 3D printing capabilities, allowing the creation of complex geometries and overcoming limitations of traditional layer-based printing, such as support for overhangs and material anisotropy. This setup allows for flexibility in path geometry and custom end-effectors, providing architects, designers and engineers with a powerful tool to expand design possibilities.</p>
+        </div>
+    </section>
+    <section class="video-section">
+        <div class="responsive-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/wOGg_3rsgEc?si=yRD2AQ2L40XNmEB5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>    
+    
+    <section class="text-image-layout">
+        <div class="text-image-layout-content">
+            <img src="../../IMG/MDEF/7-HERO.gif" alt="LAST">
+        </div>
+        <div class="text-content-right">
+            <h2>GLOBAL KNOWLEDGE</h2>
+            <p>This project in continuously adapting to the changing digital world, trying to revolutionize the way craftsmanship is taught by merging historical methods with modern advancements. The digital platform preserves and teaches ancient skills, celebrating cultural heritage while promoting innovation. The initiative supports "global knowledge, local production," encouraging collaborations among artisans, educators, and learners all over the world. This approach might help local traditions thrive by integrating global insights and technology. The project's goal is to ensure traditional craftsmanship thrives globally, supported by technology and a commitment to preserving culture and providing quality education.</p>
+        </div>
+    </section>
+    <section class="custom-photography-section">
+        <div class="text-content">
+            <h2>DAFNE +</h2>
+            <p>As part of my role in Horizon funded project Dafne+ Ambassador I've been working in the intersection between the crafts and the use of blockchain technology exposing the project in events and workshops. Currently I'm developing research on how NFTs can be used as certificates in this educational platform that gives value to the different educational crafts courses.</p>
+            <p>Blockchain will give transparency and inmutability to the certificates. Allowing everyone on the blockchain to validate those. Also will benefit artisans and artists, allowing them to connect with students without intermediaries.</p>
+        </div>
+        <div class="image-content">
+            <img src="../../IMG/MDEF/1720081597700.jpeg" alt="Custom Photography">
+        </div>
+    </section>
+    <section class="case-layout">
+        <div class="case-header">
+            <h1>SLOW FURNITURE</h1>
+            <a href="./slow_furniture.html" class="next-case">NEXT WORK</a>
+        </div>
+        <div class="case-image-wrapper">
+            <img src="../../IMG/MDEF/9-NEXT-SLOW_FURNITURE.png" alt="expo" class="case-image">
+        </div>
+    </section>
+    <div id="hover-image" class="hover-image">
+        <img src="../../IMG/MDEF/8-NEXT-SLOW_FURNITURE.png" alt="Small Image">
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const image = document.getElementById('main-image');
+            setTimeout(() => {
+                image.style.transform = 'scale(1)'; // Reduce to normal size
+            }, 500); // Delay for the effect
+        });
+
+        function changeImage(element, src) {
+            const bigImage = document.getElementById('big-image');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            // Remove the selected class from all thumbnails
+            thumbnails.forEach(thumbnail => {
+                thumbnail.classList.remove('selected');
+            });
+
+            // Add the selected class to the clicked thumbnail
+            element.classList.add('selected');
+
+            bigImage.classList.add('fade-out');
+            setTimeout(() => {
+                bigImage.src = src;
+                bigImage.classList.remove('fade-out');
+                bigImage.classList.add('fade-in');
+            }, 300);
+            setTimeout(() => {
+                bigImage.classList.remove('fade-in');
+            }, 600);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hoverImage = document.getElementById('hover-image');
+            const caseHeader = document.querySelector('.case-header');
+            const caseImageWrapper = document.querySelector('.case-image-wrapper');
+
+            function showHoverImage(e) {
+                hoverImage.style.display = 'block';
+                hoverImage.style.left = `${e.pageX + 15}px`;
+                hoverImage.style.top = `${e.pageY + 15}px`;
+            }
+
+            function hideHoverImage() {
+                hoverImage.style.display = 'none';
+            }
+
+            function moveHoverImage(e) {
+                hoverImage.style.left = `${e.pageX + 15}px`;
+                hoverImage.style.top = `${e.pageY + 15}px`;
+            }
+
+            caseHeader.addEventListener('mouseover', showHoverImage);
+            caseHeader.addEventListener('mousemove', moveHoverImage);
+            caseHeader.addEventListener('mouseout', hideHoverImage);
+
+            caseImageWrapper.addEventListener('mouseover', showHoverImage);
+            caseImageWrapper.addEventListener('mousemove', moveHoverImage);
+            caseImageWrapper.addEventListener('mouseout', hideHoverImage);
+
+            caseHeader.addEventListener('click', () => {
+                window.location.href = './slow_furniture.html';
+            });
+
+            caseImageWrapper.addEventListener('click', () => {
+                window.location.href = './slow_furniture.html';
+            });
+        });
+    </script>
+</body>
+</html>
