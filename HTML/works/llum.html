@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLUM25 BCN</title>
+    <link rel="stylesheet" href="../../CSS/works/non-planar.css">
+</head>
+<body>
+    <a href="../../index.html" class="home-link">HOME</a> 
+    <header>
+        <div class="header-content">
+            <p class="subheader">Interactive light installation</p>
+            <h1>LLUM25 INSTALLATION</h1>
+        </div>
+    </header>
+    <main>
+        <img id="main-image" src="../../IMG/PORTFOLIO/LLUM25/Timelapse1.2.gif" alt="Image">
+    </main>
+    <section class="info-section">
+        <div class="info-left">
+            <p><strong>YEAR</strong>2025</p>
+            <p><strong>KIND</strong>GROUP</p>
+            <p><strong>CATEGORY</strong>EFIMERAL INSTALLATION</p>
+            <p><strong>FUNCTION</strong>CONCEPT DEVELOPEMENT, DESIGN, PROTOTYPING, CODING</p>
+        </div>
+        <div class="info-right">
+            <p>We had the pleasure to make th IAAC LLUM25 festival installation at Barcelona.</p>
+        </div>
+    </section>
+    <section class="custom-photography-section">
+        <div class="text-content">
+            <h2>THE CONCEPT</h2>
+            <p>During this second year we developed a collective project called MIRALLS DEL DEMÀ. Our team came together during the Interaction and Prototyping Seminar to create an installation that would bridge technology and consciousness about the future. The conceptual phase was particularly engaging as we explored ways to transform individual voices into collective visual experiences. We wanted to create more than just an interactive piece trying to develop a platform that would reflect humanity's relationship with its future. Through many discussions and iterations, we settled on the idea of using AI to transform spoken thoughts into dynamic visualizations, making abstract concerns about our planet's future tangible and immediate.</p>
+        </div>
+        <div class="image-content">
+            <img src="../../IMG/PORTFOLIO/LLUM25/2.jpg" alt="Custom Photography">
+        </div>
+    </section>
+    <section class="interactive-gallery">
+        <div class="big-image">
+            <img id="big-image" src="../../IMG/PORTFOLIO/LLUM25/3.jpg" alt="Big Image">
+        </div>
+        <div class="thumbnail-gallery">
+            <img class="thumbnail selected" src="../../IMG/PORTFOLIO/LLUM25/4.jpg" alt="Thumb 1" onclick="changeImage(this, '../../IMG/PORTFOLIO/LLUM25/4.jpg')">
+            <img class="thumbnail" src="../../IMG/PORTFOLIO/LLUM25/5.jpg" alt="Thumb 2" onclick="changeImage(this, '../../IMG/PORTFOLIO/LLUM25/5.jpg')">
+            <img class="thumbnail" src="../../IMG/PORTFOLIO/LLUM25/6.jpg" alt="Thumb 3" onclick="changeImage(this, '../../IMG/PORTFOLIO/LLUM25/6.jpg')">
+            <img class="thumbnail" src="../../IMG/PORTFOLIO/LLUM25/7.jpg" alt="Thumb 4" onclick="changeImage(this, '../../IMG/PORTFOLIO/LLUM25/7.jpg')">
+            <img class="thumbnail" src="../../IMG/PORTFOLIO/LLUM25/8.jpg" alt="Thumb 5" onclick="changeImage(this, '../../IMG/PORTFOLIO/LLUM25/8.jpg')">
+            <img class="thumbnail" src="../../IMG/PORTFOLIO/LLUM25/9.jpg" alt="Thumb 6" onclick="changeImage(this, '../../IMG/PORTFOLIO/LLUM25/9.jpg')">
+
+        </div>
+        <div class="text-content">
+            <h2>PROTOTYPING</h2>
+            <p>The prototyping process brought its own set of challenges. Our team worked to integrate various technologies (proximity sensors, microphones, and AI models) into a cohesive interaction. We invcested a lot of time testing different approaches to ensure the technology would serve our concept rather than overshadow it. The process of fine tunning the AI to interpret speech into meaningful(and interesting) visual patterns was particularly complexas well as it's web interaction, but it was awesome to see how each technical solution started coming together shaping the whole system.</p>
+            <p>The final installation and testing phase, where everything came together, was the important part. Watching the LED panel come to life and the interactions unfold was incredibly rewarding. We positioned the microphoneto create an inviting space for visitors to share their thoughts, and the way the AI transforms these words into visual projections exceeded our expectations (spetially with children!!!). The installation tryed to highlight critical issues like housing, urbanization, future transportation... while maintaining an artistic and engaging presence. What makes me most proud is how our collective work succeeded in creating a space that not only raises awareness about environmental challenges but also inspires hope and action for a sustainable future.</p>
+        </div>
+    </section>
+    <section class="case-layout">
+        <div class="case-header">
+            <h1>SLOW FURNITURE</h1>
+            <a href="./slow_furniture.html" class="next-case">NEXT WORK</a>
+        </div>
+        <div class="case-image-wrapper">
+            <img src="../../IMG/MDEF/9-NEXT-SLOW_FURNITURE.png" alt="expo" class="case-image">
+        </div>
+    </section>
+    <div id="hover-image" class="hover-image">
+        <img src="../../IMG/MDEF/8-NEXT-SLOW_FURNITURE.png" alt="Small Image">
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const image = document.getElementById('main-image');
+            setTimeout(() => {
+                image.style.transform = 'scale(1)'; // Reduce to normal size
+            }, 500); // Delay for the effect
+        });
+
+        function changeImage(element, src) {
+            const bigImage = document.getElementById('big-image');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            // Remove the selected class from all thumbnails
+            thumbnails.forEach(thumbnail => {
+                thumbnail.classList.remove('selected');
+            });
+
+            // Add the selected class to the clicked thumbnail
+            element.classList.add('selected');
+
+            bigImage.classList.add('fade-out');
+            setTimeout(() => {
+                bigImage.src = src;
+                bigImage.classList.remove('fade-out');
+                bigImage.classList.add('fade-in');
+            }, 300);
+            setTimeout(() => {
+                bigImage.classList.remove('fade-in');
+            }, 600);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hoverImage = document.getElementById('hover-image');
+            const caseHeader = document.querySelector('.case-header');
+            const caseImageWrapper = document.querySelector('.case-image-wrapper');
+
+            function showHoverImage(e) {
+                hoverImage.style.display = 'block';
+                hoverImage.style.left = `${e.pageX + 15}px`;
+                hoverImage.style.top = `${e.pageY + 15}px`;
+            }
+
+            function hideHoverImage() {
+                hoverImage.style.display = 'none';
+            }
+
+            function moveHoverImage(e) {
+                hoverImage.style.left = `${e.pageX + 15}px`;
+                hoverImage.style.top = `${e.pageY + 15}px`;
+            }
+
+            caseHeader.addEventListener('mouseover', showHoverImage);
+            caseHeader.addEventListener('mousemove', moveHoverImage);
+            caseHeader.addEventListener('mouseout', hideHoverImage);
+
+            caseImageWrapper.addEventListener('mouseover', showHoverImage);
+            caseImageWrapper.addEventListener('mousemove', moveHoverImage);
+            caseImageWrapper.addEventListener('mouseout', hideHoverImage);
+
+            caseHeader.addEventListener('click', () => {
+                window.location.href = './slow_furniture.html';
+            });
+
+            caseImageWrapper.addEventListener('click', () => {
+                window.location.href = './slow_furniture.html';
+            });
+        });
+    </script>
+</body>
+</html>

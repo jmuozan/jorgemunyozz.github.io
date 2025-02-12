@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "../IMG/LAB/5-AI_GRASSHOPPER/GCODE.png",
     "../IMG/WORKS/HAPPY_MEAL.jpg",
     "../IMG/WORKS/GRESAL.jpg",
-    "../IMG/1.png",
+    "../IMG/PORTFOLIO/LLUM25/Timelapse1.2.gif",
   ];
 
   const menuItems = document.querySelectorAll(".menu-item");
